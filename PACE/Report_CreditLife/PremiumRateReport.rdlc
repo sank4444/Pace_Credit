@@ -1,0 +1,466 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DummyDataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:DataSourceID>f67cae1f-44cf-4e9b-a981-f459266fc0cf</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="dsPremiumRateReport_dtPremiumRateReport">
+      <Query>
+        <DataSourceName>DummyDataSource</DataSourceName>
+        <CommandText />
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <Fields>
+        <Field Name="RateCode">
+          <DataField>RateCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Age">
+          <DataField>Age</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Tenure">
+          <DataField>Tenure</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Rate">
+          <DataField>Rate</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>dsPremiumRateReport</rd:DataSetName>
+        <rd:TableName>dtPremiumRateReport</rd:TableName>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+      <Body>
+        <ReportItems>
+          <Textbox Name="textbox15">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Rate Code:</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Height>0.63492cm</Height>
+            <Width>2.22222cm</Width>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="RateCode">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Fields!RateCode.Value</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>RateCode</rd:DefaultName>
+            <Left>0.875in</Left>
+            <Height>0.25in</Height>
+            <Width>1.125in</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Tablix Name="matrix1">
+            <TablixCorner>
+              <TablixCornerRows>
+                <TablixCornerRow>
+                  <TablixCornerCell>
+                    <CellContents>
+                      <Textbox Name="textbox14">
+                        <CanGrow>true</CanGrow>
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value>Age / Tenure</Value>
+                                <Style>
+                                  <FontFamily>Times New Roman</FontFamily>
+                                  <FontSize>8pt</FontSize>
+                                  <FontWeight>Bold</FontWeight>
+                                </Style>
+                              </TextRun>
+                            </TextRuns>
+                            <Style>
+                              <TextAlign>Center</TextAlign>
+                            </Style>
+                          </Paragraph>
+                        </Paragraphs>
+                        <ZIndex>3</ZIndex>
+                        <Style>
+                          <Border>
+                            <Style>Solid</Style>
+                          </Border>
+                          <BackgroundColor>LightBlue</BackgroundColor>
+                          <PaddingLeft>2pt</PaddingLeft>
+                          <PaddingRight>2pt</PaddingRight>
+                          <PaddingTop>2pt</PaddingTop>
+                          <PaddingBottom>2pt</PaddingBottom>
+                        </Style>
+                      </Textbox>
+                    </CellContents>
+                  </TablixCornerCell>
+                </TablixCornerRow>
+              </TablixCornerRows>
+            </TablixCorner>
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>1in</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="textbox5">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Rate.Value.ToString()</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>textbox5</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                      <DataElementOutput>Output</DataElementOutput>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <Group Name="matrix1_ColumnGroup2">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!Tenure.Value</GroupExpression>
+                    </GroupExpressions>
+                    <Parent>=Fields!Tenure.Value</Parent>
+                  </Group>
+                  <TablixHeader>
+                    <Size>0.25in</Size>
+                    <CellContents>
+                      <Textbox Name="textbox2">
+                        <CanGrow>true</CanGrow>
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value>=Fields!Tenure.Value</Value>
+                                <Style>
+                                  <FontSize>8pt</FontSize>
+                                </Style>
+                              </TextRun>
+                            </TextRuns>
+                            <Style>
+                              <TextAlign>Center</TextAlign>
+                            </Style>
+                          </Paragraph>
+                        </Paragraphs>
+                        <rd:DefaultName>textbox2</rd:DefaultName>
+                        <ZIndex>2</ZIndex>
+                        <Style>
+                          <Border>
+                            <Style>Solid</Style>
+                          </Border>
+                          <BackgroundColor>LightGrey</BackgroundColor>
+                          <PaddingLeft>2pt</PaddingLeft>
+                          <PaddingRight>2pt</PaddingRight>
+                          <PaddingTop>2pt</PaddingTop>
+                          <PaddingBottom>2pt</PaddingBottom>
+                        </Style>
+                      </Textbox>
+                    </CellContents>
+                  </TablixHeader>
+                  <DataElementOutput>Output</DataElementOutput>
+                  <KeepTogether>true</KeepTogether>
+                </TablixMember>
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <Group Name="matrix1_RowGroup2">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!Age.Value</GroupExpression>
+                    </GroupExpressions>
+                    <Parent>=Fields!Age.Value</Parent>
+                  </Group>
+                  <TablixHeader>
+                    <Size>1.375in</Size>
+                    <CellContents>
+                      <Textbox Name="textbox3">
+                        <CanGrow>true</CanGrow>
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value>=Fields!Age.Value</Value>
+                                <Style>
+                                  <FontSize>8pt</FontSize>
+                                </Style>
+                              </TextRun>
+                            </TextRuns>
+                            <Style>
+                              <TextAlign>Center</TextAlign>
+                            </Style>
+                          </Paragraph>
+                        </Paragraphs>
+                        <rd:DefaultName>textbox3</rd:DefaultName>
+                        <ZIndex>1</ZIndex>
+                        <Style>
+                          <Border>
+                            <Style>Solid</Style>
+                          </Border>
+                          <BackgroundColor>LightGrey</BackgroundColor>
+                          <PaddingLeft>2pt</PaddingLeft>
+                          <PaddingRight>2pt</PaddingRight>
+                          <PaddingTop>2pt</PaddingTop>
+                          <PaddingBottom>2pt</PaddingBottom>
+                        </Style>
+                      </Textbox>
+                    </CellContents>
+                  </TablixHeader>
+                  <DataElementOutput>Output</DataElementOutput>
+                  <KeepTogether>true</KeepTogether>
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <RepeatColumnHeaders>true</RepeatColumnHeaders>
+            <RepeatRowHeaders>true</RepeatRowHeaders>
+            <Top>0.375in</Top>
+            <Height>0.5in</Height>
+            <Width>2.375in</Width>
+            <ZIndex>2</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Tablix>
+        </ReportItems>
+        <Height>0.875in</Height>
+        <Style />
+      </Body>
+      <Width>10.47619cm</Width>
+      <Page>
+        <PageHeader>
+          <Height>0.75in</Height>
+          <PrintOnFirstPage>true</PrintOnFirstPage>
+          <PrintOnLastPage>true</PrintOnLastPage>
+          <ReportItems>
+            <Image Name="image2">
+              <Source>Embedded</Source>
+              <Value>tata_aig_logo</Value>
+              <MIMEType>image/jpeg</MIMEType>
+              <Sizing>Fit</Sizing>
+              <Height>0.68906in</Height>
+              <Width>1.86458in</Width>
+              <Style />
+            </Image>
+            <Textbox Name="textbox20">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>Credit Life Premium Rate Report</Value>
+                      <Style>
+                        <FontWeight>Bold</FontWeight>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <Top>0.125in</Top>
+              <Left>4.7619cm</Left>
+              <Height>0.63492cm</Height>
+              <Width>5.71429cm</Width>
+              <ZIndex>1</ZIndex>
+              <Style>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+          </ReportItems>
+          <Style />
+        </PageHeader>
+        <PageFooter>
+          <Height>0.25in</Height>
+          <PrintOnFirstPage>true</PrintOnFirstPage>
+          <PrintOnLastPage>true</PrintOnLastPage>
+          <ReportItems>
+            <Textbox Name="textbox9">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Globals!TotalPages</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <Left>8.80159cm</Left>
+              <Height>0.25in</Height>
+              <Width>0.75cm</Width>
+              <Style>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="textbox1">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>of</Value>
+                      <Style>
+                        <FontFamily>Verdana</FontFamily>
+                        <FontSize>9pt</FontSize>
+                        <FontWeight>SemiBold</FontWeight>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <Left>8.05159cm</Left>
+              <Height>0.25in</Height>
+              <Width>0.75cm</Width>
+              <ZIndex>1</ZIndex>
+              <Style>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="textbox28">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Globals!PageNumber</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>textbox28</rd:DefaultName>
+              <Left>7.30159cm</Left>
+              <Height>0.25in</Height>
+              <Width>0.75cm</Width>
+              <ZIndex>2</ZIndex>
+              <Style>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+          </ReportItems>
+          <Style />
+        </PageFooter>
+        <LeftMargin>1in</LeftMargin>
+        <RightMargin>1in</RightMargin>
+        <TopMargin>1in</TopMargin>
+        <BottomMargin>1in</BottomMargin>
+        <Style />
+      </Page>
+  <EmbeddedImages>
+    <EmbeddedImage Name="tata_aig_logo">
+      <MIMEType>image/jpeg</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <Language>en-US</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>cc934678-1ef5-4117-871e-016057ca15ed</rd:ReportID>
+</Report>

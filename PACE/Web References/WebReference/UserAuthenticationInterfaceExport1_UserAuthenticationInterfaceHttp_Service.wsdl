@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:Port_0="http://BService_UserAuthentication_v1/UserAuthenticationInterface" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:this="http://BService_UserAuthentication_v1/UserAuthenticationInterface/Binding" name="UserAuthenticationInterfaceExport1_UserAuthenticationInterfaceHttp_Service" targetNamespace="http://BService_UserAuthentication_v1/UserAuthenticationInterface/Binding" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://BService_UserAuthentication_v1/UserAuthenticationInterface" location="UserAuthenticationInterface.wsdl" />
+  <wsdl:types />
+  <wsdl:binding name="UserAuthenticationInterfaceExport1_UserAuthenticationInterfaceHttpBinding" type="Port_0:UserAuthenticationInterface">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getCredentialCheck">
+      <soap:operation soapAction="" />
+      <wsdl:input name="getCredentialCheckRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCredentialCheckResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="forgotPassword">
+      <soap:operation soapAction="" />
+      <wsdl:input name="forgotPasswordRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="forgotPasswordResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="changePassword">
+      <soap:operation soapAction="" />
+      <wsdl:input name="changePasswordRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="changePasswordResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="verifyUser">
+      <soap:operation soapAction="" />
+      <wsdl:input name="verifyUserRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="verifyUserResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UserAuthenticationInterfaceExport1_UserAuthenticationInterfaceHttpService">
+    <wsdl:port name="UserAuthenticationInterfaceExport1_UserAuthenticationInterfaceHttpPort" binding="this:UserAuthenticationInterfaceExport1_UserAuthenticationInterfaceHttpBinding">
+      <soap:address location="http://10.32.141.84:9081/BService_UserAuthentication_v1Web/sca/UserAuthenticationInterfaceExport1" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

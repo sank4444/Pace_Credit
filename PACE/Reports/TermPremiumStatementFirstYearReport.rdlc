@@ -1,0 +1,1259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="DummyDataSource">
+      <rd:DataSourceID>807b3573-4580-4d80-9b0b-1cf8326479fb</rd:DataSourceID>
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <ReportParameters>
+    <ReportParameter Name="TALICHeaderNameParam">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Report_Parameter_0</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <RightMargin>0.3in</RightMargin>
+  <LeftMargin>0.3in</LeftMargin>
+  <PageHeader>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <ReportItems>
+      <Image Name="image2">
+        <Sizing>Fit</Sizing>
+        <MIMEType>image/jpeg</MIMEType>
+        <Source>Embedded</Source>
+        <Style />
+        <ZIndex>1</ZIndex>
+        <Left>13.96825cm</Left>
+        <Value>tata_aig_logo</Value>
+      </Image>
+      <Textbox Name="textbox11">
+        <Width>8.57143cm</Width>
+        <Style>
+          <FontFamily>Verdana</FontFamily>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Left>5.22486cm</Left>
+        <Height>0.63492cm</Height>
+        <Value>=Parameters!TALICHeaderNameParam.Value</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>0.5in</Height>
+    <PrintOnLastPage>true</PrintOnLastPage>
+  </PageHeader>
+  <BottomMargin>0.3in</BottomMargin>
+  <rd:ReportID>baae97f9-c284-4f08-b762-256946c22799</rd:ReportID>
+  <EmbeddedImages>
+    <EmbeddedImage Name="tata_aig_logo">
+      <MIMEType>image/jpeg</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <PageWidth>9in</PageWidth>
+  <DataSets>
+    <DataSet Name="dsTermPremiumStatementFirstYearReport_dtTermPolicyDetail">
+      <Fields>
+        <Field Name="PolicyUID">
+          <DataField>PolicyUID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PolicyNumber">
+          <DataField>PolicyNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PolicyYear">
+          <DataField>PolicyYear</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DummyDataSource</DataSourceName>
+        <CommandText />
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>dsTermPremiumStatementFirstYearReport</rd:DataSetName>
+        <rd:TableName>dtTermPolicyDetail</rd:TableName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="dsTermPremiumStatementFirstYearReport_dtTermReportTag">
+      <Fields>
+        <Field Name="ReportTag1">
+          <DataField>ReportTag1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ReportTag2">
+          <DataField>ReportTag2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ReportTag3">
+          <DataField>ReportTag3</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ReportTag4">
+          <DataField>ReportTag4</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ReportTag5">
+          <DataField>ReportTag5</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ReportTag6">
+          <DataField>ReportTag6</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ReportTag7">
+          <DataField>ReportTag7</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ReportTag8">
+          <DataField>ReportTag8</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ReportTag9">
+          <DataField>ReportTag9</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ReportTag10">
+          <DataField>ReportTag10</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ReportTag11">
+          <DataField>ReportTag11</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DummyDataSource</DataSourceName>
+        <CommandText />
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>dsTermPremiumStatementFirstYearReport</rd:DataSetName>
+        <rd:TableName>dtTermReportTag</rd:TableName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="dsTermPremiumStatementFirstYearReport_dtTermReportAmounts">
+      <Fields>
+        <Field Name="OpeningBalance">
+          <DataField>OpeningBalance</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FloadSuspenseAmount">
+          <DataField>FloadSuspenseAmount</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FloadClosingAmount">
+          <DataField>FloadClosingAmount</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="OutstandingPremiumDue">
+          <DataField>OutstandingPremiumDue</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ERRAmount">
+          <DataField>ERRAmount</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ClosingBalance">
+          <DataField>ClosingBalance</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="OverShortageAmount">
+          <DataField>OverShortageAmount</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="OverShortageCR">
+          <DataField>OverShortageCR</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="OverShortageDR">
+          <DataField>OverShortageDR</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FloatSuspenseAmount">
+          <DataField>FloatSuspenseAmount</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FloatClosingAmount">
+          <DataField>FloatClosingAmount</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DummyDataSource</DataSourceName>
+        <CommandText />
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>dsTermPremiumStatementFirstYearReport</rd:DataSetName>
+        <rd:TableName>dtTermReportAmounts</rd:TableName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="dsTermPremiumStatementFirstYearReport_dtTermReceiptDetail">
+      <Fields>
+        <Field Name="PolicyUID">
+          <DataField>PolicyUID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ReportName">
+          <DataField>ReportName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ReceiptAmount">
+          <DataField>ReceiptAmount</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TotalReceiptAmount">
+          <DataField>TotalReceiptAmount</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DummyDataSource</DataSourceName>
+        <CommandText />
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>dsTermPremiumStatementFirstYearReport</rd:DataSetName>
+        <rd:TableName>dtTermReceiptDetail</rd:TableName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="dsTermPremiumStatementFirstYearReport_dtTermBillDetail">
+      <Fields>
+        <Field Name="PolicyUID">
+          <DataField>PolicyUID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ReportName">
+          <DataField>ReportName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BillingAmount">
+          <DataField>BillingAmount</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ServiceTaxName">
+          <DataField>ServiceTaxName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ServiceTaxAndEdcessAmount">
+          <DataField>ServiceTaxAndEdcessAmount</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TotalBillingAmount">
+          <DataField>TotalBillingAmount</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DummyDataSource</DataSourceName>
+        <CommandText />
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>dsTermPremiumStatementFirstYearReport</rd:DataSetName>
+        <rd:TableName>dtTermBillDetail</rd:TableName>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <Code />
+  <Width>7.36458in</Width>
+  <Body>
+    <ReportItems>
+      <Textbox Name="textbox16">
+        <Top>4.75in</Top>
+        <Width>4in</Width>
+        <Style>
+          <FontFamily>Verdana</FontFamily>
+          <FontSize>8pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>25</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.125in</Left>
+        <Height>0.25in</Height>
+        <Value>=First(Fields!ReportTag11.Value, "dsTermPremiumStatementFirstYearReport_dtTermReportTag")</Value>
+      </Textbox>
+      <Textbox Name="textbox13">
+        <Top>4.5in</Top>
+        <Width>4in</Width>
+        <Style>
+          <FontFamily>Verdana</FontFamily>
+          <FontSize>8pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>24</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.125in</Left>
+        <Height>0.25in</Height>
+        <Value>=First(Fields!ReportTag10.Value, "dsTermPremiumStatementFirstYearReport_dtTermReportTag")</Value>
+      </Textbox>
+      <Textbox Name="textbox7">
+        <Top>4.75in</Top>
+        <Width>1.5in</Width>
+        <Style>
+          <FontFamily>Verdana</FontFamily>
+          <FontSize>8pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>23</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>5.75in</Left>
+        <Height>0.25in</Height>
+        <Value>=First(Fields!OverShortageCR.Value, "dsTermPremiumStatementFirstYearReport_dtTermReportAmounts")</Value>
+      </Textbox>
+      <Textbox Name="OverShortageDR">
+        <rd:DefaultName>OverShortageDR</rd:DefaultName>
+        <Top>4.5in</Top>
+        <Width>1.5in</Width>
+        <Style>
+          <FontFamily>Verdana</FontFamily>
+          <FontSize>8pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>22</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>5.75in</Left>
+        <Height>0.25in</Height>
+        <Value>=First(Fields!OverShortageDR.Value, "dsTermPremiumStatementFirstYearReport_dtTermReportAmounts")</Value>
+      </Textbox>
+      <Textbox Name="FloadClosingAmount">
+        <rd:DefaultName>FloadClosingAmount</rd:DefaultName>
+        <Top>5.75in</Top>
+        <Width>1.5in</Width>
+        <Style>
+          <FontFamily>Verdana</FontFamily>
+          <FontSize>8pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>21</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>5.75in</Left>
+        <Height>0.25in</Height>
+        <Value>=First(Fields!FloatClosingAmount.Value, "dsTermPremiumStatementFirstYearReport_dtTermReportAmounts")</Value>
+      </Textbox>
+      <Textbox Name="ClosingBalance">
+        <rd:DefaultName>ClosingBalance</rd:DefaultName>
+        <Top>5.45833in</Top>
+        <Width>1.5in</Width>
+        <Style>
+          <FontFamily>Verdana</FontFamily>
+          <FontSize>8pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>20</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>5.75in</Left>
+        <Height>0.25in</Height>
+        <Value>=First(Fields!ClosingBalance.Value, "dsTermPremiumStatementFirstYearReport_dtTermReportAmounts")</Value>
+      </Textbox>
+      <Textbox Name="OutstandingPremiumDue">
+        <rd:DefaultName>OutstandingPremiumDue</rd:DefaultName>
+        <Top>5.15625in</Top>
+        <Width>1.5in</Width>
+        <Style>
+          <FontFamily>Verdana</FontFamily>
+          <FontSize>8pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>19</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>5.75in</Left>
+        <Height>0.25in</Height>
+        <Value>=First(Fields!OutstandingPremiumDue.Value, "dsTermPremiumStatementFirstYearReport_dtTermReportAmounts")</Value>
+      </Textbox>
+      <Textbox Name="ERRAmount">
+        <rd:DefaultName>ERRAmount</rd:DefaultName>
+        <Top>2.75in</Top>
+        <Width>1.5in</Width>
+        <Style>
+          <FontFamily>Verdana</FontFamily>
+          <FontSize>8pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>18</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>5.75in</Left>
+        <Height>0.25in</Height>
+        <Value>=First(Fields!ERRAmount.Value, "dsTermPremiumStatementFirstYearReport_dtTermReportAmounts")</Value>
+      </Textbox>
+      <Textbox Name="ReportTag9">
+        <rd:DefaultName>ReportTag9</rd:DefaultName>
+        <Top>6.625in</Top>
+        <Width>4in</Width>
+        <Style>
+          <FontFamily>Verdana</FontFamily>
+          <FontSize>8pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>17</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.125in</Left>
+        <Value>=First(Fields!ReportTag9.Value, "dsTermPremiumStatementFirstYearReport_dtTermReportTag")</Value>
+      </Textbox>
+      <Textbox Name="ReportTag8">
+        <rd:DefaultName>ReportTag8</rd:DefaultName>
+        <Top>6.33334in</Top>
+        <Width>4in</Width>
+        <Style>
+          <FontFamily>Verdana</FontFamily>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>16</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.125in</Left>
+        <Height>0.25in</Height>
+        <Value>=First(Fields!ReportTag8.Value, "dsTermPremiumStatementFirstYearReport_dtTermReportTag")</Value>
+      </Textbox>
+      <Textbox Name="ReportTag7">
+        <rd:DefaultName>ReportTag7</rd:DefaultName>
+        <Top>6.05209in</Top>
+        <Width>4in</Width>
+        <Style>
+          <FontFamily>Verdana</FontFamily>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>15</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.125in</Left>
+        <Height>0.25in</Height>
+        <Value>=First(Fields!ReportTag7.Value, "dsTermPremiumStatementFirstYearReport_dtTermReportTag")</Value>
+      </Textbox>
+      <Textbox Name="ReportTag4">
+        <rd:DefaultName>ReportTag4</rd:DefaultName>
+        <Top>5.76042in</Top>
+        <Width>4in</Width>
+        <Style>
+          <FontFamily>Verdana</FontFamily>
+          <FontSize>8pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>14</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.125in</Left>
+        <Height>0.25in</Height>
+        <Value>=First(Fields!ReportTag4.Value, "dsTermPremiumStatementFirstYearReport_dtTermReportTag")</Value>
+      </Textbox>
+      <Textbox Name="ReportTag3">
+        <rd:DefaultName>ReportTag3</rd:DefaultName>
+        <Top>5.46875in</Top>
+        <Width>4in</Width>
+        <Style>
+          <FontFamily>Verdana</FontFamily>
+          <FontSize>8pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>13</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.125in</Left>
+        <Height>0.25in</Height>
+        <Value>=First(Fields!ReportTag3.Value, "dsTermPremiumStatementFirstYearReport_dtTermReportTag")</Value>
+      </Textbox>
+      <Textbox Name="ReportTag6">
+        <rd:DefaultName>ReportTag6</rd:DefaultName>
+        <Top>5.16667in</Top>
+        <Width>4in</Width>
+        <Style>
+          <FontFamily>Verdana</FontFamily>
+          <FontSize>8pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Left</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>12</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.125in</Left>
+        <Height>0.25in</Height>
+        <Value>=First(Fields!ReportTag6.Value, "dsTermPremiumStatementFirstYearReport_dtTermReportTag")</Value>
+      </Textbox>
+      <Table Name="table2">
+        <ZIndex>11</ZIndex>
+        <DataSetName>dsTermPremiumStatementFirstYearReport_dtTermBillDetail</DataSetName>
+        <Top>3.16667in</Top>
+        <Width>7.125in</Width>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="ReportName_1">
+                      <rd:DefaultName>ReportName_1</rd:DefaultName>
+                      <Style>
+                        <FontFamily>Verdana</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>11</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!ReportName.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="BillingAmount">
+                      <rd:DefaultName>BillingAmount</rd:DefaultName>
+                      <Style>
+                        <FontFamily>Verdana</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>10</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!BillingAmount.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox14">
+                      <rd:DefaultName>textbox14</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>9</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="ServiceTaxName">
+                      <rd:DefaultName>ServiceTaxName</rd:DefaultName>
+                      <Style>
+                        <FontFamily>Verdana</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>2</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!ServiceTaxName.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="ServiceTaxAndEdcessAmount">
+                      <rd:DefaultName>ServiceTaxAndEdcessAmount</rd:DefaultName>
+                      <Style>
+                        <FontFamily>Verdana</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>1</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!ServiceTaxAndEdcessAmount.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox15">
+                      <rd:DefaultName>textbox15</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <TableColumns>
+          <TableColumn>
+            <Width>4.17672in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.47414in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.47414in</Width>
+          </TableColumn>
+        </TableColumns>
+        <Height>1in</Height>
+        <Footer>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox6">
+                      <rd:DefaultName>textbox6</rd:DefaultName>
+                      <Style>
+                        <FontFamily>Verdana</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>5</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="OverShortageAmount">
+                      <rd:DefaultName>OverShortageAmount</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>4</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="TotalBillingAmount">
+                      <rd:DefaultName>TotalBillingAmount</rd:DefaultName>
+                      <Style>
+                        <FontFamily>Verdana</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>3</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox8">
+                      <rd:DefaultName>textbox8</rd:DefaultName>
+                      <Style>
+                        <FontFamily>Verdana</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>8</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Total Bill Amount :</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox10">
+                      <rd:DefaultName>textbox10</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>7</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox12">
+                      <rd:DefaultName>textbox12</rd:DefaultName>
+                      <Style>
+                        <FontFamily>Verdana</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>6</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=First(Fields!TotalBillingAmount.Value)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+          </TableRows>
+        </Footer>
+        <Left>0.125in</Left>
+      </Table>
+      <Textbox Name="textbox3">
+        <Top>2.89583in</Top>
+        <Width>3.36458in</Width>
+        <Style>
+          <FontFamily>Verdana</FontFamily>
+          <FontSize>8pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Left</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>10</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.125in</Left>
+        <Height>0.19792in</Height>
+        <Value>Less:</Value>
+      </Textbox>
+      <Textbox Name="ReportTag5">
+        <rd:DefaultName>ReportTag5</rd:DefaultName>
+        <Top>2.75in</Top>
+        <Width>4in</Width>
+        <Style>
+          <FontFamily>Verdana</FontFamily>
+          <FontSize>8pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>9</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.125in</Left>
+        <Height>0.25in</Height>
+        <Value>=First(Fields!ReportTag5.Value, "dsTermPremiumStatementFirstYearReport_dtTermReportTag")</Value>
+      </Textbox>
+      <Table Name="table1">
+        <ZIndex>8</ZIndex>
+        <DataSetName>dsTermPremiumStatementFirstYearReport_dtTermReceiptDetail</DataSetName>
+        <Top>1.91667in</Top>
+        <Width>7.125in</Width>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="ReportName">
+                      <rd:DefaultName>ReportName</rd:DefaultName>
+                      <Style>
+                        <FontFamily>Verdana</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>2</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!ReportName.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox4">
+                      <rd:DefaultName>textbox4</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>1</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="ReceiptAmount">
+                      <rd:DefaultName>ReceiptAmount</rd:DefaultName>
+                      <Style>
+                        <FontFamily>Verdana</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!ReceiptAmount.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <TableColumns>
+          <TableColumn>
+            <Width>4.17672in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.47414in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.47414in</Width>
+          </TableColumn>
+        </TableColumns>
+        <Height>0.75in</Height>
+        <Footer>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox5">
+                      <rd:DefaultName>textbox5</rd:DefaultName>
+                      <Style>
+                        <FontFamily>Verdana</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>5</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Total Receipt Amount(Policy Reserve):</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox9">
+                      <rd:DefaultName>textbox9</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>4</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="TotalReceiptAmount">
+                      <rd:DefaultName>TotalReceiptAmount</rd:DefaultName>
+                      <Style>
+                        <FontFamily>Verdana</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>3</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=First(Fields!TotalReceiptAmount.Value)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox17">
+                      <rd:DefaultName>textbox17</rd:DefaultName>
+                      <Style>
+                        <FontFamily>Verdana</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>8</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Total Receipt Amount(Float Reserve):</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox18">
+                      <rd:DefaultName>textbox18</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>7</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox19">
+                      <rd:DefaultName>textbox19</rd:DefaultName>
+                      <Style>
+                        <FontFamily>Verdana</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>6</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+          </TableRows>
+          <RepeatOnNewPage>true</RepeatOnNewPage>
+        </Footer>
+        <Left>0.125in</Left>
+      </Table>
+      <Textbox Name="textbox2">
+        <Top>1.64583in</Top>
+        <Width>3.36458in</Width>
+        <Style>
+          <FontFamily>Verdana</FontFamily>
+          <FontSize>8pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Left</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>7</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.125in</Left>
+        <Height>0.20833in</Height>
+        <Value>Receipts Detail:</Value>
+      </Textbox>
+      <Textbox Name="FloadSuspenseAmount">
+        <rd:DefaultName>FloadSuspenseAmount</rd:DefaultName>
+        <Top>1.30209in</Top>
+        <Width>1.5in</Width>
+        <Style>
+          <FontFamily>Verdana</FontFamily>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>6</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>5.75in</Left>
+        <Height>0.25in</Height>
+        <Value>=First(Fields!FloatSuspenseAmount.Value, "dsTermPremiumStatementFirstYearReport_dtTermReportAmounts")</Value>
+      </Textbox>
+      <Textbox Name="OpeningBalance">
+        <rd:DefaultName>OpeningBalance</rd:DefaultName>
+        <Top>1in</Top>
+        <Width>1.5in</Width>
+        <Style>
+          <FontFamily>Verdana</FontFamily>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>5</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>5.75in</Left>
+        <Height>0.25in</Height>
+        <Value>=First(Fields!OpeningBalance.Value, "dsTermPremiumStatementFirstYearReport_dtTermReportAmounts")</Value>
+      </Textbox>
+      <Textbox Name="ReportTag2">
+        <rd:DefaultName>ReportTag2</rd:DefaultName>
+        <Top>1.30209in</Top>
+        <Width>4in</Width>
+        <Style>
+          <FontFamily>Verdana</FontFamily>
+          <FontSize>8pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>4</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.125in</Left>
+        <Height>0.25in</Height>
+        <Value>=First(Fields!ReportTag2.Value, "dsTermPremiumStatementFirstYearReport_dtTermReportTag")</Value>
+      </Textbox>
+      <Textbox Name="ReportTag1">
+        <rd:DefaultName>ReportTag1</rd:DefaultName>
+        <Top>1in</Top>
+        <Width>4in</Width>
+        <Style>
+          <FontFamily>Verdana</FontFamily>
+          <FontSize>8pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>3</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.125in</Left>
+        <Height>0.25in</Height>
+        <Value>=First(Fields!ReportTag1.Value,"dsTermPremiumStatementFirstYearReport_dtTermReportTag")</Value>
+      </Textbox>
+      <Textbox Name="textbox1">
+        <rd:DefaultName>textbox1</rd:DefaultName>
+        <Top>0.29167in</Top>
+        <Width>3.36458in</Width>
+        <Style>
+          <FontFamily>Verdana</FontFamily>
+          <FontSize>8pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>2</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>2.0625in</Left>
+        <Height>0.25in</Height>
+        <Value>Premium Statement</Value>
+      </Textbox>
+      <Textbox Name="PolicyYear">
+        <rd:DefaultName>PolicyYear</rd:DefaultName>
+        <Top>0.58333in</Top>
+        <Width>3.375in</Width>
+        <Style>
+          <FontFamily>Verdana</FontFamily>
+          <FontSize>8pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>1</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>2.05989in</Left>
+        <Height>0.25in</Height>
+        <Value>=First(Fields!PolicyYear.Value, "dsTermPremiumStatementFirstYearReport_dtTermPolicyDetail")</Value>
+      </Textbox>
+      <Textbox Name="PolicyNumber">
+        <rd:DefaultName>PolicyNumber</rd:DefaultName>
+        <Width>3.375in</Width>
+        <Style>
+          <FontFamily>Verdana</FontFamily>
+          <FontSize>8pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Left>2.05468in</Left>
+        <Height>0.25in</Height>
+        <Value>=First(Fields!PolicyNumber.Value,"dsTermPremiumStatementFirstYearReport_dtTermPolicyDetail")</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>6.875in</Height>
+  </Body>
+  <Language>en-US</Language>
+  <PageFooter>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <ReportItems>
+      <Textbox Name="textbox62">
+        <Top>0.03789in</Top>
+        <Width>0.75cm</Width>
+        <Style>
+          <FontFamily>Verdana</FontFamily>
+          <FontSize>8pt</FontSize>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>1pt</PaddingLeft>
+          <PaddingRight>1pt</PaddingRight>
+          <PaddingTop>1pt</PaddingTop>
+          <PaddingBottom>1pt</PaddingBottom>
+        </Style>
+        <ZIndex>2</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>8.22685cm</Left>
+        <Height>0.17422in</Height>
+        <Value>=Globals!PageNumber</Value>
+      </Textbox>
+      <Textbox Name="textbox69">
+        <Top>0.03789in</Top>
+        <Width>0.75cm</Width>
+        <Style>
+          <FontFamily>Verdana</FontFamily>
+          <FontSize>8pt</FontSize>
+          <FontWeight>600</FontWeight>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>1pt</PaddingLeft>
+          <PaddingRight>1pt</PaddingRight>
+          <PaddingTop>1pt</PaddingTop>
+          <PaddingBottom>1pt</PaddingBottom>
+        </Style>
+        <ZIndex>1</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>8.97685cm</Left>
+        <Height>0.17422in</Height>
+        <Value>of</Value>
+      </Textbox>
+      <Textbox Name="textbox70">
+        <Top>0.03789in</Top>
+        <Width>0.75cm</Width>
+        <Style>
+          <FontFamily>Verdana</FontFamily>
+          <FontSize>8pt</FontSize>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>1pt</PaddingLeft>
+          <PaddingRight>1pt</PaddingRight>
+          <PaddingTop>1pt</PaddingTop>
+          <PaddingBottom>1pt</PaddingBottom>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Left>9.72685cm</Left>
+        <Height>0.17422in</Height>
+        <Value>=Globals!TotalPages</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>0.25in</Height>
+    <PrintOnLastPage>true</PrintOnLastPage>
+  </PageFooter>
+  <TopMargin>0.3in</TopMargin>
+  <PageHeight>14in</PageHeight>
+</Report>

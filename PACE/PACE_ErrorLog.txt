@@ -1,0 +1,368 @@
+12/19/2022 1:03:25 PM: UserUID: 0 UserName: : Message: Thread was being aborted.
+ StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at PACE.CreditLifeInformation.COpyPolicySubOfficeAccess_cr.Page_Load(Object sender, EventArgs e) in D:\Xangars_Data\Faiz_PACE\PACE\CreditLifeInformation\COpyPolicySubOfficeAccess_cr.aspx.cs:line 37
+
+1/19/2023 11:36:53 AM: UserUID: 0 UserName: : Message: Invalid object name 'TALIC_GLIMPSE_SysDB.dbo.tbl_mUser'.
+ StackTrace:    at GlimpsBAL.BillEnquiryBAL.GetBillEnquiry_cr(Int32 UserUID, String PeriodFromDate, String PeriodToDate, String Searchaction) in D:\Xangars_Data\Faiz_PACE\GlimpsBAL\BillEnquiryBAL.cs:line 51
+   at PACE.MIS.BillEnquiry_cr.btnSearch_Click(Object sender, EventArgs e) in D:\Xangars_Data\Faiz_PACE\PACE\MIS\BillEnquiry_cr.aspx.cs:line 134
+
+1/19/2023 11:36:59 AM: UserUID: 0 UserName: : Message: Invalid object name 'TALIC_GLIMPSE_SysDB.dbo.tbl_mUser'.
+ StackTrace:    at GlimpsBAL.BillEnquiryBAL.GetBillEnquiry_cr(Int32 UserUID, String PeriodFromDate, String PeriodToDate, String Searchaction) in D:\Xangars_Data\Faiz_PACE\GlimpsBAL\BillEnquiryBAL.cs:line 51
+   at PACE.MIS.BillEnquiry_cr.btnSearch_Click(Object sender, EventArgs e) in D:\Xangars_Data\Faiz_PACE\PACE\MIS\BillEnquiry_cr.aspx.cs:line 134
+
+1/19/2023 11:36:59 AM: UserUID: 0 UserName: : Message: Invalid object name 'TALIC_GLIMPSE_SysDB.dbo.tbl_mUser'.
+ StackTrace:    at GlimpsBAL.BillEnquiryBAL.GetBillEnquiry_cr(Int32 UserUID, String PeriodFromDate, String PeriodToDate, String Searchaction) in D:\Xangars_Data\Faiz_PACE\GlimpsBAL\BillEnquiryBAL.cs:line 51
+   at PACE.MIS.BillEnquiry_cr.btnSearch_Click(Object sender, EventArgs e) in D:\Xangars_Data\Faiz_PACE\PACE\MIS\BillEnquiry_cr.aspx.cs:line 134
+
+1/19/2023 11:36:59 AM: UserUID: 0 UserName: : Message: Invalid object name 'TALIC_GLIMPSE_SysDB.dbo.tbl_mUser'.
+ StackTrace:    at GlimpsBAL.BillEnquiryBAL.GetBillEnquiry_cr(Int32 UserUID, String PeriodFromDate, String PeriodToDate, String Searchaction) in D:\Xangars_Data\Faiz_PACE\GlimpsBAL\BillEnquiryBAL.cs:line 51
+   at PACE.MIS.BillEnquiry_cr.btnSearch_Click(Object sender, EventArgs e) in D:\Xangars_Data\Faiz_PACE\PACE\MIS\BillEnquiry_cr.aspx.cs:line 134
+
+1/19/2023 11:36:59 AM: UserUID: 0 UserName: : Message: Invalid object name 'TALIC_GLIMPSE_SysDB.dbo.tbl_mUser'.
+ StackTrace:    at GlimpsBAL.BillEnquiryBAL.GetBillEnquiry_cr(Int32 UserUID, String PeriodFromDate, String PeriodToDate, String Searchaction) in D:\Xangars_Data\Faiz_PACE\GlimpsBAL\BillEnquiryBAL.cs:line 51
+   at PACE.MIS.BillEnquiry_cr.btnSearch_Click(Object sender, EventArgs e) in D:\Xangars_Data\Faiz_PACE\PACE\MIS\BillEnquiry_cr.aspx.cs:line 134
+
+1/19/2023 11:36:59 AM: UserUID: 0 UserName: : Message: Invalid object name 'TALIC_GLIMPSE_SysDB.dbo.tbl_mUser'.
+ StackTrace:    at GlimpsBAL.BillEnquiryBAL.GetBillEnquiry_cr(Int32 UserUID, String PeriodFromDate, String PeriodToDate, String Searchaction) in D:\Xangars_Data\Faiz_PACE\GlimpsBAL\BillEnquiryBAL.cs:line 51
+   at PACE.MIS.BillEnquiry_cr.btnSearch_Click(Object sender, EventArgs e) in D:\Xangars_Data\Faiz_PACE\PACE\MIS\BillEnquiry_cr.aspx.cs:line 134
+
+1/19/2023 11:37:00 AM: UserUID: 0 UserName: : Message: Invalid object name 'TALIC_GLIMPSE_SysDB.dbo.tbl_mUser'.
+ StackTrace:    at GlimpsBAL.BillEnquiryBAL.GetBillEnquiry_cr(Int32 UserUID, String PeriodFromDate, String PeriodToDate, String Searchaction) in D:\Xangars_Data\Faiz_PACE\GlimpsBAL\BillEnquiryBAL.cs:line 51
+   at PACE.MIS.BillEnquiry_cr.btnSearch_Click(Object sender, EventArgs e) in D:\Xangars_Data\Faiz_PACE\PACE\MIS\BillEnquiry_cr.aspx.cs:line 134
+
+1/19/2023 11:37:00 AM: UserUID: 0 UserName: : Message: Invalid object name 'TALIC_GLIMPSE_SysDB.dbo.tbl_mUser'.
+ StackTrace:    at GlimpsBAL.BillEnquiryBAL.GetBillEnquiry_cr(Int32 UserUID, String PeriodFromDate, String PeriodToDate, String Searchaction) in D:\Xangars_Data\Faiz_PACE\GlimpsBAL\BillEnquiryBAL.cs:line 51
+   at PACE.MIS.BillEnquiry_cr.btnSearch_Click(Object sender, EventArgs e) in D:\Xangars_Data\Faiz_PACE\PACE\MIS\BillEnquiry_cr.aspx.cs:line 134
+
+1/19/2023 11:37:00 AM: UserUID: 0 UserName: : Message: Invalid object name 'TALIC_GLIMPSE_SysDB.dbo.tbl_mUser'.
+ StackTrace:    at GlimpsBAL.BillEnquiryBAL.GetBillEnquiry_cr(Int32 UserUID, String PeriodFromDate, String PeriodToDate, String Searchaction) in D:\Xangars_Data\Faiz_PACE\GlimpsBAL\BillEnquiryBAL.cs:line 51
+   at PACE.MIS.BillEnquiry_cr.btnSearch_Click(Object sender, EventArgs e) in D:\Xangars_Data\Faiz_PACE\PACE\MIS\BillEnquiry_cr.aspx.cs:line 134
+
+1/19/2023 11:37:04 AM: UserUID: 0 UserName: : Message: Invalid object name 'TALIC_GLIMPSE_SysDB.dbo.tbl_mUser'.
+ StackTrace:    at GlimpsBAL.BillEnquiryBAL.GetBillEnquiry_cr(Int32 UserUID, String PeriodFromDate, String PeriodToDate, String Searchaction) in D:\Xangars_Data\Faiz_PACE\GlimpsBAL\BillEnquiryBAL.cs:line 51
+   at PACE.MIS.BillEnquiry_cr.btnSearch_Click(Object sender, EventArgs e) in D:\Xangars_Data\Faiz_PACE\PACE\MIS\BillEnquiry_cr.aspx.cs:line 134
+
+1/19/2023 11:37:04 AM: UserUID: 0 UserName: : Message: Invalid object name 'TALIC_GLIMPSE_SysDB.dbo.tbl_mUser'.
+ StackTrace:    at GlimpsBAL.BillEnquiryBAL.GetBillEnquiry_cr(Int32 UserUID, String PeriodFromDate, String PeriodToDate, String Searchaction) in D:\Xangars_Data\Faiz_PACE\GlimpsBAL\BillEnquiryBAL.cs:line 51
+   at PACE.MIS.BillEnquiry_cr.btnSearch_Click(Object sender, EventArgs e) in D:\Xangars_Data\Faiz_PACE\PACE\MIS\BillEnquiry_cr.aspx.cs:line 134
+
+1/19/2023 11:37:04 AM: UserUID: 0 UserName: : Message: Invalid object name 'TALIC_GLIMPSE_SysDB.dbo.tbl_mUser'.
+ StackTrace:    at GlimpsBAL.BillEnquiryBAL.GetBillEnquiry_cr(Int32 UserUID, String PeriodFromDate, String PeriodToDate, String Searchaction) in D:\Xangars_Data\Faiz_PACE\GlimpsBAL\BillEnquiryBAL.cs:line 51
+   at PACE.MIS.BillEnquiry_cr.btnSearch_Click(Object sender, EventArgs e) in D:\Xangars_Data\Faiz_PACE\PACE\MIS\BillEnquiry_cr.aspx.cs:line 134
+
+1/19/2023 11:37:05 AM: UserUID: 0 UserName: : Message: Invalid object name 'TALIC_GLIMPSE_SysDB.dbo.tbl_mUser'.
+ StackTrace:    at GlimpsBAL.BillEnquiryBAL.GetBillEnquiry_cr(Int32 UserUID, String PeriodFromDate, String PeriodToDate, String Searchaction) in D:\Xangars_Data\Faiz_PACE\GlimpsBAL\BillEnquiryBAL.cs:line 51
+   at PACE.MIS.BillEnquiry_cr.btnSearch_Click(Object sender, EventArgs e) in D:\Xangars_Data\Faiz_PACE\PACE\MIS\BillEnquiry_cr.aspx.cs:line 134
+
+1/19/2023 11:37:05 AM: UserUID: 0 UserName: : Message: Invalid object name 'TALIC_GLIMPSE_SysDB.dbo.tbl_mUser'.
+ StackTrace:    at GlimpsBAL.BillEnquiryBAL.GetBillEnquiry_cr(Int32 UserUID, String PeriodFromDate, String PeriodToDate, String Searchaction) in D:\Xangars_Data\Faiz_PACE\GlimpsBAL\BillEnquiryBAL.cs:line 51
+   at PACE.MIS.BillEnquiry_cr.btnSearch_Click(Object sender, EventArgs e) in D:\Xangars_Data\Faiz_PACE\PACE\MIS\BillEnquiry_cr.aspx.cs:line 134
+
+1/19/2023 11:37:23 AM: UserUID: 0 UserName: : Message: Invalid object name 'TALIC_GLIMPSE_SysDB.dbo.tbl_mUser'.
+ StackTrace:    at GlimpsBAL.BillEnquiryBAL.GetBillEnquiry_cr(Int32 UserUID, String PeriodFromDate, String PeriodToDate, String Searchaction) in D:\Xangars_Data\Faiz_PACE\GlimpsBAL\BillEnquiryBAL.cs:line 51
+   at PACE.MIS.BillEnquiry_cr.btnSearch_Click(Object sender, EventArgs e) in D:\Xangars_Data\Faiz_PACE\PACE\MIS\BillEnquiry_cr.aspx.cs:line 134
+
+1/19/2023 6:11:12 PM: UserUID: 0 UserName: : Message: The current transaction cannot be committed and cannot support operations that write to the log file. Roll back the transaction.
+Insert into tbl_Error_Log_Transaction(PolicyUID,RenewalUID,ReferenceNo,TransactionUID,Process,SubProcess,PCDate,PCMonth,PCYear,CreatedBy,ErrorCode,Error_Flag,SubError_Flag,SQLErrorMsg,Type)
+		select distinct PolMemberTemp.PolicyUID,PolMemberTemp.RenewalNoUID,PolMemberTemp.PolicyMemberSubmissionUID,PolMemberTemp.TransactionID,'Easy Admin','Upload','Jan 19 2023','1','2023',662,'A019','E','E',dbo.SQLMsgDisplay('A019','',''),'submission'  from tbl_pPolicy_Member_Submission_Temp PolMemberTemp with (nolock) where case Isdate(PolMemberTemp.Dtapplsignedproposedinsured) when 1 then (PolMemberTemp.Dtapplsignedproposedinsured) end >('2023-01-19') or Case Isdate(PolMemberTemp.Dtapplsignedproposedinsured) When 1 Then (PolMemberTemp.Dtapplsignedproposedinsured) end not between (dateadd(Month,-3,'2023-01-19')) and ('2023-01-19')  and PolMemberTemp.PolicyUID=144 and PolMemberTemp.RenewalNoUID=0 and PolMemberTemp.CreatedBy=662  and PolMemberTemp.Module='submission' 
+Insert into tbl_Error_Log_Transaction(PolicyUID,RenewalUID,ReferenceNo,TransactionUID,Process,SubProcess,PCDate,PCMonth,PCYear,CreatedBy,ErrorCode,Error_Flag,SubError_Flag,SQLErrorMsg,Type)
+		select distinct PolMemberTemp.PolicyUID,PolMemberTemp.RenewalNoUID,PolMemberTemp.PolicyMemberSubmissionUID,PolMemberTemp.TransactionID,'Easy Admin','Upload','Jan 19 2023','1','2023',662,'A027','E','E',dbo.SQLMsgDisplay('A027','',''),'submission'  from tbl_pPolicy_Member_Submission_Temp PolMemberTemp with (nolock) where  ( Not exists ( select PreModeType.CommonListSubCode From vw_PremiumModeType PreModeType Inner Join tbl_ppolicy P On P.PolicyUID=PolMemberTemp.PolicyUID And P.PremiumModeID=PreModeType.CommonListUID And PolMemberTemp.Premium_Mode= Case When PreModeType.CommonListSubCode='Both' Then PolMemberTemp.Premium_Mode else PreModeType.CommonListSubCode end) or isnull(PolMemberTemp.Premium_Mode,'')='' ) or ( isnull(PolMemberTemp.Premium_Mode,'')<>'ASP' and isnull(PolMemberTemp.Premium_Mode,'')<>'GSP' )  and PolMemberTemp.PolicyUID=144 and PolMemberTemp.RenewalNoUID=0 and PolMemberTemp.CreatedBy=662  and PolMemberTemp.Module='submission' 
+Insert into tbl_Error_Log_Transaction(PolicyUID,RenewalUID,ReferenceNo,TransactionUID,Process,SubProcess,PCDate,PCMonth,PCYear,CreatedBy,ErrorCode,Error_Flag,SubError_Flag,SQLErrorMsg,Type)
+		select distinct PolMemberTemp.PolicyUID,PolMemberTemp.RenewalNoUID,PolMemberTemp.PolicyMemberSubmissionUID,PolMemberTemp.TransactionID,'Easy Admin','Upload','Jan 19 2023','1','2023',662,'A132','E','E',dbo.SQLMsgDisplay('A132','',''),'submission'  from tbl_pPolicy_Member_Submission_Temp PolMemberTemp with (nolock) where  not exists (select PreType.CommonListSubCode From vw_PremiumType PreType Inner Join tbl_ppolicy P On P.PolicyUID=PolMemberTemp.PolicyUID And P.PremiumType=PreType.CommonListUID And PolMemberTemp.Fk_PremiumTypeCode=PreType.CommonListSubCode) or isnull(PolMemberTemp.Fk_PremiumTypeCode,'')=''  and PolMemberTemp.PolicyUID=144 and PolMemberTemp.RenewalNoUID=0 and PolMemberTemp.CreatedBy=662  and PolMemberTemp.Module='submission' 
+Insert into tbl_Error_Log_Transaction(PolicyUID,RenewalUID,ReferenceNo,TransactionUID,Process,SubProcess,PCDate,PCMonth,PCYear,CreatedBy,ErrorCode,Error_Flag,SubError_Flag,SQLErrorMsg,Type)
+		select distinct PolMemberTemp.PolicyUID,PolMemberTemp.RenewalNoUID,PolMemberTemp.PolicyMemberSubmissionUID,PolMemberTemp.TransactionID,'Easy Admin','Upload','Jan 19 2023','1','2023',662,'A133','E','E',dbo.SQLMsgDisplay('A133','',''),'submission'  from tbl_pPolicy_Member_Submission_Temp PolMemberTemp with (nolock) where  not exists ( select PreType.CommonListSubCode From vw_PremiumType PreType Inner Join tbl_ppolicy P On P.PolicyUID=PolMemberTemp.PolicyUID And P.PremiumType=PreType.CommonListUID And PolMemberTemp.Fk_PremiumTypeCode=PreType.CommonListSubCode  And ( 	( PolMemberTemp.Fk_PremiumTypeCode = 'S' And PolMemberTemp.Fk_PremiumFrequencyCode='0' ) 	Or ( PolMemberTemp.Fk_PremiumTypeCode = 'R' And PolMemberTemp.Fk_PremiumFrequencyCode<>'0' ) )) 	or isnull(PolMemberTemp.Fk_PremiumFrequencyCode,'')=''  and PolMemberTemp.PolicyUID=144 and PolMemberTemp.RenewalNoUID=0 and PolMemberTemp.CreatedBy=662  and PolMemberTemp.Module='submission' 
+Insert into tbl_Error_Log_Transaction(PolicyUID,RenewalUID,ReferenceNo,TransactionUID,Process,SubProcess,PCDate,PCMonth,PCYear,CreatedBy,ErrorCode,Error_Flag,SubError_Flag,SQLErrorMsg,Type)
+		select distinct PolMemberTemp.PolicyUID,PolMemberTemp.RenewalNoUID,PolMemberTemp.PolicyMemberSubmissionUID,PolMemberTemp.TransactionID,'Easy Admin','Upload','Jan 19 2023','1','2023',662,'A008','E','E',dbo.SQLMsgDisplay('A008','',''),'submission'  from tbl_pPolicy_Member_Submission_Temp PolMemberTemp with (nolock)  inner join tbl_pPolicy_Member_Submission_Temp PMST on PolMemberTemp.PolicyMemberSubmissionUID=PMST.PolicyMemberSubmissionUID Inner Join tbl_pPolicy_Quote PQ On PolMemberTemp.PolicyUID=PQ.Fk_PolicyUID and PolMemberTemp.RenewalNoUID=PQ.RenewalNoUID And PQ.Todate Is Null And PQ.isActive=1 Inner Join tbl_pPolicy_Segment PS On PQ.Fk_SegmentUID=PS.Policy_SegmentUID And PolMemberTemp.SegmentCode=PS.SegmentCode Inner Join tbl_pBenefit PB on PQ.Fk_PolicyUID=PB.PolicyUID and PQ.RenewalNoUID=PB.RenewalNoUID AND PQ.Fk_RiderUID=PB.RiderUID Inner join tbl_pPolicy_Parameter PP on PQ.PolicyQuoteUID=PP.Fk_PolicyQuoteUID  where  (isnumeric(round(PolMemberTemp.SumAssured,2))=1 and PolMemberTemp.SumAssured not between Mincover and MaxCover)  Or Isnull(PolMemberTemp.SumAssured,'')=''  and PolMemberTemp.PolicyUID=144 and PolMemberTemp.RenewalNoUID=0 and PolMemberTemp.CreatedBy=662  and PolMemberTemp.Module='submission' 
+Insert into tbl_Error_Log_Transaction(PolicyUID,RenewalUID,ReferenceNo,TransactionUID,Process,SubProcess,PCDate,PCMonth,PCYear,CreatedBy,ErrorCode,Error_Flag,SubError_Flag,SQLErrorMsg,Type)
+		select distinct PolMemberTemp.PolicyUID,PolMemberTemp.RenewalNoUID,PolMemberTemp.PolicyMemberSubmissionUID,PolMemberTemp.TransactionID,'Easy Admin','Upload','Jan 19 2023','1','2023',662,'A088','E','E',dbo.SQLMsgDisplay('A088','',''),'submission'  from tbl_pPolicy_Member_Submission_Temp PolMemberTemp with (nolock)  inner join tbl_pPolicy_Member_Submission_Temp PMST on PolMemberTemp.PolicyMemberSubmissionUID=PMST.PolicyMemberSubmissionUID Inner Join tbl_pPolicy_Quote PQ On PolMemberTemp.PolicyUID=PQ.Fk_PolicyUID and PolMemberTemp.RenewalNoUID=PQ.RenewalNoUID And PQ.Todate Is Null And PQ.isActive=1 Inner Join tbl_pPolicy_Segment PS On PQ.Fk_SegmentUID=PS.Policy_SegmentUID And PolMemberTemp.SegmentCode=PS.SegmentCode Inner Join tbl_pBenefit PB on PQ.Fk_PolicyUID=PB.PolicyUID and PQ.RenewalNoUID=PB.RenewalNoUID AND PQ.Fk_RiderUID=PB.RiderUID Inner join tbl_pPolicy_Parameter PP on PQ.PolicyQuoteUID=PP.Fk_PolicyQuoteUID  where  (isnumeric(PolMemberTemp.ProposedInsuranceTerm)= 1 and PolMemberTemp.ProposedInsuranceTerm not between MinTenure and MaxTenure) Or ISNULL(PolMemberTemp.ProposedInsuranceTerm,0)=0   and PolMemberTemp.PolicyUID=144 and PolMemberTemp.RenewalNoUID=0 and PolMemberTemp.CreatedBy=662  and PolMemberTemp.Module='submission' 
+ StackTrace:    at GlimpsBAL.ServiceBAL.InsertXMLInDataBase_cr(String Process, String SubProcess, String Upload, Int32 policyUID, Int32 UserUID, DataSet ds) in D:\Xangars_Data\Faiz_pace_new\GlimpsBAL\ServiceBAL.cs:line 97
+   at PACE.Services_cr.service_cr.imgbtn_Next_Click(Object sender, ImageClickEventArgs e) in D:\Xangars_Data\Faiz_pace_new\PACE\Services_cr\service_cr.aspx.cs:line 1194
+
+1/23/2023 11:49:47 AM: UserUID: 0 UserName: : Message: A field or property with the name 'Benefit_Coverage' was not found on the selected data source.
+ StackTrace:    at System.Web.UI.WebControls.BoundField.GetValue(Control controlContainer)
+   at System.Web.UI.WebControls.BoundField.OnDataBindField(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnDataBinding(EventArgs e)
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.Control.DataBindChildren()
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   at System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   at System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   at System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   at System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   at System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   at System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   at System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   at System.Web.UI.WebControls.GridView.DataBind()
+   at PACE.MemberInformation_cr.AllMember.BindGrid(String FromDate, String FromTo, String COINo) in C:\Users\Faiz\source\Workspaces\Pace_New\PACE\MemberInformation_cr\AllMember.aspx.cs:line 114
+   at PACE.MemberInformation_cr.AllMember.Page_Load(Object sender, EventArgs e) in C:\Users\Faiz\source\Workspaces\Pace_New\PACE\MemberInformation_cr\AllMember.aspx.cs:line 56
+
+1/23/2023 11:51:39 AM: UserUID: 0 UserName: : Message: A field or property with the name 'Benefit_Coverage' was not found on the selected data source.
+ StackTrace:    at System.Web.UI.WebControls.BoundField.GetValue(Control controlContainer)
+   at System.Web.UI.WebControls.BoundField.OnDataBindField(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnDataBinding(EventArgs e)
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.Control.DataBindChildren()
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   at System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   at System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   at System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   at System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   at System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   at System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   at System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   at System.Web.UI.WebControls.GridView.DataBind()
+   at PACE.MemberInformation_cr.AllMember.btnSearchCOI_Click(Object sender, EventArgs e) in C:\Users\Faiz\source\Workspaces\Pace_New\PACE\MemberInformation_cr\AllMember.aspx.cs:line 87
+
+1/23/2023 11:54:39 AM: UserUID: 0 UserName: : Message: A field or property with the name 'Benefit_Coverage' was not found on the selected data source.
+ StackTrace:    at System.Web.UI.WebControls.BoundField.GetValue(Control controlContainer)
+   at System.Web.UI.WebControls.BoundField.OnDataBindField(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnDataBinding(EventArgs e)
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.Control.DataBindChildren()
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   at System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   at System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   at System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   at System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   at System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   at System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   at System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   at System.Web.UI.WebControls.GridView.DataBind()
+   at PACE.MemberInformation_cr.AllMember.btnSearchCOI_Click(Object sender, EventArgs e) in C:\Users\Faiz\source\Workspaces\Pace_New\PACE\MemberInformation_cr\AllMember.aspx.cs:line 87
+
+1/23/2023 11:55:04 AM: UserUID: 0 UserName: : Message: A field or property with the name 'Benefit_Coverage' was not found on the selected data source.
+ StackTrace:    at System.Web.UI.WebControls.BoundField.GetValue(Control controlContainer)
+   at System.Web.UI.WebControls.BoundField.OnDataBindField(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnDataBinding(EventArgs e)
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.Control.DataBindChildren()
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   at System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   at System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   at System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   at System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   at System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   at System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   at System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   at System.Web.UI.WebControls.GridView.DataBind()
+   at PACE.MemberInformation_cr.AllMember.btnSearchCOI_Click(Object sender, EventArgs e) in C:\Users\Faiz\source\Workspaces\Pace_New\PACE\MemberInformation_cr\AllMember.aspx.cs:line 87
+
+1/23/2023 11:55:38 AM: UserUID: 0 UserName: : Message: A field or property with the name 'Benefit_Coverage' was not found on the selected data source.
+ StackTrace:    at System.Web.UI.WebControls.BoundField.GetValue(Control controlContainer)
+   at System.Web.UI.WebControls.BoundField.OnDataBindField(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnDataBinding(EventArgs e)
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.Control.DataBindChildren()
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   at System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   at System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   at System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   at System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   at System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   at System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   at System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   at System.Web.UI.WebControls.GridView.DataBind()
+   at PACE.MemberInformation_cr.AllMember.BindGrid(String FromDate, String FromTo, String COINo) in C:\Users\Faiz\source\Workspaces\Pace_New\PACE\MemberInformation_cr\AllMember.aspx.cs:line 114
+   at PACE.MemberInformation_cr.AllMember.Page_Load(Object sender, EventArgs e) in C:\Users\Faiz\source\Workspaces\Pace_New\PACE\MemberInformation_cr\AllMember.aspx.cs:line 56
+
+1/23/2023 11:55:42 AM: UserUID: 0 UserName: : Message: A field or property with the name 'Benefit_Coverage' was not found on the selected data source.
+ StackTrace:    at System.Web.UI.WebControls.BoundField.GetValue(Control controlContainer)
+   at System.Web.UI.WebControls.BoundField.OnDataBindField(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnDataBinding(EventArgs e)
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.Control.DataBindChildren()
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   at System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   at System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   at System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   at System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   at System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   at System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   at System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   at System.Web.UI.WebControls.GridView.DataBind()
+   at PACE.MemberInformation_cr.AllMember.BindGrid(String FromDate, String FromTo, String COINo) in C:\Users\Faiz\source\Workspaces\Pace_New\PACE\MemberInformation_cr\AllMember.aspx.cs:line 114
+   at PACE.MemberInformation_cr.AllMember.Page_Load(Object sender, EventArgs e) in C:\Users\Faiz\source\Workspaces\Pace_New\PACE\MemberInformation_cr\AllMember.aspx.cs:line 56
+
+1/23/2023 11:58:55 AM: UserUID: 0 UserName: : Message: DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'EffectiveDateOfCoverage'.
+ StackTrace:    at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.DataBinder.Eval(Object container, String[] expressionParts)
+   at System.Web.UI.DataBinder.Eval(Object container, String expression)
+   at System.Web.UI.DataBinder.Eval(Object container, String expression, String format)
+   at System.Web.UI.TemplateControl.Eval(String expression, String format)
+   at ASP.memberinformation_cr_allmember_aspx.__DataBind__control24(Object sender, EventArgs e) in c:\Users\Faiz\source\Workspaces\Pace_New\PACE\MemberInformation_cr\AllMember.aspx:line 223
+   at System.Web.UI.Control.OnDataBinding(EventArgs e)
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.Control.DataBindChildren()
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.Control.DataBindChildren()
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   at System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   at System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   at System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   at System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   at System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   at System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   at System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   at System.Web.UI.WebControls.GridView.DataBind()
+   at PACE.MemberInformation_cr.AllMember.BindGrid(String FromDate, String FromTo, String COINo) in C:\Users\Faiz\source\Workspaces\Pace_New\PACE\MemberInformation_cr\AllMember.aspx.cs:line 114
+   at PACE.MemberInformation_cr.AllMember.Page_Load(Object sender, EventArgs e) in C:\Users\Faiz\source\Workspaces\Pace_New\PACE\MemberInformation_cr\AllMember.aspx.cs:line 56
+
+24-11-2024 00:10:35: UserUID: 0 UserName: : Message: The 'Microsoft.Jet.OLEDB.12.0' provider is not registered on the local machine.
+ StackTrace:    at GlimpsBAL._objConfigurationBAL.CreateDataSet_cr(String strFilePath, String strFileType) in D:\Pace_Credit_New\Pace_Credit_New\Pace_New\GlimpsBAL\_objConfigurationBAL.cs:line 224
+   at PACE.Services_cr.service_cr.ExcelDataImportToGridView() in D:\Pace_Credit_New\Pace_Credit_New\Pace_New\PACE\Services_cr\service_cr.aspx.cs:line 205
+
+24-11-2024 00:12:48: UserUID: 0 UserName: : Message: The 'Microsoft.Jet.OLEDB.12.0' provider is not registered on the local machine.
+ StackTrace:    at GlimpsBAL._objConfigurationBAL.CreateDataSet_cr(String strFilePath, String strFileType) in D:\Pace_Credit_New\Pace_Credit_New\Pace_New\GlimpsBAL\_objConfigurationBAL.cs:line 224
+   at PACE.Services_cr.service_cr.ExcelDataImportToGridView() in D:\Pace_Credit_New\Pace_Credit_New\Pace_New\PACE\Services_cr\service_cr.aspx.cs:line 205
+
+24-11-2024 00:21:31: UserUID: 0 UserName: : Message: The 'Microsoft.Jet.OLEDB.12.0' provider is not registered on the local machine.
+ StackTrace:    at GlimpsBAL._objConfigurationBAL.CreateDataSet_cr(String strFilePath, String strFileType) in D:\Pace_Credit_New\Pace_Credit_New\Pace_New\GlimpsBAL\_objConfigurationBAL.cs:line 224
+   at PACE.Services_cr.service_cr.ExcelDataImportToGridView() in D:\Pace_Credit_New\Pace_Credit_New\Pace_New\PACE\Services_cr\service_cr.aspx.cs:line 210
+
+24-11-2024 12:38:22: UserUID: 0 UserName: : Message: The 'Microsoft.Jet.OLEDB.12.0' provider is not registered on the local machine.
+ StackTrace:    at GlimpsBAL._objConfigurationBAL.CreateDataSet_cr(String strFilePath, String strFileType) in D:\Pace_Credit_New\Pace_Credit_New\Pace_New\GlimpsBAL\_objConfigurationBAL.cs:line 226
+   at PACE.Services_cr.service_cr.ExcelDataImportToGridView() in D:\Pace_Credit_New\Pace_Credit_New\Pace_New\PACE\Services_cr\service_cr.aspx.cs:line 205
+
+24-11-2024 13:11:28: UserUID: 0 UserName: : Message: The 'Microsoft.ACE.OLEDB.12.0' provider is not registered on the local machine.
+ StackTrace:    at GlimpsBAL._objConfigurationBAL.CreateDataSet_cr(String strFilePath, String strFileType) in D:\Pace_Credit_New\Pace_Credit_New\Pace_New\GlimpsBAL\_objConfigurationBAL.cs:line 228
+   at PACE.Services_cr.service_cr.ExcelDataImportToGridView() in D:\Pace_Credit_New\Pace_Credit_New\Pace_New\PACE\Services_cr\service_cr.aspx.cs:line 205
+
+05-Dec-24 12:42:01 PM: UserUID: 0 UserName: : Message: Thread was being aborted.
+ StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at PACE.MemberInformation_cr.AllMember.Page_Load(Object sender, EventArgs e) in D:\Pace_New\PACE\MemberInformation_cr\AllMember.aspx.cs:line 50
+
+05-Dec-24 12:44:29 PM: UserUID: 0 UserName: : Message: Thread was being aborted.
+ StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at PACE.MemberInformation_cr.AllMember.Page_Load(Object sender, EventArgs e) in D:\Pace_New\PACE\MemberInformation_cr\AllMember.aspx.cs:line 50
+
+05-12-2024 15:24:11: UserUID: 0 UserName: : Message: Thread was being aborted.
+ StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at PACE.MemberInformation_cr.AllMember.Page_Load(Object sender, EventArgs e) in D:\pace_credit_rdlc_05122024\Pace_New\Pace_New\PACE\MemberInformation_cr\AllMember.aspx.cs:line 51
+
+05-12-2024 15:32:11: UserUID: 0 UserName: : Message: Thread was being aborted.
+ StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at PACE.MemberInformation_cr.AllMember.Page_Load(Object sender, EventArgs e) in D:\pace_credit_rdlc_05122024\Pace_New\Pace_New\PACE\MemberInformation_cr\AllMember.aspx.cs:line 51
+
+05-12-2024 15:40:30: UserUID: 0 UserName: : Message: Thread was being aborted.
+ StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at PACE.MemberInformation_cr.AllMember.Page_Load(Object sender, EventArgs e) in D:\pace_credit_rdlc_05122024\Pace_New\Pace_New\PACE\MemberInformation_cr\AllMember.aspx.cs:line 51
+
+05-12-2024 15:44:13: UserUID: 0 UserName: : Message: Thread was being aborted.
+ StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at PACE.MemberInformation_cr.AllMember.Page_Load(Object sender, EventArgs e) in D:\pace_credit_rdlc_05122024\Pace_New\Pace_New\PACE\MemberInformation_cr\AllMember.aspx.cs:line 51
+
+05-12-2024 18:29:20: UserUID: 0 UserName: : Message: The 'Microsoft.ACE.OLEDB.12.0' provider is not registered on the local machine.
+ StackTrace:    at GlimpsBAL._objConfigurationBAL.CreateDataSet_cr(String strFilePath, String strFileType) in D:\pace_credit_rdlc_05122024\Pace_New\Pace_New\GlimpsBAL\_objConfigurationBAL.cs:line 228
+   at PACE.Services_cr.service_cr.ExcelDataImportToGridView() in D:\pace_credit_rdlc_05122024\Pace_New\Pace_New\PACE\Services_cr\service_cr.aspx.cs:line 205
+
+12-05-2025 03:05:34 PM: UserUID: 0 UserName: : Message: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The network location cannot be reached. For information about network troubleshooting, see Windows Help.)
+ StackTrace:    at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at GlimpsDAL.CommonMethods.InsertingPageInfo_cr(String action, String UserUID, String PageName) in D:\Pace_Credit_10May2025\GlimpsDAL\Common\CommonConstantNames.cs:line 264
+   at PACE.CreditLifeInformation.PremiumCalculation1.Page_Load(Object sender, EventArgs e) in D:\Pace_Credit_10May2025\PACE\CreditLifeInformation\PremiumCalculation.aspx.cs:line 45
+
+08-08-2025 12:16:53 PM: UserUID: 0 UserName: : Message: Thread was being aborted.
+ StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at PACE.ContactInformation_cr.ContactInformation_cr.Page_Load(Object sender, EventArgs e) in D:\pace-credit-git\Pace_IFL\PACE\ContactInformation_cr\ContactInformation_cr.aspx.cs:line 38
+
+11-08-2025 01:44:28 PM: UserUID: 0 UserName: : Message: Thread was being aborted.
+ StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at PACE.ContactInformation_cr.ContactInformation_cr.Page_Load(Object sender, EventArgs e) in D:\pace-credit-git\Pace_IFL\PACE\ContactInformation_cr\ContactInformation_cr.aspx.cs:line 38
+
+11-08-2025 05:36:34 PM: UserUID: 0 UserName: : Message: Thread was being aborted.
+ StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at PACE.MIS.BillEnquiry_cr.Page_Load(Object sender, EventArgs e) in D:\pace-credit-git\Pace_IFL\PACE\MIS\BillEnquiry_cr.aspx.cs:line 96
+
+11-08-2025 06:13:37 PM: UserUID: 0 UserName: : Message: Object reference not set to an instance of an object.
+ StackTrace:    at PACE.Services_cr.service_cr.CheckExcelValidation(DataSet dsExcel) in D:\pace-credit-git\Pace_IFL\PACE\Services_cr\service_cr.aspx.cs:line 658
+
+21-08-2025 01:52:01 PM: UserUID: 0 UserName: : Message: Thread was being aborted.
+ StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at PACE.ContactInformation_cr.ContactInformation_cr.Page_Load(Object sender, EventArgs e) in D:\pace-credit-git\Pace_IFL\PACE\ContactInformation_cr\ContactInformation_cr.aspx.cs:line 38
+

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://BService_UserAuthentication_v1" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="VerifyUserRes">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="response" type="xsd:boolean" />
+      <xsd:element minOccurs="0" name="errorCode" type="xsd:string" />
+      <xsd:element minOccurs="0" name="errorMessage" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

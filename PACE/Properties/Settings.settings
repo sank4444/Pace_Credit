@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="PACE.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="PACE_WebReference_UserAuthenticationInterfaceExport1_UserAuthenticationInterfaceHttpService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.32.141.84:9081/BService_UserAuthentication_v1Web/sca/UserAuthenticationInterfaceExport1</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

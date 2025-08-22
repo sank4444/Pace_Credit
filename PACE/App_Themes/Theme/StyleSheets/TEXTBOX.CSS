@@ -1,0 +1,9 @@
+.inputbox {
+	BORDER-RIGHT: #aeaeae 1px solid; BORDER-TOP: #aeaeae 1px solid; FONT-SIZE: 9pt; BORDER-LEFT: #aeaeae 0px; COLOR: #333333; BORDER-BOTTOM: #aeaeae 1px solid; FONT-FAMILY: Verdana, Arial, 'MS Sans Serif'; HEIGHT: 20px; BACKGROUND-COLOR: #EDE1C5; TEXT-DECORATION: none
+}
+.textarea {
+	BORDER-RIGHT: #aeaeae 1px solid; BORDER-TOP: #aeaeae 1px solid; FONT-SIZE: 9pt; BORDER-LEFT: #aeaeae 0px; COLOR: #333333; BORDER-BOTTOM: #aeaeae 1px solid; FONT-FAMILY: Verdana, Arial, 'MS Sans Serif'; HEIGHT: 100px; BACKGROUND-COLOR: #EDE1C5; TEXT-DECORATION: none
+}
+.arial_red {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: normal; color: #cc3333}
+.arial_black {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: normal; color: #333333}
+.indexportlet {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #333333}

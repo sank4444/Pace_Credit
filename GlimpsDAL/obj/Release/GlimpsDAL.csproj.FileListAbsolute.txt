@@ -1,0 +1,12 @@
+D:\Pace_Credit_New\backup_added_applicationform_26112024\Pace_Credit_New\Pace_New\GlimpsDAL\bin\Release\GlimpsDAL.dll
+D:\Pace_Credit_New\backup_added_applicationform_26112024\Pace_Credit_New\Pace_New\GlimpsDAL\bin\Release\GlimpsDAL.pdb
+D:\Pace_Credit_New\backup_added_applicationform_26112024\Pace_Credit_New\Pace_New\GlimpsDAL\obj\Release\GlimpsDAL.csproj.AssemblyReference.cache
+D:\Pace_Credit_New\backup_added_applicationform_26112024\Pace_Credit_New\Pace_New\GlimpsDAL\obj\Release\GlimpsDAL.csproj.CoreCompileInputs.cache
+D:\Pace_Credit_New\backup_added_applicationform_26112024\Pace_Credit_New\Pace_New\GlimpsDAL\obj\Release\GlimpsDAL.dll
+D:\Pace_Credit_New\backup_added_applicationform_26112024\Pace_Credit_New\Pace_New\GlimpsDAL\obj\Release\GlimpsDAL.pdb
+D:\Pace_Credit\GlimpsDAL\bin\Release\GlimpsDAL.dll
+D:\Pace_Credit\GlimpsDAL\bin\Release\GlimpsDAL.pdb
+D:\Pace_Credit\GlimpsDAL\obj\Release\GlimpsDAL.csproj.AssemblyReference.cache
+D:\Pace_Credit\GlimpsDAL\obj\Release\GlimpsDAL.csproj.CoreCompileInputs.cache
+D:\Pace_Credit\GlimpsDAL\obj\Release\GlimpsDAL.dll
+D:\Pace_Credit\GlimpsDAL\obj\Release\GlimpsDAL.pdb

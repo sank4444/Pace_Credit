@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tns="http://BService_UserAuthentication_v1/UserAuthenticationInterface" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons1="http://BService_UserAuthentication_v1" name="UserAuthenticationInterface" targetNamespace="http://BService_UserAuthentication_v1/UserAuthenticationInterface" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://BService_UserAuthentication_v1/UserAuthenticationInterface">
+      <xsd:import schemaLocation="VerifyUserRes.xsd" namespace="http://BService_UserAuthentication_v1" />
+      <xsd:import schemaLocation="VerifyUserReq.xsd" namespace="http://BService_UserAuthentication_v1" />
+      <xsd:import schemaLocation="ChangePasswordRes.xsd" namespace="http://BService_UserAuthentication_v1" />
+      <xsd:import schemaLocation="ChangePasswordReq.xsd" namespace="http://BService_UserAuthentication_v1" />
+      <xsd:import schemaLocation="ForgotPasswordResBO.xsd" namespace="http://BService_UserAuthentication_v1" />
+      <xsd:import schemaLocation="ForgotPasswordReqBO.xsd" namespace="http://BService_UserAuthentication_v1" />
+      <xsd:import schemaLocation="CredentialResBO.xsd" namespace="http://BService_UserAuthentication_v1" />
+      <xsd:import schemaLocation="CredentialReqBO.xsd" namespace="http://BService_UserAuthentication_v1" />
+      <xsd:element name="getCredentialCheck">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="CredentialReq" nillable="true" type="bons1:CredentialReqBO" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getCredentialCheckResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="CredentialRes" nillable="true" type="bons1:CredentialResBO" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="forgotPassword">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ForgotReq" nillable="true" type="bons1:ForgotPasswordReqBO" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="forgotPasswordResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ForgotRes" nillable="true" type="bons1:ForgotPasswordResBO" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="changePassword">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ChangePwdReq" nillable="true" type="bons1:ChangePasswordReq" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="changePasswordResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ChangePwdRes" nillable="true" type="bons1:ChangePasswordRes" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="verifyUser">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="VerifyUserReq" nillable="true" type="bons1:VerifyUserReq" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="verifyUserResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="VerifyUserRes" nillable="true" type="bons1:VerifyUserRes" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="forgotPasswordRequestMsg">
+    <wsdl:part name="forgotPasswordParameters" element="tns:forgotPassword" />
+  </wsdl:message>
+  <wsdl:message name="changePasswordResponseMsg">
+    <wsdl:part name="changePasswordResult" element="tns:changePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="verifyUserResponseMsg">
+    <wsdl:part name="verifyUserResult" element="tns:verifyUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="verifyUserRequestMsg">
+    <wsdl:part name="verifyUserParameters" element="tns:verifyUser" />
+  </wsdl:message>
+  <wsdl:message name="changePasswordRequestMsg">
+    <wsdl:part name="changePasswordParameters" element="tns:changePassword" />
+  </wsdl:message>
+  <wsdl:message name="getCredentialCheckResponseMsg">
+    <wsdl:part name="getCredentialCheckResult" element="tns:getCredentialCheckResponse" />
+  </wsdl:message>
+  <wsdl:message name="forgotPasswordResponseMsg">
+    <wsdl:part name="forgotPasswordResult" element="tns:forgotPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCredentialCheckRequestMsg">
+    <wsdl:part name="getCredentialCheckParameters" element="tns:getCredentialCheck" />
+  </wsdl:message>
+  <wsdl:portType name="UserAuthenticationInterface">
+    <wsdl:operation name="getCredentialCheck">
+      <wsdl:input name="getCredentialCheckRequest" message="tns:getCredentialCheckRequestMsg" />
+      <wsdl:output name="getCredentialCheckResponse" message="tns:getCredentialCheckResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="forgotPassword">
+      <wsdl:input name="forgotPasswordRequest" message="tns:forgotPasswordRequestMsg" />
+      <wsdl:output name="forgotPasswordResponse" message="tns:forgotPasswordResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="changePassword">
+      <wsdl:input name="changePasswordRequest" message="tns:changePasswordRequestMsg" />
+      <wsdl:output name="changePasswordResponse" message="tns:changePasswordResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="verifyUser">
+      <wsdl:input name="verifyUserRequest" message="tns:verifyUserRequestMsg" />
+      <wsdl:output name="verifyUserResponse" message="tns:verifyUserResponseMsg" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

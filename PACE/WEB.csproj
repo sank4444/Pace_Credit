@@ -1,0 +1,1267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7C058EF0-D2A4-473D-BEF3-8A46957404B1}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PACE</RootNamespace>
+    <AssemblyName>PACE</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=4.1.50508.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.4.1.50508\lib\40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip.Reduced, Version=1.9.1.5, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Ionic.Zip.Reduced.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.0.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Runtime.Common.12.0.2402.15\lib\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Runtime.Common.12.0.2402.15\lib\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Runtime.Common.12.0.2402.15\lib\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Runtime.WebForms.12.0.2402.15\lib\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Recaptcha, Version=1.0.5.0, Culture=neutral, PublicKeyToken=9afc4d65b28c38c2, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Recaptcha.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Extensions.Design" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Telerik.Web.Design, Version=2009.3.1106.20, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Telerik.Web.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI, Version=2009.2.701.35, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="XangarsControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\XangarsControls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Application_Form.html" />
+    <Content Include="App_Themes\Theme\Images\arrow-left.png" />
+    <Content Include="App_Themes\Theme\Images\arrow-right.png" />
+    <Content Include="App_Themes\Theme\Images\downloads-gray.png" />
+    <Content Include="App_Themes\Theme\Images\downloads-white.png" />
+    <Content Include="App_Themes\Theme\Images\View-white.png" />
+    <Content Include="App_Themes\Theme\StyleSheets\cards_style.css" />
+    <Content Include="App_Themes\Theme\StyleSheets\dashboard_script.js" />
+    <Content Include="App_Themes\Theme\StyleSheets\inner_page_style.css" />
+    <Content Include="App_Themes\Theme\StyleSheets\navigation_style.css" />
+    <Content Include="App_Themes\Theme\StyleSheets\online_servicing_style.css" />
+    <Content Include="CustomerSatisfactionSurvey\CustomerSatisfactionSurvey.aspx" />
+    <Content Include="DefaultNew.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="MemberInformation_cr\COIPrintingReport.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Code\BaseClass.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="App_Code\dsTermPremiumStatementFirstYearReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsTermPremiumStatementFirstYearReport.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Code\DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Content>
+    <Compile Include="BillEnquiry\BillPayment.aspx.cs">
+      <DependentUpon>BillPayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BillEnquiry\BillPayment.aspx.designer.cs">
+      <DependentUpon>BillPayment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword\ChangePassword_cr.aspx.cs">
+      <DependentUpon>ChangePassword_cr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangePassword\ChangePassword_cr.aspx.designer.cs">
+      <DependentUpon>ChangePassword_cr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CImage.aspx.cs">
+      <DependentUpon>CImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CImage.aspx.designer.cs">
+      <DependentUpon>CImage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Claims\ClaimDefult.aspx.cs">
+      <DependentUpon>ClaimDefult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Claims\ClaimDefult.aspx.designer.cs">
+      <DependentUpon>ClaimDefult.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Claims\ClaimDownload.aspx.cs">
+      <DependentUpon>ClaimDownload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Claims\ClaimDownload.aspx.designer.cs">
+      <DependentUpon>ClaimDownload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Claims\ClaimIntimation.aspx.cs">
+      <DependentUpon>ClaimIntimation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Claims\ClaimIntimation.aspx.designer.cs">
+      <DependentUpon>ClaimIntimation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Claims\ClaimListRequirement.aspx.cs">
+      <DependentUpon>ClaimListRequirement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Claims\ClaimListRequirement.aspx.designer.cs">
+      <DependentUpon>ClaimListRequirement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Claims\ClaimProcess.aspx.cs">
+      <DependentUpon>ClaimProcess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Claims\ClaimProcess.aspx.designer.cs">
+      <DependentUpon>ClaimProcess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Claims\ClaimFAQ.aspx.cs">
+      <DependentUpon>ClaimFAQ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Claims\ClaimFAQ.aspx.designer.cs">
+      <DependentUpon>ClaimFAQ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Claims\OnlineClaimTracking.aspx.cs">
+      <DependentUpon>OnlineClaimTracking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Claims\OnlineClaimTracking.aspx.designer.cs">
+      <DependentUpon>OnlineClaimTracking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContactInformation_cr\ContactInformation_cr.aspx.cs">
+      <DependentUpon>ContactInformation_cr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactInformation_cr\ContactInformation_cr.aspx.designer.cs">
+      <DependentUpon>ContactInformation_cr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContactInformation_cr\popupContactinfo_cr.aspx.cs">
+      <DependentUpon>popupContactinfo_cr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactInformation_cr\popupContactinfo_cr.aspx.designer.cs">
+      <DependentUpon>popupContactinfo_cr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContactUs\Contactus.aspx.cs">
+      <DependentUpon>Contactus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactUs\Contactus.aspx.designer.cs">
+      <DependentUpon>Contactus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContactUs\Contactus_cr.aspx.cs">
+      <DependentUpon>Contactus_cr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactUs\Contactus_cr.aspx.designer.cs">
+      <DependentUpon>Contactus_cr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreditLifeInformation\Archival_cr.aspx.cs">
+      <DependentUpon>Archival_cr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreditLifeInformation\Archival_cr.aspx.designer.cs">
+      <DependentUpon>Archival_cr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreditLifeInformation\BenifitBasis_cr.aspx.cs">
+      <DependentUpon>BenifitBasis_cr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreditLifeInformation\BenifitBasis_cr.aspx.designer.cs">
+      <DependentUpon>BenifitBasis_cr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreditLifeInformation\COpyPolicySubOfficeAccess_cr.aspx.cs">
+      <DependentUpon>COpyPolicySubOfficeAccess_cr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreditLifeInformation\COpyPolicySubOfficeAccess_cr.aspx.designer.cs">
+      <DependentUpon>COpyPolicySubOfficeAccess_cr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreditLifeInformation\CreditLifeInformation.aspx.cs">
+      <DependentUpon>CreditLifeInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreditLifeInformation\CreditLifeInformation.aspx.designer.cs">
+      <DependentUpon>CreditLifeInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreditLifeInformation\MemberListing_cr.aspx.cs">
+      <DependentUpon>MemberListing_cr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreditLifeInformation\MemberListing_cr.aspx.designer.cs">
+      <DependentUpon>MemberListing_cr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreditLifeInformation\NEL_cr.aspx.cs">
+      <DependentUpon>NEL_cr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreditLifeInformation\NEL_cr.aspx.designer.cs">
+      <DependentUpon>NEL_cr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreditLifeInformation\PolicyDownload_cr.aspx.cs">
+      <DependentUpon>PolicyDownload_cr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreditLifeInformation\PolicyDownload_cr.aspx.designer.cs">
+      <DependentUpon>PolicyDownload_cr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreditLifeInformation\PremiumCalculation.aspx.cs">
+      <DependentUpon>PremiumCalculation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreditLifeInformation\PremiumCalculation.aspx.designer.cs">
+      <DependentUpon>PremiumCalculation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreditLifeInformation\PremiumRates_cr.aspx.cs">
+      <DependentUpon>PremiumRates_cr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreditLifeInformation\PremiumRates_cr.aspx.designer.cs">
+      <DependentUpon>PremiumRates_cr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreditLifeInformation\PremiumStatement_cr.aspx.cs">
+      <DependentUpon>PremiumStatement_cr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreditLifeInformation\PremiumStatement_cr.aspx.designer.cs">
+      <DependentUpon>PremiumStatement_cr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreditLifeInformation\ReceiptsandPayments_cr.aspx.cs">
+      <DependentUpon>ReceiptsandPayments_cr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreditLifeInformation\ReceiptsandPayments_cr.aspx.designer.cs">
+      <DependentUpon>ReceiptsandPayments_cr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreditLifeInformation\SubmissionScreen.aspx.cs">
+      <DependentUpon>SubmissionScreen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreditLifeInformation\SubmissionScreen.aspx.designer.cs">
+      <DependentUpon>SubmissionScreen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreditLifeInformation\SurrenderCalculation.aspx.cs">
+      <DependentUpon>SurrenderCalculation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreditLifeInformation\SurrenderCalculation.aspx.designer.cs">
+      <DependentUpon>SurrenderCalculation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreditLifeInformation\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreditLifeInformation\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerSatisfactionSurvey\CutomerSatisfacation_cr.aspx.cs">
+      <DependentUpon>CutomerSatisfacation_cr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerSatisfactionSurvey\CutomerSatisfacation_cr.aspx.designer.cs">
+      <DependentUpon>CutomerSatisfacation_cr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultNew.aspx.cs">
+      <DependentUpon>DefaultNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefaultNew.aspx.designer.cs">
+      <DependentUpon>DefaultNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default_CL.aspx.cs">
+      <DependentUpon>Default_CL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default_CL.aspx.designer.cs">
+      <DependentUpon>Default_CL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerSatisfactionSurvey\CustomerSatisfactionSurvey.aspx.designer.cs">
+      <DependentUpon>CustomerSatisfactionSurvey.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\dsPremiumRateReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsPremiumRateReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="error.aspx.cs">
+      <DependentUpon>error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="error.aspx.designer.cs">
+      <DependentUpon>error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassword\ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword\ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPage.aspx.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginPage.aspx.designer.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LongRunningProcess.aspx.cs">
+      <DependentUpon>LongRunningProcess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LongRunningProcess.aspx.designer.cs">
+      <DependentUpon>LongRunningProcess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Masters\MenuMasterPage.master.cs">
+      <DependentUpon>MenuMasterPage.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Masters\MenuMasterPage.master.designer.cs">
+      <DependentUpon>MenuMasterPage.master</DependentUpon>
+    </Compile>
+    <Compile Include="Masters\MenuMasterPage_Cr.Master.cs">
+      <DependentUpon>MenuMasterPage_Cr.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Masters\MenuMasterPage_Cr.Master.designer.cs">
+      <DependentUpon>MenuMasterPage_Cr.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MemberInformation\MemberInfoDetails.aspx.cs">
+      <DependentUpon>MemberInfoDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MemberInformation\MemberInfoDetails.aspx.designer.cs">
+      <DependentUpon>MemberInfoDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MemberInformation\MemberInfoPopUp.aspx.cs">
+      <DependentUpon>MemberInfoPopUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MemberInformation\MemberInfoPopUp.aspx.designer.cs">
+      <DependentUpon>MemberInfoPopUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MemberInformation\MemberInformation.aspx.cs">
+      <DependentUpon>MemberInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MemberInformation\MemberInformation.aspx.designer.cs">
+      <DependentUpon>MemberInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MemberInformation_cr\AllMember.aspx.cs">
+      <DependentUpon>AllMember.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MemberInformation_cr\AllMember.aspx.designer.cs">
+      <DependentUpon>AllMember.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MemberInformation_cr\COIPopUP.aspx.cs">
+      <DependentUpon>COIPopUP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MemberInformation_cr\COIPopUP.aspx.designer.cs">
+      <DependentUpon>COIPopUP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MemberInformation_cr\COIPrintingReport.aspx.cs">
+      <DependentUpon>COIPrintingReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MemberInformation_cr\COIPrintingReport.aspx.designer.cs">
+      <DependentUpon>COIPrintingReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MemberInformation_cr\MemberInfoDetails_cr.aspx.cs">
+      <DependentUpon>MemberInfoDetails_cr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MemberInformation_cr\MemberInfoDetails_cr.aspx.designer.cs">
+      <DependentUpon>MemberInfoDetails_cr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MemberInformation_cr\MemberInfoPopUp_cr.aspx.cs">
+      <DependentUpon>MemberInfoPopUp_cr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MemberInformation_cr\MemberInfoPopUp_cr.aspx.designer.cs">
+      <DependentUpon>MemberInfoPopUp_cr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MemberInformation_cr\MemberInformation_cr.aspx.cs">
+      <DependentUpon>MemberInformation_cr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MemberInformation_cr\MemberInformation_cr.aspx.designer.cs">
+      <DependentUpon>MemberInformation_cr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MIS\BillEnquiry_cr.aspx.cs">
+      <DependentUpon>BillEnquiry_cr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MIS\BillEnquiry_cr.aspx.designer.cs">
+      <DependentUpon>BillEnquiry_cr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MIS\BillPayment_cr.aspx.cs">
+      <DependentUpon>BillPayment_cr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MIS\BillPayment_cr.aspx.designer.cs">
+      <DependentUpon>BillPayment_cr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MIS\PopUpBillEnquiry_cr.aspx.cs">
+      <DependentUpon>PopUpBillEnquiry_cr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MIS\PopUpBillEnquiry_cr.aspx.designer.cs">
+      <DependentUpon>PopUpBillEnquiry_cr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Old_App_Code\BaseClass.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_GlobalResources\Resource.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="BillEnquiry\BillEnquiry.aspx.cs">
+      <DependentUpon>BillEnquiry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BillEnquiry\BillEnquiry.aspx.designer.cs">
+      <DependentUpon>BillEnquiry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BillEnquiry\PopUpBillEnquiry.aspx.cs">
+      <DependentUpon>PopUpBillEnquiry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BillEnquiry\PopUpBillEnquiry.aspx.designer.cs">
+      <DependentUpon>PopUpBillEnquiry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangePassword\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContactInformation\ContactInformation.aspx.cs">
+      <DependentUpon>ContactInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactInformation\ContactInformation.aspx.designer.cs">
+      <DependentUpon>ContactInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContactInformation\popupContactinfo.aspx.cs">
+      <DependentUpon>popupContactinfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactInformation\popupContactinfo.aspx.designer.cs">
+      <DependentUpon>popupContactinfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerSatisfactionSurvey\CustomerSatisfactionSurvey.aspx.cs">
+      <DependentUpon>CustomerSatisfactionSurvey.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OnlineRequest\OnlineRequest.aspx.cs">
+      <DependentUpon>OnlineRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OnlineRequest\OnlineRequest.aspx.designer.cs">
+      <DependentUpon>OnlineRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PolicyInformation\Archival.aspx.cs">
+      <DependentUpon>Archival.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PolicyInformation\Archival.aspx.designer.cs">
+      <DependentUpon>Archival.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PolicyInformation\ReceiptsandPayments.aspx.cs">
+      <DependentUpon>ReceiptsandPayments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PolicyInformation\ReceiptsandPayments.aspx.designer.cs">
+      <DependentUpon>ReceiptsandPayments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PolicyInformation\UserManual.aspx.cs">
+      <DependentUpon>UserManual.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PolicyInformation\UserManual.aspx.designer.cs">
+      <DependentUpon>UserManual.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PolicyInformation\PolicyDownload.aspx.cs">
+      <DependentUpon>PolicyDownload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PolicyInformation\PolicyDownload.aspx.designer.cs">
+      <DependentUpon>PolicyDownload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PolicyInformation\BenifitBasis.aspx.cs">
+      <DependentUpon>BenifitBasis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PolicyInformation\BenifitBasis.aspx.designer.cs">
+      <DependentUpon>BenifitBasis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PolicyInformation\COpyPolicySubOfficeAccess.aspx.cs">
+      <DependentUpon>COpyPolicySubOfficeAccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PolicyInformation\COpyPolicySubOfficeAccess.aspx.designer.cs">
+      <DependentUpon>COpyPolicySubOfficeAccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PolicyInformation\MemberListing.aspx.cs">
+      <DependentUpon>MemberListing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PolicyInformation\MemberListing.aspx.designer.cs">
+      <DependentUpon>MemberListing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PolicyInformation\NEL.aspx.cs">
+      <DependentUpon>NEL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PolicyInformation\NEL.aspx.designer.cs">
+      <DependentUpon>NEL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PolicyInformation\PolicyDocuments.aspx.cs">
+      <DependentUpon>PolicyDocuments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PolicyInformation\PolicyDocuments.aspx.designer.cs">
+      <DependentUpon>PolicyDocuments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PolicyInformation\PolicyInformation.aspx.cs">
+      <DependentUpon>PolicyInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PolicyInformation\PolicyInformation.aspx.designer.cs">
+      <DependentUpon>PolicyInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PolicyInformation\PolicyQuoteListing.aspx.cs">
+      <DependentUpon>PolicyQuoteListing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PolicyInformation\PolicyQuoteListing.aspx.designer.cs">
+      <DependentUpon>PolicyQuoteListing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PolicyInformation\PremiumRates.aspx.cs">
+      <DependentUpon>PremiumRates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PolicyInformation\PremiumRates.aspx.designer.cs">
+      <DependentUpon>PremiumRates.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PolicyInformation\PremiumStatement.aspx.cs">
+      <DependentUpon>PremiumStatement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PolicyInformation\PremiumStatement.aspx.designer.cs">
+      <DependentUpon>PremiumStatement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PolicyInformation\ServiceHistory.aspx.cs">
+      <DependentUpon>ServiceHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PolicyInformation\ServiceHistory.aspx.designer.cs">
+      <DependentUpon>ServiceHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="RandomImage.cs" />
+    <Compile Include="Reports\BillGenerateReport.aspx.cs">
+      <DependentUpon>BillGenerateReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\BillGenerateReport.aspx.designer.cs">
+      <DependentUpon>BillGenerateReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PremiumRateReport.aspx.cs">
+      <DependentUpon>PremiumRateReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\PremiumRateReport.aspx.designer.cs">
+      <DependentUpon>PremiumRateReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ShowMTRF.aspx.cs">
+      <DependentUpon>ShowMTRF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\ShowMTRF.aspx.designer.cs">
+      <DependentUpon>ShowMTRF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report_CreditLife\DeclineLetterReport.aspx.cs">
+      <DependentUpon>DeclineLetterReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report_CreditLife\DeclineLetterReport.aspx.designer.cs">
+      <DependentUpon>DeclineLetterReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report_CreditLife\MedicalGridReport_cr.aspx.cs">
+      <DependentUpon>MedicalGridReport_cr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report_CreditLife\MedicalGridReport_cr.aspx.designer.cs">
+      <DependentUpon>MedicalGridReport_cr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report_CreditLife\PremiumRateReport_cr.aspx.cs">
+      <DependentUpon>PremiumRateReport_cr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report_CreditLife\PremiumRateReport_cr.aspx.designer.cs">
+      <DependentUpon>PremiumRateReport_cr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\CallCenterDetails.aspx.cs">
+      <DependentUpon>CallCenterDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Services\CallCenterDetails.aspx.designer.cs">
+      <DependentUpon>CallCenterDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\ServiceList.aspx.cs">
+      <DependentUpon>ServiceList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Services\ServiceList.aspx.designer.cs">
+      <DependentUpon>ServiceList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\ServiceRequest.aspx.cs">
+      <DependentUpon>ServiceRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Services\ServiceRequest.aspx.designer.cs">
+      <DependentUpon>ServiceRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\PopUpBillGeneration.aspx.cs">
+      <DependentUpon>PopUpBillGeneration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Services\PopUpBillGeneration.aspx.designer.cs">
+      <DependentUpon>PopUpBillGeneration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\service.aspx.cs">
+      <DependentUpon>service.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Services\service.aspx.designer.cs">
+      <DependentUpon>service.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Services_cr\CallCenterDetails_cr.aspx.cs">
+      <DependentUpon>CallCenterDetails_cr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Services_cr\CallCenterDetails_cr.aspx.designer.cs">
+      <DependentUpon>CallCenterDetails_cr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Services_cr\ServiceList_cr.aspx.cs">
+      <DependentUpon>ServiceList_cr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Services_cr\ServiceList_cr.aspx.designer.cs">
+      <DependentUpon>ServiceList_cr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Services_cr\service_cr.aspx.cs">
+      <DependentUpon>service_cr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Services_cr\service_cr.aspx.designer.cs">
+      <DependentUpon>service_cr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SubmissionScreen\Submission.aspx.cs">
+      <DependentUpon>Submission.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubmissionScreen\Submission.aspx.designer.cs">
+      <DependentUpon>Submission.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TTSLNomineeNavigatorLink\TTSLNavigator.aspx.cs">
+      <DependentUpon>TTSLNavigator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TTSLNomineeNavigatorLink\TTSLNavigator.aspx.designer.cs">
+      <DependentUpon>TTSLNavigator.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WebReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="OnlineRequest\OnlineRequest.aspx" />
+    <Content Include="PolicyInformation\BenifitBasis.aspx" />
+    <Content Include="PolicyInformation\NEL.aspx" />
+    <Content Include="PolicyInformation\PolicyDocuments.aspx" />
+    <Content Include="PolicyInformation\PolicyInformation.aspx" />
+    <Content Include="PolicyInformation\PremiumRates.aspx" />
+    <Content Include="Reports\BillGenerateReport.aspx" />
+    <Content Include="Reports\PremiumRateReport.aspx" />
+    <Content Include="Services\PopUpBillGeneration.aspx" />
+    <Content Include="Services\service.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Code\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="App_Code\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="App_Code\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="App_Code\dsPremiumRateReport.xsc">
+      <DependentUpon>dsPremiumRateReport.xsd</DependentUpon>
+    </None>
+    <None Include="App_Code\dsPremiumRateReport.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsPremiumRateReport.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Code\dsPremiumRateReport.xss">
+      <DependentUpon>dsPremiumRateReport.xsd</DependentUpon>
+    </None>
+    <None Include="App_Code\dsTermPremiumStatementFirstYearReport.xsc">
+      <DependentUpon>dsTermPremiumStatementFirstYearReport.xsd</DependentUpon>
+    </None>
+    <None Include="App_Code\dsTermPremiumStatementFirstYearReport.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsTermPremiumStatementFirstYearReport.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Code\dsTermPremiumStatementFirstYearReport.xss">
+      <DependentUpon>dsTermPremiumStatementFirstYearReport.xsd</DependentUpon>
+    </None>
+    <None Include="ClaimDocuments\EDLI_Claim_form.pdf" />
+    <None Include="ClaimDocuments\EDLI_Claim_requirements.pdf" />
+    <None Include="ClaimDocuments\Gratuity_Claim_Form.pdf" />
+    <None Include="ClaimDocuments\GTL_Claims_requirements.pdf" />
+    <None Include="ClaimDocuments\GTL_Claim_form.pdf" />
+    <None Include="ClaimDocuments\Pension_claim_requirements.pdf" />
+    <None Include="ClaimDocuments\Vendor_TALIC_Group Life_Portal_PACE_User_Manual-Vr.1_PS_Final.pdf" />
+    <None Include="DownloadFormate\EasyAdmin_Member Upload File.xls" />
+    <None Include="DownloadFormate\EasyAdmin_Member Upload FileOLD.xls" />
+    <None Include="DownloadFormate\PACE_POS_Add_Member.xls" />
+    <None Include="DownloadFormate\PACE_POS_Change_DOB_Member.xls" />
+    <None Include="DownloadFormate\PACE_POS_Change_EmployeeNo_Member.xls" />
+    <None Include="DownloadFormate\PACE_POS_Change_FSA_Member.xls" />
+    <None Include="DownloadFormate\PACE_POS_Change_FSG_Member.xls" />
+    <None Include="DownloadFormate\PACE_POS_Change_Gender_Member.xls" />
+    <None Include="DownloadFormate\PACE_POS_Change_Name_Member.xls" />
+    <None Include="DownloadFormate\PACE_POS_Change_Salary_Member.xls" />
+    <None Include="DownloadFormate\PACE_POS_Deletion_Member.xls" />
+    <None Include="DownloadFormate\TermMemberPOS_Upload-Group Life.xls" />
+    <Content Include="Masters\MenuMasterPage_Cr.Master" />
+    <None Include="GeneratedPDF\COIDetails.pdf" />
+    <Content Include="MemberInformation_cr\COIPrintingReport.rdlc" />
+    <Content Include="MemberInformation_cr\COIPrintingReport_1.rdlc" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WebReference\ChangePasswordReq.xsd" />
+    <None Include="Web References\WebReference\ChangePasswordRes.xsd" />
+    <None Include="Web References\WebReference\changePasswordResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WebReference\CredentialReqBO.xsd" />
+    <None Include="Web References\WebReference\CredentialResBO.xsd" />
+    <None Include="Web References\WebReference\ForgotPasswordReqBO.xsd" />
+    <None Include="Web References\WebReference\ForgotPasswordResBO.xsd" />
+    <None Include="Web References\WebReference\forgotPasswordResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WebReference\getCredentialCheckResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WebReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WebReference\UserAuthenticationInterface.wsdl" />
+    <None Include="Web References\WebReference\UserAuthenticationInterfaceExport1_UserAuthenticationInterfaceHttp_Service.wsdl" />
+    <None Include="Web References\WebReference\VerifyUserReq.xsd" />
+    <None Include="Web References\WebReference\VerifyUserRes.xsd" />
+    <None Include="Web References\WebReference\verifyUserResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Resource.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Resource.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Themes\Theme\Images\background.jpg" />
+    <Content Include="App_Themes\Theme\Images\Back_bg.png" />
+    <Content Include="App_Themes\Theme\Images\bananasplit_dayNormal.gif" />
+    <Content Include="App_Themes\Theme\Images\bananasplit_dayOver.gif" />
+    <Content Include="App_Themes\Theme\Images\Billgenerate_bg.png" />
+    <Content Include="App_Themes\Theme\Images\billing_info.png" />
+    <Content Include="App_Themes\Theme\Images\blank_box.png" />
+    <Content Include="App_Themes\Theme\Images\body.jpg" />
+    <Content Include="App_Themes\Theme\Images\bottom_new_tab_bg.png" />
+    <Content Include="App_Themes\Theme\Images\boxBottomLeftCorner.png" />
+    <Content Include="App_Themes\Theme\Images\boxBottomRightCorner.png" />
+    <Content Include="App_Themes\Theme\Images\boxSideWallPx.gif" />
+    <Content Include="App_Themes\Theme\Images\boxTopLeftCorner.png" />
+    <Content Include="App_Themes\Theme\Images\boxTopPx.gif" />
+    <Content Include="App_Themes\Theme\Images\boxTopRightCorner.png" />
+    <Content Include="App_Themes\Theme\Images\btn_Edit.png" />
+    <Content Include="App_Themes\Theme\Images\btn_Back.png" />
+    <Content Include="App_Themes\Theme\Images\Btn_bg.png" />
+    <Content Include="App_Themes\Theme\Images\btn_Cancel.png" />
+    <Content Include="App_Themes\Theme\Images\btn_Confirm.png" />
+    <Content Include="App_Themes\Theme\Images\btn_Download.png" />
+    <Content Include="App_Themes\Theme\Images\btn_download_sample_file.png" />
+    <Content Include="App_Themes\Theme\Images\btn_export_to_excel.png" />
+    <Content Include="App_Themes\Theme\Images\btn_Finish.png" />
+    <Content Include="App_Themes\Theme\Images\btn_Generate.png" />
+    <Content Include="App_Themes\Theme\Images\btn_Issue.png" />
+    <Content Include="App_Themes\Theme\Images\btn_Next.png" />
+    <Content Include="App_Themes\Theme\Images\btn_Pay.png" />
+    <Content Include="App_Themes\Theme\Images\btn_Reset.png" />
+    <Content Include="App_Themes\Theme\Images\btn_Save.png" />
+    <Content Include="App_Themes\Theme\Images\btn_Search.png" />
+    <Content Include="App_Themes\Theme\Images\btn_Select.png" />
+    <Content Include="App_Themes\Theme\Images\btn_Submit.png" />
+    <Content Include="App_Themes\Theme\Images\btn_Undo.png" />
+    <Content Include="App_Themes\Theme\Images\btn_Upload.png" />
+    <Content Include="App_Themes\Theme\Images\btn_View.png" />
+    <Content Include="App_Themes\Theme\Images\bt_Cancel.png" />
+    <Content Include="App_Themes\Theme\Images\bt_export-to-excel.jpg" />
+    <Content Include="App_Themes\Theme\Images\bt_Issue.png" />
+    <Content Include="App_Themes\Theme\Images\bt_reset.jpg" />
+    <Content Include="App_Themes\Theme\Images\bt_Save.png" />
+    <Content Include="App_Themes\Theme\Images\bt_search.png" />
+    <Content Include="App_Themes\Theme\Images\button_bg.png" />
+    <Content Include="App_Themes\Theme\Images\button_Next.png" />
+    <Content Include="App_Themes\Theme\Images\Calendar.png" />
+    <Content Include="App_Themes\Theme\Images\calender.png" />
+    <Content Include="App_Themes\Theme\Images\Cancel.png" />
+    <Content Include="App_Themes\Theme\Images\change_password.png" />
+    <Content Include="App_Themes\Theme\Images\close-red.gif" />
+    <Content Include="App_Themes\Theme\Images\close.gif" />
+    <Content Include="App_Themes\Theme\Images\closeButton_normal.gif" />
+    <Content Include="App_Themes\Theme\Images\Confirm_bg.png" />
+    <Content Include="App_Themes\Theme\Images\contact-info-full.PNG" />
+    <Content Include="App_Themes\Theme\Images\contact_info_bg.png" />
+    <Content Include="App_Themes\Theme\Images\contact_us.png" />
+    <Content Include="App_Themes\Theme\Images\Copy of button_bg.png" />
+    <Content Include="App_Themes\Theme\Images\Copy of DIV.jpg" />
+    <Content Include="App_Themes\Theme\Images\customer_satisfaction.png" />
+    <Content Include="App_Themes\Theme\Images\date_bg.png" />
+    <Content Include="App_Themes\Theme\Images\DIV.jpg" />
+    <Content Include="App_Themes\Theme\Images\DIV1.JPG" />
+    <Content Include="App_Themes\Theme\Images\Download.png" />
+    <Content Include="App_Themes\Theme\Images\drop_down_bg.png" />
+    <Content Include="App_Themes\Theme\Images\Edit.png" />
+    <Content Include="App_Themes\Theme\Images\Export.png" />
+    <Content Include="App_Themes\Theme\Images\ExportImage.png" />
+    <Content Include="App_Themes\Theme\Images\ExportToExcel.png" />
+    <Content Include="App_Themes\Theme\Images\Filter.gif" />
+    <Content Include="App_Themes\Theme\Images\footerEmployerLogin.JPG" />
+    <Content Include="App_Themes\Theme\Images\FooterLogin.jpg" />
+    <Content Include="App_Themes\Theme\Images\footerofAIASite.bmp" />
+    <Content Include="App_Themes\Theme\Images\greytbbutton.png" />
+    <Content Include="App_Themes\Theme\Images\home_but.png" />
+    <Content Include="App_Themes\Theme\Images\ico3.png" />
+    <Content Include="App_Themes\Theme\Images\icon2.png" />
+    <Content Include="App_Themes\Theme\Images\icon_4.png" />
+    <Content Include="App_Themes\Theme\Images\icon_5.png" />
+    <Content Include="App_Themes\Theme\Images\icon_6.png" />
+    <Content Include="App_Themes\Theme\Images\Icon_Cancel.gif" />
+    <Content Include="App_Themes\Theme\Images\Icon_Insert.gif" />
+    <Content Include="App_Themes\Theme\Images\ico_select.png" />
+    <Content Include="App_Themes\Theme\Images\ico_selected.png" />
+    <Content Include="App_Themes\Theme\Images\img_Download.png" />
+    <Content Include="App_Themes\Theme\Images\input-field-ie.jpg" />
+    <Content Include="App_Themes\Theme\Images\input-field-ie1.jpg" />
+    <Content Include="App_Themes\Theme\Images\input_bg.png" />
+    <Content Include="App_Themes\Theme\Images\left_box_bg.png" />
+    <Content Include="App_Themes\Theme\Images\loading.gif" />
+    <Content Include="App_Themes\Theme\Images\loginBackGround.jpg" />
+    <Content Include="App_Themes\Theme\Images\loginbg_new.png" />
+    <Content Include="App_Themes\Theme\Images\LOGINPAGEFOOTER.jpg" />
+    <Content Include="App_Themes\Theme\Images\Login_bg.jpg" />
+    <Content Include="App_Themes\Theme\Images\login_input_bg.png" />
+    <Content Include="App_Themes\Theme\Images\member_info.png" />
+    <Content Include="App_Themes\Theme\Images\monthBackward_normal.gif" />
+    <Content Include="App_Themes\Theme\Images\monthForward_normal.gif" />
+    <Content Include="App_Themes\Theme\Images\New\1.png" />
+    <Content Include="App_Themes\Theme\Images\New\2.png" />
+    <Content Include="App_Themes\Theme\Images\New\3.png" />
+    <Content Include="App_Themes\Theme\Images\New\4.png" />
+    <Content Include="App_Themes\Theme\Images\New\5.png" />
+    <Content Include="App_Themes\Theme\Images\New\6.png" />
+    <Content Include="App_Themes\Theme\Images\New\arrow.png" />
+    <Content Include="App_Themes\Theme\Images\New\Billing-Payment.png" />
+    <Content Include="App_Themes\Theme\Images\New\Billing-Paymen_Newt.png" />
+    <Content Include="App_Themes\Theme\Images\New\Bill_Label_01.png" />
+    <Content Include="App_Themes\Theme\Images\New\Bill_Label_02.png" />
+    <Content Include="App_Themes\Theme\Images\New\branch.png" />
+    <Content Include="App_Themes\Theme\Images\New\btn_send_mail.png" />
+    <Content Include="App_Themes\Theme\Images\New\button1.jpg" />
+    <Content Include="App_Themes\Theme\Images\New\button2.jpg" />
+    <Content Include="App_Themes\Theme\Images\New\button3.jpg" />
+    <Content Include="App_Themes\Theme\Images\New\button4.jpg" />
+    <Content Include="App_Themes\Theme\Images\New\Claims.png" />
+    <Content Include="App_Themes\Theme\Images\New\Claim_Label_01.png" />
+    <Content Include="App_Themes\Theme\Images\New\Claim_Label_02.png" />
+    <Content Include="App_Themes\Theme\Images\New\Claim_Label_03.png" />
+    <Content Include="App_Themes\Theme\Images\New\Claim_Label_04.png" />
+    <Content Include="App_Themes\Theme\Images\New\Client_Contact_Information.png" />
+    <Content Include="App_Themes\Theme\Images\New\Copy_of_arrow.png" />
+    <Content Include="App_Themes\Theme\Images\New\Downloads.png" />
+    <Content Include="App_Themes\Theme\Images\New\Label.png" />
+    <Content Include="App_Themes\Theme\Images\New\Label_01.png" />
+    <Content Include="App_Themes\Theme\Images\New\Label_015.png" />
+    <Content Include="App_Themes\Theme\Images\New\Label_02.png" />
+    <Content Include="App_Themes\Theme\Images\New\Label_03.png" />
+    <Content Include="App_Themes\Theme\Images\New\Label_04.png" />
+    <Content Include="App_Themes\Theme\Images\New\Label_05.png" />
+    <Content Include="App_Themes\Theme\Images\New\Label_06.png" />
+    <Content Include="App_Themes\Theme\Images\New\Line.png" />
+    <Content Include="App_Themes\Theme\Images\New\Logo.jpg" />
+    <Content Include="App_Themes\Theme\Images\New\Member-Information.png" />
+    <Content Include="App_Themes\Theme\Images\New\Member_Label_01.png" />
+    <Content Include="App_Themes\Theme\Images\New\message.png" />
+    <Content Include="App_Themes\Theme\Images\New\Miscellaneous.png" />
+    <Content Include="App_Themes\Theme\Images\New\Misce_Label_01.png" />
+    <Content Include="App_Themes\Theme\Images\New\Misce_Label_02.png" />
+    <Content Include="App_Themes\Theme\Images\New\Misce_Label_03.png" />
+    <Content Include="App_Themes\Theme\Images\New\Phone.png" />
+    <Content Include="App_Themes\Theme\Images\New\Policy-Information.png" />
+    <Content Include="App_Themes\Theme\Images\New\Policy_Enquiry_new.png" />
+    <Content Include="App_Themes\Theme\Images\New\premium-calculation.png" />
+    <Content Include="App_Themes\Theme\Images\New\Receipts_and_Payment.png" />
+    <Content Include="App_Themes\Theme\Images\New\Service_Label_01.png" />
+    <Content Include="App_Themes\Theme\Images\New\Service_Label_02.png" />
+    <Content Include="App_Themes\Theme\Images\New\Servicing.png" />
+    <Content Include="App_Themes\Theme\Images\New\submission.png" />
+    <Content Include="App_Themes\Theme\Images\New\SubOfcAccess.png" />
+    <Content Include="App_Themes\Theme\Images\New\Sub_Office_Access.png" />
+    <Content Include="App_Themes\Theme\Images\New\surrender-calculation.png" />
+    <Content Include="App_Themes\Theme\Images\New\tataAIA_life_logo.jpg" />
+    <Content Include="App_Themes\Theme\Images\New\visit.PNG" />
+    <Content Include="App_Themes\Theme\Images\new_animated.gif" />
+    <Content Include="App_Themes\Theme\Images\new_tab_bg.png" />
+    <Content Include="App_Themes\Theme\Images\new_tab_hover_bg.png" />
+    <Content Include="App_Themes\Theme\Images\Next_bg.png" />
+    <Content Include="App_Themes\Theme\Images\Next_bg1.png" />
+    <Content Include="App_Themes\Theme\Images\paceHeader.jpg" />
+    <Content Include="App_Themes\Theme\Images\pace_logo.png" />
+    <Content Include="App_Themes\Theme\Images\payment_info.png" />
+    <Content Include="App_Themes\Theme\Images\PDF.png" />
+    <Content Include="App_Themes\Theme\Images\police_info.png" />
+    <Content Include="App_Themes\Theme\Images\PopUp_BackGround.bmp" />
+    <Content Include="App_Themes\Theme\Images\PopUp_Header_BackGround.bmp" />
+    <Content Include="App_Themes\Theme\Images\PopUp_Left_Corner.bmp" />
+    <Content Include="App_Themes\Theme\Images\PopUp_Right_Corner.bmp" />
+    <Content Include="App_Themes\Theme\Images\print.png" />
+    <Content Include="App_Themes\Theme\Images\Refresh.png" />
+    <Content Include="App_Themes\Theme\Images\Save.png" />
+    <Content Include="App_Themes\Theme\Images\scroll_bar.png" />
+    <Content Include="App_Themes\Theme\Images\scroll_drag.png" />
+    <Content Include="App_Themes\Theme\Images\Search.png" />
+    <Content Include="App_Themes\Theme\Images\servicing.png" />
+    <Content Include="App_Themes\Theme\Images\sidebody.jpg" />
+    <Content Include="App_Themes\Theme\Images\sideMenu.jpg" />
+    <Content Include="App_Themes\Theme\Images\sort_asc.png" />
+    <Content Include="App_Themes\Theme\Images\sort_asc_disabled.png" />
+    <Content Include="App_Themes\Theme\Images\sort_both.png" />
+    <Content Include="App_Themes\Theme\Images\sort_desc.png" />
+    <Content Include="App_Themes\Theme\Images\sort_desc_disabled.png" />
+    <Content Include="App_Themes\Theme\Images\submission.png" />
+    <Content Include="App_Themes\Theme\Images\submit_bg.png" />
+    <Content Include="App_Themes\Theme\Images\tab_Inactive.gif" />
+    <Content Include="App_Themes\Theme\Images\tab_left_inactive.gif" />
+    <Content Include="App_Themes\Theme\Images\tab_right_inactive.gif" />
+    <Content Include="App_Themes\Theme\Images\tata-aia-logo.gif" />
+    <Content Include="App_Themes\Theme\Images\tataAIA_life_logo.jpg" />
+    <Content Include="App_Themes\Theme\Images\TATAAIA_New_Address_Logo.JPG" />
+    <Content Include="App_Themes\Theme\Images\tata_aia_web.png" />
+    <Content Include="App_Themes\Theme\Images\tata_pace.png" />
+    <Content Include="App_Themes\Theme\Images\Text_left_border.png" />
+    <Content Include="App_Themes\Theme\Images\Text_right_border.png" />
+    <Content Include="App_Themes\Theme\Images\Title_Bg.png" />
+    <Content Include="App_Themes\Theme\Images\Title_Left.png" />
+    <Content Include="App_Themes\Theme\Images\top_line.jpg" />
+    <Content Include="App_Themes\Theme\Images\top_new_tab_bg.png" />
+    <Content Include="App_Themes\Theme\Images\top_tab_bg.png" />
+    <Content Include="App_Themes\Theme\Images\Undo_bg.png" />
+    <Content Include="App_Themes\Theme\Images\Upload.png" />
+    <Content Include="App_Themes\Theme\Images\verticalbar.jpg" />
+    <Content Include="App_Themes\Theme\Images\View.png" />
+    <Content Include="App_Themes\Theme\Images\yearBackward_normal.gif" />
+    <Content Include="App_Themes\Theme\Images\yearForward_normal.gif" />
+    <Content Include="App_Themes\Theme\StyleSheets\gw_style.css" />
+    <Content Include="App_Themes\Theme\StyleSheets\jquery-1.11.3.min.js" />
+    <Content Include="App_Themes\Theme\StyleSheets\jquery.blockUI.js" />
+    <Content Include="App_Themes\Theme\StyleSheets\jquery.dataTables.min.css" />
+    <Content Include="App_Themes\Theme\StyleSheets\jquery.jrumble.1.3.min.js" />
+    <Content Include="App_Themes\Theme\StyleSheets\Jquery.Jscrollpanel.css" />
+    <Content Include="App_Themes\Theme\StyleSheets\jquery.mCustomScrollbar.concat.min.js" />
+    <Content Include="App_Themes\Theme\StyleSheets\jsDatePick.jquery.min.1.3.js" />
+    <Content Include="App_Themes\Theme\StyleSheets\jsDatePick_ltr.min.css" />
+    <Content Include="App_Themes\Theme\StyleSheets\MAIN.CSS" />
+    <Content Include="BillEnquiry\BillEnquiry.aspx" />
+    <Content Include="BillEnquiry\BillPayment.aspx" />
+    <Content Include="BillEnquiry\PopUpBillEnquiry.aspx" />
+    <Content Include="bin\AjaxControlToolkit.dll" />
+    <Content Include="bin\GlimpsBAL.dll" />
+    <Content Include="bin\GlimpsBAL.pdb" />
+    <Content Include="bin\GlimpsDAL.dll" />
+    <Content Include="bin\GlimpsDAL.pdb" />
+    <Content Include="bin\PACE.dll" />
+    <Content Include="bin\PACE.pdb" />
+    <Content Include="bin\Recaptcha.dll" />
+    <Content Include="ChangePassword\ChangePassword.aspx" />
+    <Content Include="ChangePassword\ChangePassword_cr.aspx" />
+    <Content Include="CImage.aspx" />
+    <Content Include="Claims\ClaimDefult.aspx" />
+    <Content Include="Claims\ClaimDownload.aspx" />
+    <Content Include="Claims\ClaimIntimation.aspx" />
+    <Content Include="Claims\ClaimListRequirement.aspx" />
+    <Content Include="Claims\ClaimProcess.aspx" />
+    <Content Include="Claims\ClaimFAQ.aspx" />
+    <Content Include="Claims\OnlineClaimTracking.aspx" />
+    <Content Include="ContactInformation\ContactInformation.aspx" />
+    <Content Include="ContactInformation\popupContactinfo.aspx" />
+    <Content Include="ContactInformation_cr\ContactInformation_cr.aspx" />
+    <Content Include="ContactInformation_cr\popupContactinfo_cr.aspx" />
+    <Content Include="ContactUs\Contactus.aspx" />
+    <Content Include="ContactUs\Contactus_cr.aspx" />
+    <Content Include="CreditLifeInformation\Archival_cr.aspx" />
+    <Content Include="CreditLifeInformation\BenifitBasis_cr.aspx" />
+    <Content Include="CreditLifeInformation\COpyPolicySubOfficeAccess_cr.aspx" />
+    <Content Include="CreditLifeInformation\CreditLifeInformation.aspx" />
+    <Content Include="CreditLifeInformation\MemberListing_cr.aspx" />
+    <Content Include="CreditLifeInformation\NEL_cr.aspx" />
+    <Content Include="CreditLifeInformation\PolicyDownload_cr.aspx" />
+    <Content Include="CreditLifeInformation\PremiumCalculation.aspx" />
+    <Content Include="CreditLifeInformation\PremiumRates_cr.aspx" />
+    <Content Include="CreditLifeInformation\PremiumStatement_cr.aspx" />
+    <Content Include="CreditLifeInformation\ReceiptsandPayments_cr.aspx" />
+    <Content Include="CreditLifeInformation\SubmissionScreen.aspx" />
+    <Content Include="CreditLifeInformation\SurrenderCalculation.aspx" />
+    <Content Include="CreditLifeInformation\WebForm1.aspx" />
+    <Content Include="CustomerSatisfactionSurvey\CutomerSatisfacation_cr.aspx" />
+    <Content Include="Default_CL.aspx" />
+    <Content Include="error.aspx" />
+    <Content Include="ErrorLog\ErrorLog.txt" />
+    <Content Include="ForgotPassword\ForgotPassword.aspx" />
+    <Content Include="LoginPage.aspx" />
+    <Content Include="Logout.aspx" />
+    <Content Include="LongRunningProcess.aspx" />
+    <Content Include="Masters\MenuMasterPage.master" />
+    <Content Include="MemberInformation\MemberInfoDetails.aspx" />
+    <Content Include="MemberInformation\MemberInfoPopUp.aspx" />
+    <Content Include="MemberInformation\MemberInformation.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="MemberInformation_cr\AllMember.aspx" />
+    <Content Include="MemberInformation_cr\COIPopUP.aspx" />
+    <Content Include="MemberInformation_cr\MemberInfoDetails_cr.aspx" />
+    <Content Include="MemberInformation_cr\MemberInfoPopUp_cr.aspx" />
+    <Content Include="MemberInformation_cr\MemberInformation_cr.aspx" />
+    <Content Include="MIS\BillEnquiry_cr.aspx" />
+    <Content Include="MIS\BillPayment_cr.aspx" />
+    <Content Include="MIS\PopUpBillEnquiry_cr.aspx" />
+    <Content Include="PolicyInformation\Archival.aspx" />
+    <Content Include="PolicyInformation\ReceiptsandPayments.aspx" />
+    <Content Include="PolicyInformation\UserManual.aspx" />
+    <Content Include="PolicyInformation\PolicyDownload.aspx" />
+    <Content Include="PolicyInformation\COpyPolicySubOfficeAccess.aspx" />
+    <Content Include="PolicyInformation\MemberListing.aspx" />
+    <Content Include="PolicyInformation\PolicyQuoteListing.aspx" />
+    <Content Include="PolicyInformation\PremiumStatement.aspx" />
+    <Content Include="PolicyInformation\ServiceHistory.aspx" />
+    <Content Include="Reports\ShowMTRF.aspx" />
+    <Content Include="Report_CreditLife\DeclineLetterReport.aspx" />
+    <Content Include="Report_CreditLife\MedicalGridReport_cr.aspx" />
+    <Content Include="Report_CreditLife\PremiumRateReport_cr.aspx" />
+    <Content Include="Scripts\JScript1.js" />
+    <Content Include="Scripts\windowshowmodaldialog.js" />
+    <Content Include="Services\CallCenterDetails.aspx" />
+    <Content Include="Services\ServiceList.aspx" />
+    <Content Include="Services\ServiceRequest.aspx" />
+    <Content Include="Services_cr\CallCenterDetails_cr.aspx" />
+    <Content Include="Services_cr\ServiceList_cr.aspx" />
+    <Content Include="Services_cr\service_cr.aspx" />
+    <Content Include="SubmissionScreen\Submission.aspx" />
+    <Content Include="TTSLNomineeNavigatorLink\TTSLNavigator.aspx" />
+    <EmbeddedResource Include="Report_CreditLife\PremiumRateReport.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://10.32.141.84:9081/BService_UserAuthentication_v1Web/sca/UserAuthenticationInterfaceExport1/WEB-INF/wsdl/BService_UserAuthentication_v1_UserAuthenticationInterfaceExport1.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WebReference\</RelPath>
+      <UpdateFromURL>http://10.32.141.84:9081/BService_UserAuthentication_v1Web/sca/UserAuthenticationInterfaceExport1/WEB-INF/wsdl/BService_UserAuthentication_v1_UserAuthenticationInterfaceExport1.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PACE_WebReference_UserAuthenticationInterfaceExport1_UserAuthenticationInterfaceHttpService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GlimpsBAL\GlimpsBAL.csproj">
+      <Project>{63F64B69-58DA-42E7-898F-61571734EA53}</Project>
+      <Name>GlimpsBAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GlimpsDAL\GlimpsDAL.csproj">
+      <Project>{CC6752AB-3EC0-4446-A753-69E20B4AD6E5}</Project>
+      <Name>GlimpsDAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Code\img\" />
+    <Folder Include="App_Data\" />
+    <Folder Include="CaptchaImages\" />
+    <Folder Include="COI_Report\" />
+    <Folder Include="Download_COI_Pdf\" />
+    <Folder Include="FileUploades\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>43986</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/WEB</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

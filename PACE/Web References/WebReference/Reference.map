@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://10.32.141.84:9081/BService_UserAuthentication_v1Web/sca/UserAuthenticationInterfaceExport1/WEB-INF/wsdl/UserAuthenticationInterface.wsdl" filename="UserAuthenticationInterface.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://10.32.141.84:9081/BService_UserAuthentication_v1Web/sca/UserAuthenticationInterfaceExport1/WEB-INF/wsdl/CredentialReqBO.xsd" filename="CredentialReqBO.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://10.32.141.84:9081/BService_UserAuthentication_v1Web/sca/UserAuthenticationInterfaceExport1/WEB-INF/wsdl/CredentialResBO.xsd" filename="CredentialResBO.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://10.32.141.84:9081/BService_UserAuthentication_v1Web/sca/UserAuthenticationInterfaceExport1/WEB-INF/wsdl/ChangePasswordRes.xsd" filename="ChangePasswordRes.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://10.32.141.84:9081/BService_UserAuthentication_v1Web/sca/UserAuthenticationInterfaceExport1/WEB-INF/wsdl/ChangePasswordReq.xsd" filename="ChangePasswordReq.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://10.32.141.84:9081/BService_UserAuthentication_v1Web/sca/UserAuthenticationInterfaceExport1/WEB-INF/wsdl/VerifyUserRes.xsd" filename="VerifyUserRes.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://10.32.141.84:9081/BService_UserAuthentication_v1Web/sca/UserAuthenticationInterfaceExport1/WEB-INF/wsdl/VerifyUserReq.xsd" filename="VerifyUserReq.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://10.32.141.84:9081/BService_UserAuthentication_v1Web/sca/UserAuthenticationInterfaceExport1/WEB-INF/wsdl/BService_UserAuthentication_v1_UserAuthenticationInterfaceExport1.wsdl" filename="UserAuthenticationInterfaceExport1_UserAuthenticationInterfaceHttp_Service.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://10.32.141.84:9081/BService_UserAuthentication_v1Web/sca/UserAuthenticationInterfaceExport1/WEB-INF/wsdl/ForgotPasswordResBO.xsd" filename="ForgotPasswordResBO.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://10.32.141.84:9081/BService_UserAuthentication_v1Web/sca/UserAuthenticationInterfaceExport1/WEB-INF/wsdl/ForgotPasswordReqBO.xsd" filename="ForgotPasswordReqBO.xsd" />
+  </Results>
+</DiscoveryClientResultsFile>

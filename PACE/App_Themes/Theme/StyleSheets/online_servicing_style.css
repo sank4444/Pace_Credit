@@ -1,0 +1,41 @@
+/* Add styles for the View Log section */
+.view-log-section {
+    margin-top: 2rem;
+}
+
+.log-tabs .nav-link {
+    color: #6c757d; /* Standard secondary text color */
+    border: 1px solid transparent;
+    border-bottom-color: #dee2e6; /* Match Bootstrap tab border */
+}
+
+.log-tabs .nav-link.active {
+    color: #0d6efd; /* Standard primary color */
+    border-color: #dee2e6 #dee2e6 #fff;
+    font-weight: bold;
+}
+
+/* Style for the log table to match portal standard */
+.log-table {
+    margin-top: 1rem;
+}
+
+/* Ensure buttons match portal style */
+/* Using existing logout-btn for orange and btn-secondary for grey */
+
+
+
+/* Specific style for Job table header */
+.job-table thead {
+    background-color: #20c997; /* Teal color from screenshot */
+    color: white;
+}
+
+
+
+/* Style for the Job results table header */
+.job-table thead {
+    background-color: #20c997; /* Teal/Cyan color from screenshot */
+    color: white;
+}
+

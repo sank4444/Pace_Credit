@@ -1,0 +1,1339 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="OnlineApplicationConnectionString">
+      <rd:DataSourceID>4dadb8f2-f85c-4631-adf2-0295ce22ab9e</rd:DataSourceID>
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+    </DataSource>
+    <DataSource Name="TALIC_GLIMPSE_AppDBConnectionString">
+      <rd:DataSourceID>bf6a9ec5-dd40-487a-834b-9c6010f9af9d</rd:DataSourceID>
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+    </DataSource>
+    <DataSource Name="DummyDataSource">
+      <rd:DataSourceID>a217cdc9-159f-41b8-9a28-16e3e9b59be1</rd:DataSourceID>
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <InteractiveHeight>8.5in</InteractiveHeight>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>11in</InteractiveWidth>
+  <rd:GridSpacing>0.25in</rd:GridSpacing>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <RightMargin>0.25in</RightMargin>
+  <LeftMargin>0.25in</LeftMargin>
+  <BottomMargin>0.25in</BottomMargin>
+  <rd:ReportID>7f3b7bc8-641b-4b39-a08b-a782a2daab17</rd:ReportID>
+  <EmbeddedImages>
+    <EmbeddedImage Name="tataaig">
+      <MIMEType>image/jpeg</MIMEType>
+      <ImageData>/9j/4AAQSkZJRgABAQEAYABgAAD/4QBoRXhpZgAATU0AKgAAAAgABAEaAAUAAAABAAAAPgEbAAUAAAABAAAARgEoAAMAAAABAAIAAAExAAIAAAASAAAATgAAAAAAAABgAAAAAQAAAGAAAAABUGFpbnQuTkVUIHYzLjUuMTAA/9sAQwACAQECAQECAgICAgICAgMFAwMDAwMGBAQDBQcGBwcHBgcHCAkLCQgICggHBwoNCgoLDAwMDAcJDg8NDA4LDAwM/9sAQwECAgIDAwMGAwMGDAgHCAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwM/8AAEQgAQgCqAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A/fHT7C3NhATBCSY1/gHpUv8AZ9v/
+AM8If++BRp3/ACD4P+ua/wAqmoAh/s+3/wCeEP8A3wKP7Pt/+eEP/fAqaigCH+z7f/nhD/3wKP7Pt/8AnhD/AN8CpqKAIf7Pt/8AnhD/AN8Cj+z7f/nhD/3wKmooAh/s+3/54Q/98Cj+z7f/AJ4Q/wDfAqaigCH+z7f/AJ4Q/wDfAo/s+3/54Q/98CpqKAIf7Pt/+eEP/fAo/s+3/wCeEP8A3wKmooAh/s+3/wCeEP8A3wKP7Pt/+eEP/fAqaigCH+z7f/nhD/3wKP7Pt/8AnhD/AN8CpqKAIf7Pt/8AnhD/AN8Cj+z7f/nhD/3wKmooAh/s+3/54Q/98Cj+z7f/AJ4Q/wDfAqaigCHTv+QfB/1zX+VTVDp3/IPg/wCua/yqagD82v8AgqX/AMFOPjH+yd+1JJ4U8EQaQ+hLpNtdhrnSWuX8yTfu+cMOPlHFfMi/8F8/2gHYKJ/B5YnAA0bJP/j9fuBX8w/w6/5KpoP/AGFbf/0ctfuXh/TynNcJUpVsHDmoxjeTs3Jvm1eit8Pd7n8+eJNXOcoxlOrQx0+WvKdoq6UEnHRau/xdlsfrX/wSV/4KNfF79r79ovW/DXj+20uHRrHw5PqcLW2lNaP56XVrGoLEnI2SycfQ9q8P/ay/4Lt/E3wv+0b4v0n4fS+GR4Q0jUHsNPkudP8AtElwIsRvLv3jKvIrsvA+Vlr7+/4Kc/tNf8MqfsZ+LfENtcfZ9c1GH+xtGIbD/a7gFFdfeNPMl/7ZV+OH/BN/9hy5/bl+JnifSA0kFloXh28vRODtT7a8bR2aMfTzmDkd1hcVjw1hMpxscRn2Nw0adCKUVHdXXxS2WruktOrRvxVjM6wEsLw5gMXOriJNyc/hlZ6Rju9FaTeuyTP1R/4JE/8ABQXVv25PhV4jTxY2nJ4y8L3yi4Wzh8mOa0mXMMgTJ5DJKpx/dU/xV8CXv/Bdv9ozTU33Mfhi3XOMyaEyDP4vXnn/AASj/aRn/ZK/bh0GTVJ
+JLHR9flbw3rccvyCFZXCo7g/d8udY2JPIUOO9fo7/AMHAX/JhMf8A2M1j/wCi561xGVZflfEKwdTCxqUsS48je0N1JJWd9Wna60sZYfOcyzfhl46ljJUq2EU1NLeps4tu6tomr2d3c+IrD/gvJ+0Rqkxjtf8AhFbmRRuKxaGXYD1wH6civuf4U/8ABRXxLpn/AASr1f40+OY7BfFdt9stbOBLU28U9155gtU8snJG4qWwfuqx7V8Zf8G6/wDye14m/wCxKu//AEusK77/AIOJv2nP7Y8YeFPhNp1xug0dP7e1hVbINxIrJbxn0KxmR8dxOh7VtnOUZfic7pZFhsJGCTjOU1o+VJtxtbZ6K997aGGRZ3meFyCtxDi8bObalThCWq520lK991q7W2vqeSWv/Bfr4+RXMbyyeDpo0YFk/sgrvGeRkPxn1r9mfg18VNL+OHwo8O+MNGk8zS/Emnw6hb5ILIsiBtjejKSVI7FSK/Bzx5+wbf8Ag3/gnB4Q+Nbx3Audc1+eC5hOcRae4EdtKR2/fQy8/wAQuI/Svu3/AIN5f2n/APhMfhB4h+Feo3O6+8IzHVNKVm5aynf96ij0jnO4/wDXwK4+OuH8tqZY8flNOMfYzcZ8qt1s7+jtbybZ3eHnEua0s1WXZzUlL28FOHM79OZWvtdXv5pI/RuvBv8AgpB+2fH+wp+y/qfjSG1tNQ1ye4i03RbO5YiG4u5MkF9pDFEjSSQgEEhMZGcj3mvxy/4Lt/tU6L40/bY8EeAdVW81HwX8NpLe88Q2tmVMt1LcPHJNEuSFLC2EaqSflaVx61+H1p8sbn9geFfCceIOIqOErQc6UE6lRLrGGvL0+KXLHdfFufSX/BNT/gpz8SPjL+0Vd/Cj41eH9K0DxNqOjx67oUttbtbNcRPEk4iZC7gloH8xSMFRHIrDcMD6E/4KYftD+Iv2VP2KPGXj3wo1iuv6GbEWxu4fOh/fX1vA+5cjPySNjng4NflD+2
+x/wVA8HfGH9sX4W/GP4aeHvEuh6z4EWOHUU1KOCFb6CKbekS+VI/DJJPGxOPldQOnH6If8FivGenfEb/gkZ4z8Q6RcLd6VrtpouoWcy9JYZdSsnRvxVgaxhUvCSTvY/ROJOB4YfiPJMbWwSw9LGTpRqUbXjGcakYzja7XLOLTSvrd+Z6v/AME5Pj5r/wC0/wDsXeCPHfihrNte1+K6e6NpD5MOY7yeFdq5OPkjXv1zXzR/wUi/4KjfEv4R/tLr8Kfgp4f0jXtd0LR31vxBNdW7XLwokLXLRKgdAoW3USMSSzGRVUBuG9I/4JSfEDTPhR/wSH8FeKNZnFtpPh7SdV1G8k7pFFfXjsR6nCnA7mvzh/YQ/wCCm3g74H/tVfFL4t/E/wAP+I9f1/x8skdoumRQTR2cU0xkmjYTSJ8uEgRcZwqEd6J1LQim7X6j4W4HhiM/zvH0sEsRTwk6kadG3uynKo4xVrpcsIptrpp5H62f8E8f2w4P24/2XdF8cm1ttP1ZpJLDWLK3YtHaXkRG4LnJCsrJIoJJCyAEkjNe31+P/wDwQR/am0fwr+1x49+HGmi8sfCHj+SfVPDVreEedbyW7OyRHBK72tS24gnJt1xX7AVtRnzQTPzbxR4UXD/EVbB0oONKVp00+kJ6pdfhd4bv4dwooorU/PSHTv8AkHwf9c1/lU1Q6d/yD4P+ua/yqagAr8ofDP8Awbq+LtB8Xadqb/Erw5IlleR3JQabMCwVw2PvdTiv1eor3cl4kx+VKosFNR57X0Tva9t0+7Pnc+4Wy7OHTlj4OXs78tm1a9r7NX2R8if8FQv+CePjD/goBP4VsdK8ZaT4b8P+HFmne1ubWWZ7q6kIXzDtIGFRcL3+d/Wul/4Jkf8ABPtP2APhdr2l3mrWev694i1EXV3f28DQoYY0CwwgMScKTK2fWU19LUUp8R4+WXLKudKitbJJdb6u13rruVDhfLo5o845G67VuZtu2ltFey002PzP/
+an/AOCBOqfGr9ojxb4w8N+N9E0HSfEuoPqSWM9hK8lvJKA8oyrAYMpdhgcAgdq+kf2u/wBhzxb+1r+xF4b+GmqeLNLi8UaVLYzX+svbSPDfPbxPG0mzO4M+4MeeDmvp+iuutxfmlX2DqTTdBpwfKrqyS3trsr33OOhwTlFH6wqVNpYhNTXNKzu29FfTd2ta1z4Y/wCCZn/BJLXv2DfjzqvjDVPGOkeILfUdBm0hbe1s5IXRnuLeUOSxIwBCRj/aFeW/tEf8EJvH/wC0h8efFHjnWPid4eS58S6jJdtGNOnc20ROI4lJbkRxhEHsgr9OaK2p8b5vDGTx8ai9pJKLfLHZdNrI56nh/ks8FDLpU37KEnJLmlu93e935dtTyj4zfsmaD8UP2PNU+D9ssdho0ugpo2nOybxZtCi/ZpSBjdskjjY9M7fevkH9h7/gjF49/Y0/aT0Dx3a/EXw/f2tgZLfULKOwmjN7ayKVkjyWxkcOueNyLX6K0VwYLibMMLhquEpT9yrfmTSd7qzeq0bXY9HH8KZbjMVRxtan+8o25Gm1ZJ3S0aTSfcGztOACe2eBXxz+w1/wTE1j9nj9qH4hfFjx54o0nxj4j8bJMsYt7N447X7RP50/EhPHyxooHRQw6HFfXPiSWSDw9fvEzLKltIyFfvBgpwR75rx39gX4+WHxh/Zy8F2s+vy6z4w07w5YNr63HmG6juTCokMpcDLmQNnk85ryo4GdShLEpXUGk99Lp6+mlvmfZYDi7FZYq2VYeagsVC0tFdxhJPlTeqve7Ud0tSz+2d+x1o37Vv7L/in4ewRaboc2txxy2l4lqoW1uYpFkjkIXBIyu0452sw7148//BN7xlrP/BLO9/Z61fxpo95qiyQxWGtC1l8mK1iv4btI3QncSoR4xg4C7PQ19P8Axwv7zS/gr4wutPlngv7bRL2W2kgJEscqwOUZSOQwYAjHOar/ALPOpX2sfADwNeapNc3GpXfh+wmu5bgk
+zSTNbRl2cnksWJJzznNZvCJ0fbt9eW3yuejl3HWaYFUstoT92nUjiI3SdqkbJNNpvorrZ9UfNGvf8E3fGTf8EutG/Z70fxro9jqEMjRanq7WkpiubU3k10Y0QHcCWaJTk4Kq4717J+xx+x/ov7K/7MPhT4ezQ6drcugwu91dvaqVurqWRpJZAGyQCzEDPIVVHasD9vSHxhrFz8LNF8HXd/bXOueKntrxLfWrrRo54F0y9l2S3NsjyRpvjRuEILKoOM5HtXw90S68NeBNH0+9eWS9tLOKK4aS+lv2MgQb/wB/KBJL82fncBmHJAJxWtXARpUKdfmTcr6dkm137rt8zDFcf5tmKxGV1pWp+1daTSS5qs1du6S6Ssley6I+Vv2zv+CZusfHT9rj4d/GDwJ4m0nwlr/gpYEuIri0d475YJ/MiHyEYBV5I2yOVKjoK+wa+M/22fHus6J+2Hp2myeK7nw94ZPhK3ufLk8T6nols9wb64V2U2cUnmS+WqjD4GAOa+y0cSIrKcqwyD61ri8seGpU6zd/aK/5f0zzavGeLzmEMuxLvHBpwhoublbbs2ldpP4bt2W1haKKK4DAh07/AJB8H/XNf5VNUOnf8g+D/rmv8qmoAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAIdO/5B8H/XNf5VNRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAf/2Q==</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <DataSets>
+    <DataSet Name="DataSet1_Proc_PolicyMemberMedicalTest_Policy">
+      <Fields>
+        <Field Name="PolicyNumber">
+          <DataField>PolicyNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="OfficeCode">
+          <DataField>OfficeCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FullName">
+          <DataField>FullName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Age">
+          <DataField>Age</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Gender">
+          <DataField>Gender</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ID_Proof">
+          <DataField>ID_Proof</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Phone">
+          <DataField>Phone</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AdvisorName">
+          <DataField>AdvisorName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AgentCode">
+          <DataField>AgentCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="HomePhone">
+          <DataField>HomePhone</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ApplicantTypeUID">
+          <DataField>ApplicantTypeUID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MTRF_SerialNo">
+          <DataField>MTRF_SerialNo</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="MTRF_Date">
+          <DataField>MTRF_Date</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="MTRF_DateValid">
+          <DataField>MTRF_DateValid</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="PolicyUID">
+          <DataField>PolicyUID</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="RenewalNo">
+          <DataField>RenewalNo</DataField>
+          <rd:TypeName>System.Byte</rd:TypeName>
+        </Field>
+        <Field Name="Loan_Reference_No">
+          <DataField>Loan_Reference_No</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="COI">
+          <DataField>COI</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Pincode">
+          <DataField>Pincode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="State">
+          <DataField>State</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="City">
+          <DataField>City</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>TALIC_GLIMPSE_AppDBConnectionString</DataSourceName>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>dbo.Proc_PolicyMemberMedicalTest_Policy</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>DataSet1</rd:DataSetName>
+        <rd:TableName>Proc_PolicyMemberMedicalTest_Policy</rd:TableName>
+        <rd:TableAdapterName>Proc_PolicyMemberMedicalTest_PolicyTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="DataSet1_dtMedicalTest">
+      <Fields>
+        <Field Name="MedicalTest">
+          <DataField>MedicalTest</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MTRF_SerialNo">
+          <DataField>MTRF_SerialNo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TestCode">
+          <DataField>TestCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TestName">
+          <DataField>TestName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MTRF_Date">
+          <DataField>MTRF_Date</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MTRF_DateValid">
+          <DataField>MTRF_DateValid</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PolicyUID">
+          <DataField>PolicyUID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RenewalNo">
+          <DataField>RenewalNo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Loan_Reference_No">
+          <DataField>Loan_Reference_No</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DummyDataSource</DataSourceName>
+        <CommandText />
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>DataSet1</rd:DataSetName>
+        <rd:TableName>dtMedicalTest</rd:TableName>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <Code />
+  <Width>7.75in</Width>
+  <Body>
+    <ColumnSpacing>0.25in</ColumnSpacing>
+    <ReportItems>
+      <Rectangle Name="rectangle1">
+        <ZIndex>1</ZIndex>
+        <ReportItems>
+          <Textbox Name="textbox42">
+            <Top>2.75in</Top>
+            <Width>1.10333in</Width>
+            <Style>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Left</TextAlign>
+            </Style>
+            <ZIndex>55</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>6in</Left>
+            <Height>0.25in</Height>
+            <Value>=First(Fields!City.Value, "DataSet1_Proc_PolicyMemberMedicalTest_Policy")</Value>
+          </Textbox>
+          <Textbox Name="textbox38">
+            <Top>2.75in</Top>
+            <Width>1.10333in</Width>
+            <Style>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Left</TextAlign>
+            </Style>
+            <ZIndex>54</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>3.5in</Left>
+            <Height>0.25in</Height>
+            <Value>=First(Fields!State.Value, "DataSet1_Proc_PolicyMemberMedicalTest_Policy")</Value>
+          </Textbox>
+          <Textbox Name="textbox43">
+            <Top>2.75in</Top>
+            <Width>0.5in</Width>
+            <Style>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+            </Style>
+            <ZIndex>53</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>5.25in</Left>
+            <Height>0.25in</Height>
+            <Value>City:</Value>
+          </Textbox>
+          <Textbox Name="textbox39">
+            <Top>2.75in</Top>
+            <Width>0.75in</Width>
+            <Style>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+            </Style>
+            <ZIndex>52</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>2.75in</Left>
+            <Height>0.25in</Height>
+            <Value>State:</Value>
+          </Textbox>
+          <Textbox Name="textbox36">
+            <Top>2.75in</Top>
+            <Width>1.10333in</Width>
+            <Style>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Left</TextAlign>
+            </Style>
+            <ZIndex>51</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>1.14667in</Left>
+            <Height>0.25in</Height>
+            <Value>=First(Fields!Pincode.Value, "DataSet1_Proc_PolicyMemberMedicalTest_Policy")</Value>
+          </Textbox>
+          <Textbox Name="textbox13">
+            <Top>1.6875in</Top>
+            <Width>2.25in</Width>
+            <Style>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Left</TextAlign>
+            </Style>
+            <ZIndex>50</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>1.14667in</Left>
+            <Height>0.16in</Height>
+            <Value>=First(Fields!COI.Value, "DataSet1_Proc_PolicyMemberMedicalTest_Policy")</Value>
+          </Textbox>
+          <Textbox Name="textbox37">
+            <Top>2.75in</Top>
+            <Width>0.84in</Width>
+            <Style>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+            </Style>
+            <ZIndex>49</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.20916in</Left>
+            <Height>0.16in</Height>
+            <Value>Pincode:</Value>
+          </Textbox>
+          <Textbox Name="textbox10">
+            <Top>1.6875in</Top>
+            <Width>0.81in</Width>
+            <Style>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+            </Style>
+            <ZIndex>48</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.15in</Left>
+            <Height>0.16in</Height>
+            <Value>COI No:</Value>
+          </Textbox>
+          <Textbox Name="textbox28">
+            <Top>0.47916in</Top>
+            <Width>1.625in</Width>
+            <Style>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+            </Style>
+            <ZIndex>47</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.1875in</Left>
+            <Height>0.16in</Height>
+            <Value>=("*")+(First(Fields!PolicyNumber.Value, "DataSet1_Proc_PolicyMemberMedicalTest_Policy"))+("*")</Value>
+          </Textbox>
+          <Textbox Name="textbox29">
+            <Top>0.30208in</Top>
+            <Width>2.25in</Width>
+            <Style>
+              <FontFamily>Code39Three</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+            </Style>
+            <ZIndex>46</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.1875in</Left>
+            <Height>0.16in</Height>
+            <Value>=(First(Fields!PolicyNumber.Value, "DataSet1_Proc_PolicyMemberMedicalTest_Policy"))</Value>
+          </Textbox>
+          <Textbox Name="textbox3">
+            <Top>2.35417in</Top>
+            <Width>0.84in</Width>
+            <Style>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+            </Style>
+            <ZIndex>45</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.21in</Left>
+            <Height>0.16in</Height>
+            <Value>Age :</Value>
+          </Textbox>
+          <Textbox Name="textbox2">
+            <Top>2.35417in</Top>
+            <Width>2.43in</Width>
+            <Style>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Left</TextAlign>
+            </Style>
+            <ZIndex>44</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>1.14667in</Left>
+            <Height>0.16in</Height>
+            <Value>=First(Fields!Age.Value, "DataSet1_Proc_PolicyMemberMedicalTest_Policy")</Value>
+          </Textbox>
+          <Table Name="table1">
+            <ZIndex>43</ZIndex>
+            <DataSetName>DataSet1_dtMedicalTest</DataSetName>
+            <Top>3.40625in</Top>
+            <Width>7.25in</Width>
+            <Details>
+              <TableRows>
+                <TableRow>
+                  <TableCells>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="MTRF_SerialNo">
+                          <rd:DefaultName>MTRF_SerialNo</rd:DefaultName>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <FontFamily>Verdana</FontFamily>
+                            <FontSize>8pt</FontSize>
+                            <FontWeight>700</FontWeight>
+                            <TextAlign>Left</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Fields!MTRF_SerialNo.Value</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="TestCode">
+                          <rd:DefaultName>TestCode</rd:DefaultName>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <FontFamily>Verdana</FontFamily>
+                            <FontSize>8pt</FontSize>
+                            <FontWeight>700</FontWeight>
+                            <TextAlign>Left</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Fields!TestCode.Value</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="TestName">
+                          <rd:DefaultName>TestName</rd:DefaultName>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <FontFamily>Verdana</FontFamily>
+                            <FontSize>8pt</FontSize>
+                            <FontWeight>700</FontWeight>
+                            <TextAlign>Left</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Fields!TestName.Value</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                  </TableCells>
+                  <Height>0.25in</Height>
+                </TableRow>
+              </TableRows>
+            </Details>
+            <Style>
+              <BorderStyle>
+                <Default>Solid</Default>
+              </BorderStyle>
+            </Style>
+            <Header>
+              <TableRows>
+                <TableRow>
+                  <TableCells>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox17">
+                          <rd:DefaultName>textbox17</rd:DefaultName>
+                          <Style>
+                            <BackgroundColor>Silver</BackgroundColor>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <FontFamily>Verdana</FontFamily>
+                            <FontSize>8pt</FontSize>
+                            <FontWeight>700</FontWeight>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>Serial No</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox18">
+                          <rd:DefaultName>textbox18</rd:DefaultName>
+                          <Style>
+                            <BackgroundColor>Silver</BackgroundColor>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <FontFamily>Verdana</FontFamily>
+                            <FontSize>8pt</FontSize>
+                            <FontWeight>700</FontWeight>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>Test Code</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox19">
+                          <rd:DefaultName>textbox19</rd:DefaultName>
+                          <Style>
+                            <BackgroundColor>Silver</BackgroundColor>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <FontFamily>Verdana</FontFamily>
+                            <FontSize>8pt</FontSize>
+                            <FontWeight>700</FontWeight>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>Test Name</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                  </TableCells>
+                  <Height>0.25in</Height>
+                </TableRow>
+              </TableRows>
+              <RepeatOnNewPage>true</RepeatOnNewPage>
+            </Header>
+            <TableColumns>
+              <TableColumn>
+                <Width>1.57609in</Width>
+              </TableColumn>
+              <TableColumn>
+                <Width>1.8913in</Width>
+              </TableColumn>
+              <TableColumn>
+                <Width>3.78261in</Width>
+              </TableColumn>
+            </TableColumns>
+            <Height>0.5in</Height>
+            <Left>0.25in</Left>
+          </Table>
+          <Rectangle Name="rectangle12">
+            <Left>0.15in</Left>
+            <ZIndex>42</ZIndex>
+            <ReportItems>
+              <Textbox Name="textbox15">
+                <Width>3.27in</Width>
+                <Style>
+                  <FontFamily>Verdana</FontFamily>
+                  <FontWeight>700</FontWeight>
+                  <TextAlign>Left</TextAlign>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+                <CanGrow>true</CanGrow>
+                <Left>0.15in</Left>
+                <Value>Proposed Insured/Agent Particulars:</Value>
+              </Textbox>
+            </ReportItems>
+            <Top>1.86458in</Top>
+            <Width>7.59in</Width>
+            <Style>
+              <BackgroundColor>#2288c6</BackgroundColor>
+              <BorderStyle>
+                <Default>Solid</Default>
+              </BorderStyle>
+            </Style>
+            <Height>0.24in</Height>
+          </Rectangle>
+          <Textbox Name="textbox9">
+            <Top>4.5in</Top>
+            <Width>7.56in</Width>
+            <Style>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>7pt</FontSize>
+              <FontWeight>100</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>41</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.38095cm</Left>
+            <Height>0.44in</Height>
+            <Value>I hereby irrevocably authorize Tata-AIA Life Insurance Limited or any of it's approved medical examiners or laboratories to perform the necessary medical assessment and test to underwrite and evaluate my/the insureds health status in relation to application and any claim arising thereform.These test may include,but are not limited to ,tests for cholesterol and related blood lipids,diabetes,liver or kidney disorders,acquired immunodeficiency syndrome(AIDS),infection by any human immunodeficiency virus(HIV),immune disorder or the presence of medications,drugs nicotine or their metabolites.</Value>
+          </Textbox>
+          <Textbox Name="textbox8">
+            <Top>4in</Top>
+            <Width>1.44in</Width>
+            <Style>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+            </Style>
+            <ZIndex>40</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>5.25in</Left>
+            <Height>0.18in</Height>
+            <Value>Doctors Signature</Value>
+          </Textbox>
+          <Textbox Name="textbox102">
+            <Top>7.95in</Top>
+            <Width>5.25in</Width>
+            <Style>
+              <FontFamily>Verdana</FontFamily>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Center</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>39</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>1.25in</Left>
+            <Height>0.25in</Height>
+            <Value>Tata AIA LIFE INSURANCE COMPANY LIMITED</Value>
+          </Textbox>
+          <Textbox Name="textbox104">
+            <Top>8.19in</Top>
+            <Width>6.65in</Width>
+            <Style>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>100</FontWeight>
+              <TextAlign>Center</TextAlign>
+            </Style>
+            <ZIndex>38</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.6in</Left>
+            <Height>0.25in</Height>
+            <Value>Registered &amp; Corporate Office: 14th Floor, Tower A, Peninsula Business Park, </Value>
+          </Textbox>
+          <Textbox Name="textbox106">
+            <Top>8.4in</Top>
+            <Width>5in</Width>
+            <Style>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>100</FontWeight>
+              <TextAlign>Center</TextAlign>
+            </Style>
+            <ZIndex>37</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>1.5in</Left>
+            <Value>Senapati Bapat Marg, Lower Parel, Mumbai - 400013. Visit Us at www.tataaia.com</Value>
+          </Textbox>
+          <Rectangle Name="rectangle5">
+            <Left>0.15in</Left>
+            <ZIndex>36</ZIndex>
+            <Top>7.83in</Top>
+            <Width>7.53in</Width>
+            <Style>
+              <BackgroundColor>#2288c6</BackgroundColor>
+              <BorderStyle>
+                <Default>Solid</Default>
+              </BorderStyle>
+            </Style>
+            <Height>0.07in</Height>
+          </Rectangle>
+          <Rectangle Name="rectangle6">
+            <Left>0.15in</Left>
+            <ZIndex>35</ZIndex>
+            <ReportItems>
+              <Textbox Name="textbox16">
+                <Width>3.48in</Width>
+                <Style>
+                  <FontFamily>Verdana</FontFamily>
+                  <FontWeight>700</FontWeight>
+                  <TextAlign>Left</TextAlign>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+                <CanGrow>true</CanGrow>
+                <Left>0.15in</Left>
+                <Value>Authorisation:</Value>
+              </Textbox>
+            </ReportItems>
+            <Top>4.25in</Top>
+            <Width>7.59in</Width>
+            <Style>
+              <BackgroundColor>#2288c6</BackgroundColor>
+              <BorderStyle>
+                <Default>Solid</Default>
+              </BorderStyle>
+            </Style>
+            <Height>0.25in</Height>
+          </Rectangle>
+          <Rectangle Name="rectangle4">
+            <Left>0.15in</Left>
+            <ZIndex>34</ZIndex>
+            <ReportItems>
+              <Textbox Name="textbox14">
+                <Width>3.27in</Width>
+                <Style>
+                  <FontFamily>Verdana</FontFamily>
+                  <FontWeight>700</FontWeight>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+                <CanGrow>true</CanGrow>
+                <Left>0.15in</Left>
+                <Value>MEDICAL TEST REQUIRED FORM [MTRF]</Value>
+              </Textbox>
+            </ReportItems>
+            <Top>0.99in</Top>
+            <Width>7.59in</Width>
+            <Style>
+              <BackgroundColor>#2288c6</BackgroundColor>
+              <BorderStyle>
+                <Default>Solid</Default>
+              </BorderStyle>
+            </Style>
+            <Height>0.21in</Height>
+          </Rectangle>
+          <Textbox Name="textbox11">
+            <Top>0.81in</Top>
+            <Width>1.62in</Width>
+            <Style>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Left</TextAlign>
+            </Style>
+            <ZIndex>33</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>5.41667in</Left>
+            <Height>0.16in</Height>
+            <Value>=Sum(Fields!MTRF_SerialNo.Value, "DataSet1_Proc_PolicyMemberMedicalTest_Policy")</Value>
+          </Textbox>
+          <Textbox Name="textbox12">
+            <Top>0.81in</Top>
+            <Width>1.47in</Width>
+            <Style>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+            </Style>
+            <ZIndex>32</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>3.84in</Left>
+            <Height>0.16in</Height>
+            <Value>MTRF SERIAL NO:</Value>
+          </Textbox>
+          <Rectangle Name="rectangle3">
+            <Left>0.15in</Left>
+            <ZIndex>31</ZIndex>
+            <Top>0.75in</Top>
+            <Width>7.59in</Width>
+            <Style>
+              <BackgroundColor>#2288c6</BackgroundColor>
+              <BorderStyle>
+                <Default>Solid</Default>
+              </BorderStyle>
+            </Style>
+            <Height>0.03in</Height>
+          </Rectangle>
+          <Textbox Name="textbox1">
+            <rd:DefaultName>textbox1</rd:DefaultName>
+            <Width>4.41in</Width>
+            <Style>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>12pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>30</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>1in</Left>
+            <Height>0.25in</Height>
+            <Value>Tata AIA LIFE INSURANCE COMPANY LIMITED</Value>
+          </Textbox>
+          <Image Name="image1">
+            <Sizing>Fit</Sizing>
+            <Top>0.09947cm</Top>
+            <Width>1.89in</Width>
+            <MIMEType>image/jpeg</MIMEType>
+            <Source>Embedded</Source>
+            <Style>
+              <BorderStyle>
+                <Default>Solid</Default>
+              </BorderStyle>
+            </Style>
+            <ZIndex>29</ZIndex>
+            <Left>5.5in</Left>
+            <Height>0.66in</Height>
+            <Value>tataaig</Value>
+          </Image>
+          <Textbox Name="textbox5">
+            <Top>0.81in</Top>
+            <Width>1.5in</Width>
+            <Style>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+            </Style>
+            <ZIndex>28</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.15in</Left>
+            <Height>0.16in</Height>
+            <Value>Department Code-</Value>
+          </Textbox>
+          <Textbox Name="textbox21">
+            <Top>2.16042in</Top>
+            <Width>0.84in</Width>
+            <Style>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+            </Style>
+            <ZIndex>27</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.21in</Left>
+            <Height>0.16in</Height>
+            <Value>Name :</Value>
+          </Textbox>
+          <Textbox Name="textbox20">
+            <Top>2.16042in</Top>
+            <Width>6.33in</Width>
+            <Style>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Left</TextAlign>
+            </Style>
+            <ZIndex>26</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>1.14667in</Left>
+            <Height>0.16in</Height>
+            <Value>=First(Fields!FullName.Value, "DataSet1_Proc_PolicyMemberMedicalTest_Policy")</Value>
+          </Textbox>
+          <Textbox Name="textbox23">
+            <Top>1.26in</Top>
+            <Width>2.22in</Width>
+            <Style>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Left</TextAlign>
+            </Style>
+            <ZIndex>25</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>1.14667in</Left>
+            <Height>0.16in</Height>
+            <Value>=First(Fields!PolicyNumber.Value, "DataSet1_Proc_PolicyMemberMedicalTest_Policy")</Value>
+          </Textbox>
+          <Textbox Name="textbox22">
+            <Top>1.26in</Top>
+            <Width>0.81in</Width>
+            <Style>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+            </Style>
+            <ZIndex>24</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.15in</Left>
+            <Height>0.16in</Height>
+            <Value>Policy No:</Value>
+          </Textbox>
+          <Textbox Name="textbox25">
+            <Top>1.47in</Top>
+            <Width>0.81in</Width>
+            <Style>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+            </Style>
+            <ZIndex>23</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.15in</Left>
+            <Height>0.16in</Height>
+            <Value>MTRF Date:</Value>
+          </Textbox>
+          <Textbox Name="textbox24">
+            <Top>1.47in</Top>
+            <Width>2.25in</Width>
+            <Style>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Left</TextAlign>
+            </Style>
+            <ZIndex>22</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>1.14667in</Left>
+            <Height>0.16in</Height>
+            <Value>=First(Fields!MTRF_Date.Value, "DataSet1_Proc_PolicyMemberMedicalTest_Policy")</Value>
+          </Textbox>
+          <Textbox Name="textbox27">
+            <Top>1.26in</Top>
+            <Width>2.16in</Width>
+            <Style>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Left</TextAlign>
+            </Style>
+            <ZIndex>21</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>5.25in</Left>
+            <Height>0.16in</Height>
+            <Value>=First(Fields!OfficeCode.Value, "DataSet1_Proc_PolicyMemberMedicalTest_Policy")</Value>
+          </Textbox>
+          <Textbox Name="textbox26">
+            <Top>1.26in</Top>
+            <Width>1.11in</Width>
+            <Style>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+            </Style>
+            <ZIndex>20</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>3.84in</Left>
+            <Height>0.16in</Height>
+            <Value>Office Code:</Value>
+          </Textbox>
+          <Textbox Name="textbox30">
+            <Top>2.55208in</Top>
+            <Width>0.84in</Width>
+            <Style>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+            </Style>
+            <ZIndex>19</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>4in</Left>
+            <Height>0.16in</Height>
+            <Value>Tel / Mob :</Value>
+          </Textbox>
+          <Textbox Name="textbox31">
+            <Top>2.55208in</Top>
+            <Width>2.43in</Width>
+            <Style>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Left</TextAlign>
+              <Direction>RTL</Direction>
+            </Style>
+            <ZIndex>18</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>4.93667in</Left>
+            <Height>0.16in</Height>
+            <Value>=First(Fields!Phone.Value, "DataSet1_Proc_PolicyMemberMedicalTest_Policy")</Value>
+          </Textbox>
+          <Textbox Name="textbox32">
+            <Top>1.47in</Top>
+            <Width>1.11in</Width>
+            <Style>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+            </Style>
+            <ZIndex>17</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>3.84in</Left>
+            <Height>0.16in</Height>
+            <Value>MTRF Valid Upto:</Value>
+          </Textbox>
+          <Textbox Name="textbox33">
+            <Top>1.47in</Top>
+            <Width>2.16in</Width>
+            <Style>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Left</TextAlign>
+            </Style>
+            <ZIndex>16</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>5.25in</Left>
+            <Height>0.16in</Height>
+            <Value>=First(Fields!MTRF_DateValid.Value, "DataSet1_Proc_PolicyMemberMedicalTest_Policy")</Value>
+          </Textbox>
+          <Textbox Name="textbox34">
+            <Top>2.36292in</Top>
+            <Width>0.84in</Width>
+            <Style>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+            </Style>
+            <ZIndex>15</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>4in</Left>
+            <Height>0.16in</Height>
+            <Value>Gender:</Value>
+          </Textbox>
+          <Textbox Name="textbox35">
+            <Top>2.36292in</Top>
+            <Width>2.43in</Width>
+            <Style>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Left</TextAlign>
+            </Style>
+            <ZIndex>14</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>4.93667in</Left>
+            <Height>0.16in</Height>
+            <Value>=First(Fields!Gender.Value, "DataSet1_Proc_PolicyMemberMedicalTest_Policy")</Value>
+          </Textbox>
+          <Textbox Name="textbox41">
+            <Top>2.54875in</Top>
+            <Width>2.43in</Width>
+            <Style>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Left</TextAlign>
+            </Style>
+            <ZIndex>13</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>1.14667in</Left>
+            <Height>0.16in</Height>
+            <Value>=First(Fields!ID_Proof.Value, "DataSet1_Proc_PolicyMemberMedicalTest_Policy")</Value>
+          </Textbox>
+          <Textbox Name="textbox40">
+            <Top>2.54875in</Top>
+            <Width>0.84in</Width>
+            <Style>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+            </Style>
+            <ZIndex>12</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.21in</Left>
+            <Height>0.16in</Height>
+            <Value>ID Proof:</Value>
+          </Textbox>
+          <Rectangle Name="rectangle8">
+            <Left>0.12in</Left>
+            <ZIndex>11</ZIndex>
+            <ReportItems>
+              <Textbox Name="textbox58">
+                <Top>0.03in</Top>
+                <Width>3.1in</Width>
+                <Style>
+                  <FontFamily>Verdana</FontFamily>
+                  <FontWeight>700</FontWeight>
+                  <TextAlign>Left</TextAlign>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+                <CanGrow>true</CanGrow>
+                <Left>0.15in</Left>
+                <Value>TESTS REQUIRED </Value>
+              </Textbox>
+            </ReportItems>
+            <Top>3.05208in</Top>
+            <Width>7.59in</Width>
+            <Style>
+              <BackgroundColor>#2288c6</BackgroundColor>
+              <BorderStyle>
+                <Default>Solid</Default>
+              </BorderStyle>
+            </Style>
+            <Height>0.28in</Height>
+          </Rectangle>
+          <Textbox Name="textbox59">
+            <Top>4in</Top>
+            <Width>1.65in</Width>
+            <Style>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+            </Style>
+            <ZIndex>10</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.18in</Left>
+            <Height>0.15in</Height>
+            <Value>Autorised Signatory</Value>
+          </Textbox>
+          <Textbox Name="textbox60">
+            <Top>5.04in</Top>
+            <Width>1.41in</Width>
+            <Style>
+              <Color>DarkGray</Color>
+              <BackgroundColor>White</BackgroundColor>
+              <BorderColor>
+                <Default>DarkGray</Default>
+              </BorderColor>
+              <BorderStyle>
+                <Default>Solid</Default>
+              </BorderStyle>
+              <FontFamily>Verdana</FontFamily>
+              <FontWeight>700</FontWeight>
+            </Style>
+            <ZIndex>9</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.81in</Left>
+            <Height>0.15in</Height>
+            <Value />
+          </Textbox>
+          <Textbox Name="textbox61">
+            <Top>5in</Top>
+            <Width>0.57in</Width>
+            <Style>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+            </Style>
+            <ZIndex>8</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.18in</Left>
+            <Height>0.15in</Height>
+            <Value>Date :</Value>
+          </Textbox>
+          <Textbox Name="textbox62">
+            <Top>5.25in</Top>
+            <Width>1.41in</Width>
+            <Style>
+              <Color>DarkGray</Color>
+              <BackgroundColor>White</BackgroundColor>
+              <BorderColor>
+                <Default>DarkGray</Default>
+              </BorderColor>
+              <BorderStyle>
+                <Default>Solid</Default>
+              </BorderStyle>
+              <FontFamily>Verdana</FontFamily>
+              <FontWeight>700</FontWeight>
+            </Style>
+            <ZIndex>7</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.81in</Left>
+            <Height>0.15in</Height>
+            <Value />
+          </Textbox>
+          <Textbox Name="textbox63">
+            <Top>5.25in</Top>
+            <Width>0.57in</Width>
+            <Style>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+            </Style>
+            <ZIndex>6</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.18in</Left>
+            <Height>0.18in</Height>
+            <Value>Place :</Value>
+          </Textbox>
+          <Textbox Name="textbox80">
+            <Top>5in</Top>
+            <Width>2.47in</Width>
+            <Style>
+              <Color>LightGrey</Color>
+              <BackgroundColor>WhiteSmoke</BackgroundColor>
+              <BorderColor>
+                <Default>DarkGray</Default>
+              </BorderColor>
+              <BorderStyle>
+                <Default>Solid</Default>
+              </BorderStyle>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>7pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Center</TextAlign>
+            </Style>
+            <ZIndex>5</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>4.53in</Left>
+            <Height>0.39in</Height>
+            <Value>Signature/Thumb impression(left hand)
+of &lt;&lt;Proposed Insured/Applicant&gt;&gt;
+(In presence of Doctor/Nurse/Technician)</Value>
+          </Textbox>
+          <Rectangle Name="rectangle11">
+            <Left>0.15in</Left>
+            <ZIndex>4</ZIndex>
+            <ReportItems>
+              <Textbox Name="textbox82">
+                <Width>4.74in</Width>
+                <Style>
+                  <FontFamily>Verdana</FontFamily>
+                  <FontWeight>700</FontWeight>
+                  <TextAlign>Left</TextAlign>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+                <CanGrow>true</CanGrow>
+                <Left>0.12in</Left>
+                <Value>INSTRUCTIONS TO ALL LABORATORY TECHNICIANS:</Value>
+              </Textbox>
+            </ReportItems>
+            <Top>5.43in</Top>
+            <Width>7.56in</Width>
+            <Style>
+              <BackgroundColor>#2288c6</BackgroundColor>
+              <BorderStyle>
+                <Default>Solid</Default>
+              </BorderStyle>
+            </Style>
+            <Height>0.21in</Height>
+          </Rectangle>
+          <Textbox Name="textbox6">
+            <Top>0.81in</Top>
+            <Width>0.48in</Width>
+            <Style>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+            </Style>
+            <ZIndex>3</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>1.71in</Left>
+            <Height>0.16in</Height>
+            <Value>U &amp; I</Value>
+          </Textbox>
+          <Textbox Name="textbox83">
+            <Top>5.67in</Top>
+            <Width>7.47in</Width>
+            <Style>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>7pt</FontSize>
+              <FontWeight>100</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>2</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.38095cm</Left>
+            <Height>0.54in</Height>
+            <Value>i)Please ensure that all details regarding the customer and agent have been correctly entered in the /me form and reports.
+ii)Please check the customer's identity proof,number and signature and enter the same on the MTRF form.
+iii)Please quote customer's name and policy number on all the reports.
+iv)Please attach a copy of the ID proof carried by the customer along with reports dispatched by the lab.</Value>
+          </Textbox>
+          <Rectangle Name="rectangle9">
+            <Left>0.12in</Left>
+            <ZIndex>1</ZIndex>
+            <ReportItems>
+              <Textbox Name="textbox4">
+                <Width>4.68in</Width>
+                <Style>
+                  <FontFamily>Verdana</FontFamily>
+                  <FontWeight>700</FontWeight>
+                  <TextAlign>Left</TextAlign>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+                <CanGrow>true</CanGrow>
+                <Left>0.15in</Left>
+                <Value>INSTRUCTIONS FOR CUSTOMERS:</Value>
+              </Textbox>
+            </ReportItems>
+            <Top>6.39in</Top>
+            <Width>7.56in</Width>
+            <Style>
+              <BackgroundColor>#2288c6</BackgroundColor>
+              <BorderStyle>
+                <Default>Solid</Default>
+              </BorderStyle>
+            </Style>
+            <Height>0.21in</Height>
+          </Rectangle>
+          <Textbox Name="textbox7">
+            <Top>6.63in</Top>
+            <Width>7.5in</Width>
+            <Style>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>7pt</FontSize>
+              <FontWeight>100</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Left>0.38095cm</Left>
+            <Height>1.17in</Height>
+            <Value>i)Kindly carry a photo id(e.g.passport,driving license,employment card,etc)along or any suitable document to proove your 
+identification to the satisfaction of the Medical examiner.
+ii)The approximate time required to complete the medicals conducted is:25-30 min for ME,10-15 min for any bolld test,
+15-20 min for ECG-R,45-60 min for TMT/ECG-Exercise,10 min for CXR &amp; 30-45 min for USG.
+iii)Please carry relevant reports along with you in case if undergone any surgery or treatment in the past.
+iv)Shaving of chest hair is required for male clients along with 2 hrs fasting for customers undergoing TMT.
+v)FBS,Cholesterol,Triglycerides,HDL-Cholestrol,LDL,BPB,BPC,BPA requires overnight fasting of 12 hours.
+vi)Your medical reports can not be disclosed by the medical centers,please do not insist for the same.
+vii)For any queries please call us on toll free nos 1800 2679966</Value>
+          </Textbox>
+        </ReportItems>
+        <Style>
+          <BackgroundColor>White</BackgroundColor>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+        </Style>
+      </Rectangle>
+      <Rectangle Name="rectangle19">
+        <Left>0.33in</Left>
+        <Width>0in</Width>
+        <Style>
+          <BackgroundColor>#2288c6</BackgroundColor>
+        </Style>
+        <Height>0in</Height>
+      </Rectangle>
+    </ReportItems>
+    <Height>8.65in</Height>
+  </Body>
+  <Language>en-US</Language>
+  <TopMargin>0.25in</TopMargin>
+</Report>

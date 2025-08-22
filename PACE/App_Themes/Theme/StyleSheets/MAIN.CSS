@@ -1,0 +1,37 @@
+A:link {
+	COLOR: #0ea4fe; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #0ea4fe; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #0ea4fe; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+.body {
+	COLOR: #000000; FONT-FAMILY: verdana; FONT-SIZE: 10pt
+}
+.blank {
+	COLOR: #000000; FONT-FAMILY: verdana; FONT-SIZE: 1pt
+}
+.login {
+	COLOR: #ffffff; FONT-FAMILY: verdana; FONT-SIZE: 9pt
+}
+.pagetop {
+	COLOR: #0ea4fe; FONT-FAMILY: verdana; FONT-SIZE: 9pt; FONT-WEIGHT: bold
+}
+.pagebot {
+	COLOR: #0ea4fe; FONT-FAMILY: verdana; FONT-SIZE: 10pt; FONT-WEIGHT: bold
+}
+.bodyb {
+	COLOR: #004287; FONT-FAMILY: verdana; FONT-SIZE: 10pt
+}
+.heading {
+	COLOR: #004287; FONT-FAMILY: verdana; FONT-SIZE: 8pt; FONT-WEIGHT: bold
+}
+.byline {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: 000000; background-color: EDE1C5}
+.large {  font-family: Arial, Helvetica, sans-serif; font-size: 16px; font-weight: bold; color: #333333; font-style: normal; line-height: normal}
+.content {  font-family: "MS Sans Serif", Verdana, Arial; font-size: 14px; color: #FFFFFF; text-decoration: none}
+.subhead {  font-family: Verdana; font-size: 13px; font-weight: bold}

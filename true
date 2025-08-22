@@ -1,0 +1,12 @@
+25-10-2018 15:02:07: UserUID: 0 UserName: : Message: Error converting data type nvarchar to numeric.
+ StackTrace:    at GlimpsBAL.MemberInfoBAL.GetPremiumDataBAL(String PolicyUID, Int32 UserUID, String name, String Rider, String rateofIns, String DOB, String SumassuredType, String PremiumModeType, String Gender, String Tenure, String PolicyTenure, String Cover) in F:\XSPL-Projects\Glimpse\Developement\PACE\GlimpsBAL\MemberInfoBAL.cs:line 209
+   at PACE.CreditLifeInformation.PremiumCalculation1.btnSearch_Click(Object sender, EventArgs e) in F:\XSPL-Projects\Glimpse\Developement\PACE\PACE\CreditLifeInformation\PremiumCalculation.aspx.cs:line 68
+
+25-10-2018 15:15:33: UserUID: 0 UserName: : Message: Thread was being aborted.
+ StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at PACE.CreditLifeInformation.SurrenderCalculation.Page_Load(Object sender, EventArgs e) in F:\XSPL-Projects\Glimpse\Developement\PACE\PACE\CreditLifeInformation\SurrenderCalculation.aspx.cs:line 42
+

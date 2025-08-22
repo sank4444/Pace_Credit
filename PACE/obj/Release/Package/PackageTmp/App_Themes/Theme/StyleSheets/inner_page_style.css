@@ -1,0 +1,523 @@
+﻿:root {
+    --primary-color: #003366; /* Navy Blue */
+    --secondary-color: #FFA500; /* Orange */
+    --accent-color: #ADD8E6; /* Light Blue */
+    /* MODIFIED: Changed background color to match navigation_style.css */
+    --background-color: #f0f9ff; /* Light Blue BG from navigation */
+    --text-color: #333;
+    --card-bg: #fff;
+    --border-color: #ddd;
+    --header-height: 65px;
+}
+
+/* Styles for the info bar container */
+.info-bar-container {
+    /* MODIFIED: Changed to percentage width with max-width */
+    width: 90%;
+    max-width: 1600px; /* Added max-width */
+    margin: 30px auto 21px auto; /* Add margin top, remove bottom margin, center horizontally */
+    /* padding: 0 20px; */ /* REMOVED padding */
+    box-sizing: border-box; /* Ensure padding is included in width */
+    background-color: var(--primary-color); /* MOVED background color here */
+    color: white; /* MOVED text color here (default for children) */
+    border-radius: 8px; /* ADDED matching border-radius */
+    overflow: hidden; /* ADDED overflow hidden */
+}
+
+/* Info bar styles */
+.info-bar {
+    /* background-color: var(--primary-color); */ /* REMOVED - Moved to container */
+    padding: 10px 20px;
+    /* border-radius: 4px; */ /* REMOVED - Using container's radius */
+    font-size: 14.4px;
+    /* color: white; */ /* REMOVED - Inherited from container */
+    /* border: 1px solid var(--primary-color); */ /* REMOVED - Using container's styling */
+}
+
+    .info-bar span {
+        margin-right: 15px;
+    }
+
+/* Main content container for inner pages */
+.dashboard-main {
+    /* MODIFIED: Changed to percentage width with max-width */
+    width: 90%;
+    max-width: 1600px; /* Added max-width */
+    padding: 20px;
+    margin: 20px auto 20px auto; /* Keep vertical margins */
+    background-color: var(--card-bg); /* White background for the main content area */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex-grow: 1; /* ADDED: Make main content grow to push footer down */
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+/* Content area within dashboard-main */
+.content-area {
+    padding: 0; /* Remove padding as dashboard-main provides it */
+}
+
+.page-title {
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--secondary-color);
+    font-size: 1.5em;
+}
+
+/* Info Grid layout - Default to 3 columns */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Default to 3 columns */
+    gap: 20px 30px; /* Row and column gap */
+}
+
+/* Styles for individual info items to match dashboard cards */
+.info-item {
+    display: flex;
+    flex-direction: column; /* Stack label above value */
+    padding: 15px; /* Increased padding */
+    border: 1px solid var(--border-color);
+    border-radius: 6px; /* Slightly rounded corners */
+    background-color: var(--card-bg); /* White background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+}
+
+.info-label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 0.85em; /* Slightly smaller label */
+    color: #555;
+}
+
+.info-value {
+    font-size: 0.95em;
+    color: var(--text-color);
+    word-wrap: break-word; /* Allow long text to wrap */
+}
+
+/* MODIFIED: Footer Styles - Rely on navigation_style.css for sticky behavior */
+.dashboard-footer {
+    background-color: var(--primary-color);
+    color: white; /* Changed from --text-light for better contrast */
+    text-align: center;
+    padding: 15px 0;
+    /* Let navigation_style.css handle margin-top: auto */
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) { /* Switch to 2 columns on medium screens */
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px 25px; /* Adjust gap */
+    }
+    /* MODIFIED: Adjust width for medium screens */
+    .info-bar-container, .dashboard-main {
+        width: 95%;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Responsive info-bar-container */
+    .info-bar-container {
+        margin: 15px auto 0 auto; /* Adjust margins for smaller screens, center */
+        padding: 0 10px; /* Adjust padding */
+        width: 95%; /* Use percentage width */
+        max-width: none; /* Remove max-width */
+    }
+
+    /* Single column grid on small screens */
+    .info-grid {
+        grid-template-columns: 1fr; /* Switch to single column */
+        gap: 10px; /* Reduce gap for single column */
+    }
+    /* Responsive dashboard-main */
+    .dashboard-main {
+        margin: 15px auto 15px auto; /* Center with reduced vertical margin */
+        padding: 15px;
+        width: 95%; /* Use percentage width */
+        max-width: none; /* Remove max-width */
+    }
+
+    .info-bar {
+        font-size: 0.8em;
+    }
+
+    .page-title {
+        font-size: 1.3em;
+    }
+
+    .info-item {
+        padding: 12px; /* Adjust padding */
+    }
+}
+
+
+
+/* Data Table Styles */
+.data-table-container {
+    margin-top: 30px;
+}
+
+.table-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 10px;
+}
+
+.show-entries label,
+.search-box label {
+    margin-right: 5px;
+    font-size: 0.9em;
+    color: var(--text-color);
+}
+
+.show-entries select,
+.search-box input[type="search"] {
+    padding: 5px 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+    font-size: 14.4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+    .data-table thead {
+        /* MODIFIED: Changed background to accent color, text to dark */
+        background-color: var(--accent-color); /* Light Blue */
+        color: var(--text-color); /* Dark text */
+    }
+
+    .data-table th,
+    .data-table td {
+        padding: 10px 12px;
+        text-align: left;
+        border: 1px solid #dee2e6; /* Lighter border for table cells */
+    }
+
+    .data-table th {
+        font-weight: 600;
+    }
+
+    .data-table tbody tr:nth-child(even) {
+        background-color: #f8f9fa; /* Subtle striping */
+    }
+
+    .data-table tbody tr:hover {
+        background-color: #e9ecef;
+    }
+
+.select-link {
+    color: var(--primary-color);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+    .select-link.selected {
+        font-weight: bold;
+        color: #000;
+        text-decoration: none;
+        cursor: default;
+    }
+
+.table-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* MODIFIED: Changed background to accent color */
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    padding: 10px 12px;
+    border-radius: 0 0 4px 4px; /* Rounded bottom corners */
+    font-size: 0.9em;
+    flex-wrap: wrap; /* Allow wrapping */
+    gap: 10px;
+}
+
+.entry-info {
+    /* No specific styles needed */
+}
+
+.pagination {
+    display: flex;
+    gap: 5px;
+}
+
+.page-link {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #f8f9fa;
+    color: var(--primary-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+    .page-link:hover {
+        background-color: #e9ecef;
+    }
+
+    .page-link.active {
+        background-color: var(--primary-color);
+        color: white;
+        border-color: var(--primary-color);
+        cursor: default;
+    }
+
+    .page-link.disabled {
+        background-color: #e9ecef;
+        color: #6c757d;
+        border-color: var(--border-color);
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+
+/* Responsive Table */
+@media (max-width: 768px) {
+    .table-controls {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+        .search-box input[type="search"] {
+            width: 100%;
+        }
+
+    .data-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .table-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+/* Modal Styles */
+/* REMOVED custom .modal rule to rely on Bootstrap defaults for interaction */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* MODIFIED: Reduced top margin */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 700px; /* Max width */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    position: relative;
+    /* MODIFIED: Added max-height and overflow-y to handle potential overflow */
+    max-height: 85vh;
+    overflow-y: auto;
+}
+
+.close-button {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+    .close-button:hover,
+    .close-button:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+.modal h2 {
+    margin-top: 0;
+    color: var(--primary-color);
+    /* MODIFIED: Changed border color to orange */
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+#contactForm .form-row {
+    margin-bottom: 15px;
+    position: relative; /* Needed for absolute positioning of error message */
+}
+
+#contactForm label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+#contactForm input[type="text"],
+#contactForm input[type="email"],
+#contactForm textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    background-color: #eee; /* Default read-only look */
+}
+
+#contactForm textarea {
+    resize: vertical;
+}
+
+    #contactForm input:read-only,
+    #contactForm textarea:read-only {
+        background-color: #eee;
+        cursor: not-allowed;
+    }
+
+    #contactForm input:not(:read-only),
+    #contactForm textarea:not(:read-only) {
+        background-color: #fff;
+        cursor: text;
+    }
+
+    /* ADDED: Validation Error Styles */
+    #contactForm input.error,
+    #contactForm textarea.error {
+        background-color: #ffe6e6; /* Light maroon/red background */
+        border-color: #C00000; /* Maroon border */
+    }
+
+.error-message {
+    color: #C00000; /* Maroon text */
+    font-size: 0.8em;
+    margin-top: 4px;
+    display: none; /* Hidden by default */
+}
+
+.form-row-split {
+    display: flex;
+    gap: 20px;
+}
+
+    .form-row-split > div {
+        flex: 1;
+    }
+
+.modal-buttons {
+    text-align: right;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+    .modal-buttons .btn {
+        padding: 8px 15px; /* MODIFIED: Adjusted padding */
+        margin-left: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9rem; /* MODIFIED: Adjusted font size */
+        font-weight: bold; /* MODIFIED: Added bold font weight */
+        text-transform: uppercase; /* MODIFIED: Added uppercase */
+        transition: background-color 0.2s ease, color 0.2s ease; /* Added transition */
+    }
+
+    /* MODIFIED: Button styles to match logout/login */
+    .modal-buttons .btn-primary { /* Save button */
+        background-color: var(--secondary-color); /* Orange */
+        color: white;
+    }
+
+        .modal-buttons .btn-primary:hover {
+            background-color: #e69500; /* Darker orange */
+        }
+
+    .modal-buttons .btn-secondary { /* Edit button */
+        background-color: var(--primary-color); /* Navy Blue */
+        color: white;
+    }
+
+        .modal-buttons .btn-secondary:hover {
+            background-color: #002244; /* Darker Navy */
+        }
+
+    .modal-buttons .btn-light { /* Cancel button */
+        background-color: #f8f9fa; /* Bootstrap light color */
+        color: #212529;
+        border: 1px solid #dee2e6;
+    }
+
+        .modal-buttons .btn-light:hover {
+            background-color: #e2e6ea;
+        }
+
+    .modal-buttons .btn:disabled {
+        background-color: #ccc;
+        color: #666;
+        cursor: not-allowed;
+        border-color: #ccc;
+    }
+
+
+
+
+
+/* Add scroll to statement area */
+.statement-area {
+    max-height: 400px; /* Adjust height as needed */
+    overflow-y: auto;
+}
+
+
+
+/* Specific style for Member Enquiry table header */
+.member-enquiry-table thead {
+    background-color: var(--accent-color); /* Light Blue #ADD8E6 */
+    color: var(--text-color); /* Dark text #333 */
+}
+
+
+
+/* Specific style for Benefit/Coverage table header */
+.benefit-coverage-table thead {
+    background-color: #20c997; /* Teal color from screenshot */
+    color: white;
+}
+
+
+
+/* Teal button style */
+.btn-teal {
+    background-color: #20c997; /* Teal color from screenshot */
+    color: white;
+    border: none;
+}
+
+    .btn-teal:hover {
+        background-color: #1aa080; /* Darker teal for hover */
+        color: white;
+    }
+
+
+
+/* REMOVED: Ensure teal header for table inside history modal */
+/*
+#historyModal .modal-body .benefit-coverage-table thead {
+    background-color: #20c997; /* Teal color */
+/*    color: white;
+}
+*/
+
+

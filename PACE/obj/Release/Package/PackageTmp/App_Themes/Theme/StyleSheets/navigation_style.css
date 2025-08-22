@@ -1,0 +1,461 @@
+﻿/* Basic Reset & Theme Variables */
+:root {
+    --primary-navy: #003366;
+    --primary-orange: #f97316;
+    --light-blue-bg: #f0f9ff;
+    --text-dark: #0f172a;
+    --text-medium: #475569;
+    --text-light: #64748b;
+    --border-light: #e2e8f0;
+    --card-bg: #ffffff;
+    --nav-hover-bg: #e0f2fe; /* Lighter blue for hover */
+    --nav-active-border: var(--primary-orange);
+    --mega-menu-bg: var(--card-bg);
+    --mega-menu-shadow: rgba(0, 0, 0, 0.1);
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--light-blue-bg);
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+.dashboard-header {
+    background-color: var(--card-bg);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid var(--border-light);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0;
+    height: 65px; /* Fixed height for header */
+    max-width: 1400px; /* Limit header width */
+    margin: 0 auto;
+}
+
+.header-left .logo {
+    height: 35px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* Top Navigation */
+.dashboard-nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.main-menu {
+    list-style: none;
+    display: flex;
+    height: 100%;
+}
+
+.nav-item {
+    position: relative; /* Needed for mega menu positioning */
+    height: 100%;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    height: 100%;
+    color: var(--text-medium);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    border-bottom: 3px solid transparent;
+    transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+    .nav-link i {
+        margin-left: 5px;
+        font-size: 12px;
+    }
+
+    .nav-item:hover > .nav-link,
+    .nav-link.active {
+        color: var(--primary-navy);
+        border-bottom-color: var(--nav-active-border);
+    }
+
+.nav-item:hover > .nav-link {
+    background-color: var(--nav-hover-bg);
+}
+
+/* Mega Menu */
+.mega-menu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    left: 0;
+    top: 100%; /* Position below the nav item */
+    background-color: var(--mega-menu-bg);
+    border: 1px solid var(--border-light);
+    border-top: none;
+    box-shadow: 0 5px 15px var(--mega-menu-shadow);
+    padding: 20px;
+    min-width: 400px; /* Minimum width */
+    z-index: 1100;
+    display: flex; /* Use flexbox for columns */
+    gap: 30px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+.nav-item.has-megamenu:hover > .mega-menu {
+    display: flex; /* Show on hover */
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.mega-menu-column {
+    flex: 1; /* Allow columns to grow */
+}
+
+    .mega-menu-column h4 {
+        color: var(--primary-navy);
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 15px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid var(--border-light);
+    }
+
+    .mega-menu-column ul {
+        list-style: none;
+    }
+
+    .mega-menu-column li {
+        margin-bottom: 8px;
+    }
+
+.mega-menu .sub-link {
+    color: var(--text-medium);
+    text-decoration: none;
+    font-size: 14px;
+    padding: 5px 0;
+    display: block;
+    border-bottom: none; /* Override main nav link border */
+    height: auto; /* Override main nav link height */
+    transition: color 0.3s ease;
+}
+
+    .mega-menu .sub-link:hover,
+    .mega-menu .sub-link.active {
+        color: var(--primary-orange);
+        border-bottom: none;
+        background-color: transparent;
+    }
+
+/* Header Right */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-greeting {
+    font-size: 14px;
+    color: var(--text-medium);
+    white-space: nowrap;
+}
+
+.logout-btn {
+    background-color: var(--primary-orange);
+    color: var(--card-bg);
+    padding: 8px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+    border: none; /* Added to remove border */
+}
+
+    .logout-btn:hover {
+        background-color: #ea580c; /* Darker orange */
+    }
+
+.mobile-nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--primary-navy);
+}
+
+/* Main Content Area */
+.dashboard-main-content {
+    flex-grow: 1;
+    padding: 30px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 30px auto 0 auto; /* Add margin top */
+}
+
+.content-area {
+    /* No extra styling needed here */
+}
+
+.module-content {
+    display: none;
+    background-color: var(--card-bg);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--border-light);
+}
+
+    .module-content.active {
+        display: block;
+    }
+
+    .module-content h2 {
+        color: var(--primary-navy);
+        margin-bottom: 15px;
+        font-size: 22px;
+    }
+
+    .module-content p {
+        color: var(--text-medium);
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+/* Footer */
+.dashboard-footer {
+    background-color: var(--primary-navy);
+    color: #a5b4fc;
+    text-align: center;
+    padding: 15px;
+    font-size: 13px;
+    margin-top: auto;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .dashboard-nav {
+        position: absolute;
+        top: 65px; /* Below header */
+        left: 0;
+        width: 100%;
+        background-color: var(--card-bg);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow-y: visible; /* Allow content to overflow */
+        max-height: 0; /* Hidden by default */
+        opacity: 0;
+        visibility: hidden;
+        transition: max-height 0.3s ease-out, opacity 0.3s ease-out, visibility 0.3s ease-out;
+        z-index: 999; /* Ensure it's above main content */
+    }
+
+        .dashboard-nav.open {
+            max-height: none; /* Allow full expansion */
+            height: calc(100vh - 65px); /* Fill viewport below header */
+            overflow-y: auto; /* Allow scroll within menu if needed */
+            opacity: 1;
+            visibility: visible;
+            background-color: var(--card-bg); /* Ensure solid background when open */
+        }
+
+    .main-menu {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    .nav-item {
+        height: auto; /* Allow item to grow with content */
+        border-bottom: 1px solid var(--border-light);
+        position: static; /* Simplify layout for mobile expansion */
+    }
+
+    .nav-link {
+        padding: 15px 30px;
+        width: 100%;
+        justify-content: space-between; /* Push arrow to right */
+        border-bottom: none;
+        display: flex; /* Ensure flex properties apply */
+        align-items: center; /* Vertically align text/icon */
+        height: auto; /* Reset height */
+    }
+
+    .nav-item:hover > .nav-link {
+        border-bottom: none;
+        background-color: transparent; /* Remove hover effect on main link in mobile */
+    }
+
+    .nav-link.active {
+        border-bottom: none;
+        border-left: 4px solid var(--nav-active-border);
+        background-color: var(--nav-hover-bg);
+        color: var(--primary-navy);
+    }
+
+    /* --- Mobile Submenu - Mega Menu --- */
+    .mega-menu {
+        position: static;
+        display: block; /* Always block, control visibility with max-height */
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        min-width: auto;
+        flex-direction: column;
+        gap: 0;
+        max-height: 0; /* Collapse by default */
+        overflow: hidden; /* Crucial for max-height transition */
+        transition: max-height 0.3s ease-out; /* Restore transition */
+        background-color: var(--card-bg); /* Submenu background - Match main menu */
+        width: 100%; /* Ensure it takes full width */
+    }
+
+    .nav-item.has-megamenu.open > .mega-menu {
+        max-height: 1000px; /* Expand - adjust if needed */
+        border-top: 1px solid var(--border-light); /* Add separator */
+    }
+
+    .mega-menu-column {
+        padding: 0; /* Remove padding if any */
+    }
+
+        .mega-menu-column h4 {
+            display: none; /* Hide column headers */
+        }
+
+        .mega-menu-column ul {
+            padding: 0;
+            list-style: none; /* Ensure list style is none */
+        }
+
+    .mega-menu li { /* Style all li directly */
+        margin-bottom: 0;
+        border-top: 1px solid var(--border-light); /* Separator between items */
+    }
+
+    .mega-menu-column ul > li:first-child {
+        border-top: none;
+    }
+
+    .mega-menu .sub-link {
+        padding: 12px 30px 12px 45px; /* Indent sub-links */
+        font-size: 14px;
+        color: var(--text-medium);
+        display: block;
+        width: 100%;
+        text-decoration: none; /* Ensure no underline */
+        height: auto; /* Override any inherited height */
+        border-bottom: none; /* Override any inherited border */
+        background-color: transparent; /* Ensure base is transparent */
+    }
+    /* --- Mobile Submenu - Standard Dropdown --- */
+    .dropdown-menu {
+        position: static;
+        display: block;
+        float: none;
+        width: 100%;
+        margin-top: 0;
+        background-color: var(--card-bg); /* Match mega menu */
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        max-height: 0; /* Collapse by default */
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+    }
+
+    .nav-item.dropdown.open > .dropdown-menu {
+        max-height: 1000px; /* Expand */
+        border-top: 1px solid var(--border-light); /* Add separator */
+    }
+
+    .dropdown-item {
+        padding: 12px 30px 12px 45px; /* Indent sub-links like mega menu */
+        font-size: 14px;
+        color: var(--text-medium);
+        display: block;
+        width: 100%;
+        text-decoration: none;
+        height: auto;
+        border-top: 1px solid var(--border-light); /* Separator between items */
+        background-color: transparent; /* Ensure base is transparent */
+        white-space: normal; /* Allow wrapping */
+    }
+
+    .dropdown-menu > li:first-child > .dropdown-item {
+        border-top: none; /* Remove top border for first item */
+    }
+
+    /* --- UNIFIED Mobile Submenu Hover/Active Styles --- */
+    .mega-menu .sub-link:hover,
+    .mega-menu .sub-link.active,
+    .dropdown-item:hover,
+    .dropdown-item:focus,
+    .dropdown-item.active {
+        background-color: var(--nav-hover-bg) !important; /* Use important to ensure override */
+        color: var(--primary-navy) !important;
+        border-bottom: none; /* Ensure no border */
+    }
+
+    /* --- Arrow Rotation --- */
+    .nav-item.has-megamenu > .nav-link i,
+    .nav-item.dropdown > .nav-link i {
+        transition: transform 0.3s ease;
+    }
+
+    .nav-item.has-megamenu.open > .nav-link i,
+    .nav-item.dropdown.open > .nav-link i {
+        transform: rotate(180deg);
+    }
+
+    /* --- Toggle Button --- */
+    .mobile-nav-toggle {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        padding: 0 15px;
+    }
+
+    .dashboard-main-content {
+        padding: 20px;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-right .user-greeting {
+        display: none;
+    }
+}

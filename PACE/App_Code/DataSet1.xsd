@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Proc_PolicyMemberMedicalTest_Policy" msprop:Generator_UserTableName="Proc_PolicyMemberMedicalTest_Policy" msprop:Generator_RowDeletedName="Proc_PolicyMemberMedicalTest_PolicyRowDeleted" msprop:Generator_TableClassName="Proc_PolicyMemberMedicalTest_PolicyDataTable" msprop:Generator_RowChangedName="Proc_PolicyMemberMedicalTest_PolicyRowChanged" msprop:Generator_RowClassName="Proc_PolicyMemberMedicalTest_PolicyRow" msprop:Generator_RowChangingName="Proc_PolicyMemberMedicalTest_PolicyRowChanging" msprop:Generator_RowEvArgName="Proc_PolicyMemberMedicalTest_PolicyRowChangeEvent" msprop:Generator_RowEvHandlerName="Proc_PolicyMemberMedicalTest_PolicyRowChangeEventHandler" msprop:Generator_TablePropName="Proc_PolicyMemberMedicalTest_Policy" msprop:Generator_TableVarName="tableProc_PolicyMemberMedicalTest_Policy" msprop:Generator_RowDeletingName="Proc_PolicyMemberMedicalTest_PolicyRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PolicyNumber" msprop:Generator_UserColumnName="PolicyNumber" msprop:Generator_ColumnPropNameInRow="PolicyNumber" msprop:Generator_ColumnVarNameInTable="columnPolicyNumber" msprop:Generator_ColumnPropNameInTable="PolicyNumberColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="OfficeCode" msprop:Generator_UserColumnName="OfficeCode" msprop:Generator_ColumnPropNameInRow="OfficeCode" msprop:Generator_ColumnVarNameInTable="columnOfficeCode" msprop:Generator_ColumnPropNameInTable="OfficeCodeColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FullName" msprop:Generator_UserColumnName="FullName" msprop:Generator_ColumnPropNameInRow="FullName" msprop:Generator_ColumnVarNameInTable="columnFullName" msprop:Generator_ColumnPropNameInTable="FullNameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Age" msprop:Generator_UserColumnName="Age" msprop:Generator_ColumnPropNameInRow="Age" msprop:Generator_ColumnVarNameInTable="columnAge" msprop:Generator_ColumnPropNameInTable="AgeColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Gender" msprop:Generator_UserColumnName="Gender" msprop:Generator_ColumnPropNameInRow="Gender" msprop:Generator_ColumnVarNameInTable="columnGender" msprop:Generator_ColumnPropNameInTable="GenderColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ID_Proof" msprop:Generator_UserColumnName="ID_Proof" msprop:Generator_ColumnPropNameInRow="ID_Proof" msprop:Generator_ColumnVarNameInTable="columnID_Proof" msprop:Generator_ColumnPropNameInTable="ID_ProofColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Phone" msprop:Generator_UserColumnName="Phone" msprop:Generator_ColumnPropNameInRow="Phone" msprop:Generator_ColumnVarNameInTable="columnPhone" msprop:Generator_ColumnPropNameInTable="PhoneColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="AdvisorName" msprop:Generator_UserColumnName="AdvisorName" msprop:Generator_ColumnPropNameInRow="AdvisorName" msprop:Generator_ColumnVarNameInTable="columnAdvisorName" msprop:Generator_ColumnPropNameInTable="AdvisorNameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="AgentCode" msprop:Generator_UserColumnName="AgentCode" msprop:Generator_ColumnPropNameInRow="AgentCode" msprop:Generator_ColumnVarNameInTable="columnAgentCode" msprop:Generator_ColumnPropNameInTable="AgentCodeColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="HomePhone" msprop:Generator_UserColumnName="HomePhone" msprop:Generator_ColumnPropNameInRow="HomePhone" msprop:Generator_ColumnVarNameInTable="columnHomePhone" msprop:Generator_ColumnPropNameInTable="HomePhoneColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ApplicantTypeUID" msprop:Generator_UserColumnName="ApplicantTypeUID" msprop:Generator_ColumnPropNameInRow="ApplicantTypeUID" msprop:Generator_ColumnVarNameInTable="columnApplicantTypeUID" msprop:Generator_ColumnPropNameInTable="ApplicantTypeUIDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MTRF_SerialNo" msprop:Generator_UserColumnName="MTRF_SerialNo" msprop:Generator_ColumnPropNameInRow="MTRF_SerialNo" msprop:Generator_ColumnVarNameInTable="columnMTRF_SerialNo" msprop:Generator_ColumnPropNameInTable="MTRF_SerialNoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MTRF_Date" msprop:Generator_UserColumnName="MTRF_Date" msprop:Generator_ColumnPropNameInRow="MTRF_Date" msprop:Generator_ColumnVarNameInTable="columnMTRF_Date" msprop:Generator_ColumnPropNameInTable="MTRF_DateColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MTRF_DateValid" msprop:Generator_UserColumnName="MTRF_DateValid" msprop:Generator_ColumnPropNameInRow="MTRF_DateValid" msprop:Generator_ColumnVarNameInTable="columnMTRF_DateValid" msprop:Generator_ColumnPropNameInTable="MTRF_DateValidColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PolicyUID" msprop:Generator_UserColumnName="PolicyUID" msprop:Generator_ColumnPropNameInRow="PolicyUID" msprop:Generator_ColumnVarNameInTable="columnPolicyUID" msprop:Generator_ColumnPropNameInTable="PolicyUIDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="RenewalNo" msprop:Generator_UserColumnName="RenewalNo" msprop:Generator_ColumnPropNameInRow="RenewalNo" msprop:Generator_ColumnVarNameInTable="columnRenewalNo" msprop:Generator_ColumnPropNameInTable="RenewalNoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Loan_Reference_No" msprop:Generator_UserColumnName="Loan_Reference_No" msprop:Generator_ColumnPropNameInRow="Loan_Reference_No" msprop:Generator_ColumnVarNameInTable="columnLoan_Reference_No" msprop:Generator_ColumnPropNameInTable="Loan_Reference_NoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="COI" msprop:Generator_UserColumnName="COI" msprop:Generator_ColumnPropNameInRow="COI" msprop:Generator_ColumnVarNameInTable="columnCOI" msprop:Generator_ColumnPropNameInTable="COIColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="State" msprop:Generator_UserColumnName="State" msprop:Generator_ColumnPropNameInRow="State" msprop:Generator_ColumnVarNameInTable="columnState" msprop:Generator_ColumnPropNameInTable="StateColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="City" msprop:Generator_UserColumnName="City" msprop:Generator_ColumnPropNameInRow="City" msprop:Generator_ColumnVarNameInTable="columnCity" msprop:Generator_ColumnPropNameInTable="CityColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Pincode" msprop:Generator_UserColumnName="Pincode" msprop:Generator_ColumnPropNameInRow="Pincode" msprop:Generator_ColumnVarNameInTable="columnPincode" msprop:Generator_ColumnPropNameInTable="PincodeColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtMedicalTest" msprop:Generator_UserTableName="dtMedicalTest" msprop:Generator_RowDeletedName="dtMedicalTestRowDeleted" msprop:Generator_TableClassName="dtMedicalTestDataTable" msprop:Generator_RowChangedName="dtMedicalTestRowChanged" msprop:Generator_RowClassName="dtMedicalTestRow" msprop:Generator_RowChangingName="dtMedicalTestRowChanging" msprop:Generator_RowEvArgName="dtMedicalTestRowChangeEvent" msprop:Generator_RowEvHandlerName="dtMedicalTestRowChangeEventHandler" msprop:Generator_TablePropName="dtMedicalTest" msprop:Generator_TableVarName="tabledtMedicalTest" msprop:Generator_RowDeletingName="dtMedicalTestRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MTRF_SerialNo" msprop:Generator_UserColumnName="MTRF_SerialNo" msprop:Generator_ColumnPropNameInRow="MTRF_SerialNo" msprop:Generator_ColumnVarNameInTable="columnMTRF_SerialNo" msprop:Generator_ColumnPropNameInTable="MTRF_SerialNoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TestCode" msprop:Generator_UserColumnName="TestCode" msprop:Generator_ColumnPropNameInRow="TestCode" msprop:Generator_ColumnVarNameInTable="columnTestCode" msprop:Generator_ColumnPropNameInTable="TestCodeColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TestName" msprop:Generator_UserColumnName="TestName" msprop:Generator_ColumnPropNameInRow="TestName" msprop:Generator_ColumnVarNameInTable="columnTestName" msprop:Generator_ColumnPropNameInTable="TestNameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MTRF_Date" msprop:Generator_UserColumnName="MTRF_Date" msprop:Generator_ColumnPropNameInRow="MTRF_Date" msprop:Generator_ColumnVarNameInTable="columnMTRF_Date" msprop:Generator_ColumnPropNameInTable="MTRF_DateColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MTRF_DateValid" msprop:Generator_UserColumnName="MTRF_DateValid" msprop:Generator_ColumnPropNameInRow="MTRF_DateValid" msprop:Generator_ColumnVarNameInTable="columnMTRF_DateValid" msprop:Generator_ColumnPropNameInTable="MTRF_DateValidColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PolicyUID" msprop:Generator_UserColumnName="PolicyUID" msprop:Generator_ColumnPropNameInRow="PolicyUID" msprop:Generator_ColumnVarNameInTable="columnPolicyUID" msprop:Generator_ColumnPropNameInTable="PolicyUIDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="RenewalNo" msprop:Generator_UserColumnName="RenewalNo" msprop:Generator_ColumnPropNameInRow="RenewalNo" msprop:Generator_ColumnVarNameInTable="columnRenewalNo" msprop:Generator_ColumnPropNameInTable="RenewalNoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Loan_Reference_No" msprop:Generator_UserColumnName="Loan_Reference_No" msprop:Generator_ColumnPropNameInRow="Loan_Reference_No" msprop:Generator_ColumnVarNameInTable="columnLoan_Reference_No" msprop:Generator_ColumnPropNameInTable="Loan_Reference_NoColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Proc_PolicyMemberMedicalTest_PolicyKey1">
+      <xs:selector xpath=".//mstns:Proc_PolicyMemberMedicalTest_Policy" />
+      <xs:field xpath="mstns:PolicyNumber" />
+      <xs:field xpath="mstns:MTRF_SerialNo" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

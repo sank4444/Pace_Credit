@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="DummyDataSource">
+      <rd:DataSourceID>48f70c43-fb14-4f66-971d-8ff98b4a10f9</rd:DataSourceID>
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <RightMargin>1in</RightMargin>
+  <LeftMargin>1in</LeftMargin>
+  <PageHeader>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <ReportItems>
+      <Image Name="image2">
+        <Sizing>Fit</Sizing>
+        <Width>1.86458in</Width>
+        <MIMEType>image/gif</MIMEType>
+        <Source>Embedded</Source>
+        <Style />
+        <Left>11.74603cm</Left>
+        <Value>tata_aia_logo</Value>
+      </Image>
+    </ReportItems>
+    <Height>0.5in</Height>
+    <PrintOnLastPage>true</PrintOnLastPage>
+  </PageHeader>
+  <BottomMargin>1in</BottomMargin>
+  <rd:ReportID>4c5dc40c-0cfa-4a28-9d63-97d2b6f7b7a3</rd:ReportID>
+  <EmbeddedImages>
+    <EmbeddedImage Name="tata_aia_logo">
+      <MIMEType>image/gif</MIMEType>
+      <ImageData>R0lGODlhqwA9AOYAAPfe2fnm4uuinlqNyubq9vvu69tUXtg8UqG54fPKxezv+Jq03sDO6tjg8vfa1eWFgmiVzu7x+eeRjrLE5pay3fC5s/HBu+aJhtMZRjZ/wv/9/eqemlOKyLvL6W6Y0PbUzvX2+95ladUrS9lLWRR4vtMVRf339am+42KRzOymotQiSXGa0dhGVuN8e9c1TwB1vIGl1v318+mWkgB2veFxcjqBw0qHxu2uqd1eZPHz+oqq2Sl8wH+j1Xad0vbX0u+0r+6xq9xbYtMSRaS74emali5+wQ54vkOExXyh1OHn9USExff4/Pz8/u2sp8PR6+aNisnV7aa94vnj34+t2+J3d/L0+uSAfuePjNPc8NTe8eiUkMfT7Ien1+Bsbk2Ix1CJx8/a7+BvcLTH5+qcl16Qyx16v5Cu2/j6/f/6+CR7wPvr5/TPyf3y73mf09zj89/m9P3z8Qt3vrjJ6HSb0ZSx3N9oa+6zreiTkOaKh9Hb8ECDxN5jZ1aMyWWTzQBzu////yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMwMTQgNzkuMTU2Nzk3LCAyMDE0LzA4LzIwLTA5OjUzOjAyICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8x
+LjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxNCAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpCM0RDQjA3RDkxMzAxMUU0OUFFQUIyN0JBMTA2MjM5NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpCM0RDQjA3RTkxMzAxMUU0OUFFQUIyN0JBMTA2MjM5NyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkIzRENCMDdCOTEzMDExRTQ5QUVBQjI3QkExMDYyMzk3IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkIzRENCMDdDOTEzMDExRTQ5QUVBQjI3QkExMDYyMzk3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAAAAAAAsAAAAAKsAPQAAB/+Af4KDhIWGh4iJiouMjY6PkJGSk5SVlpe
+YmZqbnJ2en6ChoqOkpaanqKmqq6ytrq+wsbKztLW2t7i5uru8vb6/wMHCw8TFxsfIycrLzM3Oz9DR0tPU1dbX2JR+29zd3n4Kgz3fSoQU3+jbHoNvL98dkz8sQi5aGodEQvqIDnsYKjQC8EqXLtyfCDPQMRh0jqC3dYJgoCMjKUEJffoE4MN4yMQ8jDgGOvRmsOE3FAxHdoMIgkS6BpG6YNR34F6hfPsMNZmpL8Euld3CMclA0I0gkyohDiHYBpIUDEJKfBihr4IhnEIOBdEnAY8+KruGLKBAYcW3FUPSDlnyR45DHoL/sgwhS2GHtxlqhzgRpITgjAiPrugLibPOVY6FPujDEADARRVqfE34NsQQGYdxchg64s2IIScj6ThCc0Bfij8BoJYAcBMxISv6QgjCoY+IZMqF3Hz74m3B5s6GIHjj4K0Ik0Y/9KkoICiEPjytcw5iI0LfDUEp9LGwuWuyt8qEeHjj08FbjeOEOHfzTCiJu25Yanib0Mi5EBqDbuhzYYIQ1kIC6CMCHIIUoII+FiSyxBBQMEIBPIeIQdeDhiAwIQKJeNcNeIJU4VI3JzBhVzdyFKIeN+wNwoU3XvxhxnCMODaYDCls0AJGQPjnmiAG0HSFAAI84YI+YSSigB9IMOIH/0SGoOBHEVDCVUgRL0BZxBcZ4jYIAt6QAMIfEnUzgInADQJCGd5gmMQ3YCzyAE9whjTIf4MkACdPjCFyZJKLLIkICikeUgQHjWjIDYd/nLgNn1h8k0V6ZQoSxV2a/THAQ4rEMOSdM/kw545UcDrTHXoiqSSThaDwAl2ATbkDErCekOV3g4DmTR6D9NVND5CuR4gN3swxyAnevEBAIjvp00QKVzzwxAYWlCbEA59Kp8aBQrQAxB0XXKCFHaEKUdMhe57655NQJmFIEUZw4O4Us244iHDd2GDOXQYlGukW3zTYYULd6JDIVkKMcIhXQogQgyB0/jEGRp4WsgZGVhlSbrKfqBICqC
+KDFqolAe9xg+EgIHsDryCK+pGiB97oUYhZ3aTBliGK6SPDIT5gdNofDVMlhAGI+GyYxX70wcDR6h7i5yEbJ1LEEUcfHe+hguhwV6uDXNrNDmegXGbJ3fhGCAPfRHEIbFFJgUiPPzOMmAUYbYCIDPqsRnQ3FCCydJOBrutNNoAHLvjghBdu+OGIJ6744ow37vjjkEcu+eSUV2755ZhnrvnmnHfu+eeghy764oEAADs=</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <DataSets>
+    <DataSet Name="dsTermPremiumStatementFirstYearReport_dtTermPolicyDetail">
+      <Fields>
+        <Field Name="PolicyUID">
+          <DataField>PolicyUID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PolicyNumber">
+          <DataField>PolicyNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PolicyYear">
+          <DataField>PolicyYear</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DummyDataSource</DataSourceName>
+        <CommandText />
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>dsTermPremiumStatementFirstYearReport</rd:DataSetName>
+        <rd:TableName>dtTermPolicyDetail</rd:TableName>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <Width>6.5in</Width>
+  <Body>
+    <ReportItems>
+      <Textbox Name="textbox1">
+        <rd:DefaultName>textbox1</rd:DefaultName>
+        <Top>0.375in</Top>
+        <Width>3.36458in</Width>
+        <Style>
+          <FontFamily>Verdana</FontFamily>
+          <FontSize>8pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>2</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.56771in</Left>
+        <Height>0.25in</Height>
+        <Value>Premium Statement</Value>
+      </Textbox>
+      <Textbox Name="PolicyYear">
+        <rd:DefaultName>PolicyYear</rd:DefaultName>
+        <Top>0.66666in</Top>
+        <Width>3.375in</Width>
+        <Style>
+          <FontFamily>Verdana</FontFamily>
+          <FontSize>8pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>1</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5651in</Left>
+        <Height>0.25in</Height>
+        <Value>=First(Fields!PolicyYear.Value,"dsTermPremiumStatementFirstYearReport_dtTermPolicyDetail")</Value>
+      </Textbox>
+      <Textbox Name="PolicyNumber">
+        <rd:DefaultName>PolicyNumber</rd:DefaultName>
+        <Top>0.08333in</Top>
+        <Width>3.375in</Width>
+        <Style>
+          <FontFamily>Verdana</FontFamily>
+          <FontSize>8pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Left>1.5599in</Left>
+        <Height>0.25in</Height>
+        <Value>=First(Fields!PolicyNumber.Value,"dsTermPremiumStatementFirstYearReport_dtTermPolicyDetail")</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>2in</Height>
+  </Body>
+  <Language>en-US</Language>
+  <PageFooter>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <Height>0.25in</Height>
+    <PrintOnLastPage>true</PrintOnLastPage>
+  </PageFooter>
+  <TopMargin>1in</TopMargin>
+</Report>

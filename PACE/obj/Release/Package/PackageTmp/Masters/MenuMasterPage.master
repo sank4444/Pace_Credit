@@ -1,0 +1,438 @@
+﻿
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MenuMasterPage.master.cs"
+    Inherits="Masters_MenuMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Life Insurence|TATA AIA</title>
+    <link href="../App_Themes/Theme/StyleSheets/gw_style.css" rel="stylesheet" type="text/css" />
+    <link href="../App_Themes/Theme/StyleSheets/Jquery.Jscrollpanel.css" rel="stylesheet"
+        type="text/css" />
+    <link href="../App_Themes/Theme/StyleSheets/jquery.dataTables.min.css" rel="stylesheet"
+        type="text/css" />
+    <link href="../favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <script src="https://code.jquery.com/jquery-1.12.3.js" type="text/javascript"></script>
+
+    <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js" type="text/javascript"></script>
+
+    <script src="../App_Themes/Theme/StyleSheets/jquery.mCustomScrollbar.concat.min.js"
+        type="text/javascript"></script>
+
+    <script src="../Scripts/JScript1.js" type="text/javascript"></script>
+
+    <style type="text/css">
+        .MainMenu
+        {
+            width: 100%;
+            position: relative;
+            display: inline-block;
+            z-index: 3000;
+        }
+        .Sub-MainMenu
+        {
+            position: absolute;
+            overflow: hidden;
+            display: none;
+            left: 240px;
+            top: 1px;
+            min-width: 220px;
+            z-index: 1000;
+        }
+        .MainMenu_Button
+        {
+            border: none;
+            cursor: pointer;
+        }
+        .MainMenu_Button:hover + .Sub-MainMenu
+        {
+            border: none;
+            cursor: pointer;
+            display: block;
+        }
+        .Sub-MainMenu:hover
+        {
+            border: none;
+            cursor: pointer;
+            display: block;
+        }
+        .Sub-MainMenu a
+        {
+            text-decoration: none;
+            display: block;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<%--onload="marqtitle()"--%>
+<body class="login_body" >
+    <form id="form1" runat="server" autocomplete="off">
+    <asp:ScriptManager ID="SM" runat="server" AsyncPostBackTimeout="360000">
+    </asp:ScriptManager>
+    <asp:UpdatePanel ID="UP" runat="server">
+        <ContentTemplate>
+            <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td height="80" align="center" valign="middle" bgcolor="#23bcb9">
+                        <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td width="4%" align="left" valign="middle">
+                                    <a href="../Default.aspx">
+                                        <img src="../App_Themes/Theme/Images/home_but.png" width="50" height="51" border="0"
+                                            title="Home" alt="" /></a>
+                                </td>
+                                <td width="4%" align="left" valign="middle">
+                                    <asp:Button ID="btnLogOut" runat="server" CssClass="LogoutIcon_button" UseSubmitBehavior="false"
+                                        OnClick="btnLogOut_Click" />
+                                </td>
+                                <td width="1.7%" align="center" valign="middle">
+                                    <img src="../App_Themes/Theme/Images/top_line.jpg" width="2" height="38" alt="" />
+                                </td>
+                                <td width="33.3%" align="left" valign="middle">
+                                    <a href="../Default.aspx" target="_self">
+                                        <img src="../App_Themes/Theme/Images/tata_aia_web.png" width="133" height="19" border="0"
+                                            title="Home" alt="" /></a>
+                                </td>
+                                <td width="25%" align="right" valign="middle">
+                                    &nbsp;
+                                </td>
+                                <td width="2%" align="left" valign="middle" style="padding-top: 2px;">
+                                    &nbsp;
+                                </td>
+                                <td width="30%" align="right" valign="middle">
+                                    <img src="../App_Themes/Theme/Images/tata_pace.png" width="250" height="57" alt="" />
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="25" align="center" valign="middle" bgcolor="#b3b3b3" style="color: #ffffff;
+                        font-size: 14px;">
+                        <marquee id="lblmarquee" runat="server" scrolldelay="200"></marquee>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #23bcb9;">
+                        <asp:Label ID="lblPolicyNo" runat="server" Text=""></asp:Label>&nbsp;&nbsp;
+                        <asp:Label ID="lblSubOfficeCode" runat="server" Text=""></asp:Label>&nbsp;&nbsp;
+                        <asp:Label ID="lblSubOfficeName" runat="server" Text=""></asp:Label>&nbsp;&nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td height="30" align="left" valign="middle" class="goodwork_page_title" colspan="6">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <tr>
+                                            <td style="background-color: #ECE9D8">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top" width="21.5%">
+                                    <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                                        <tr>
+                                            <td align="center" style="border-top-left-radius: 15px; border-top-right-radius: 15px;">
+                                                <table border="0" cellspacing="0" cellpadding="0">
+                                                    <tr>
+                                                        <td id="PolicyInformation" runat="server" class="top_newtab_link">
+                                                            <div class="MainMenu">
+                                                                <div id="divPolicyInfo" runat="server" class="MainMenu_Button">
+                                                                    Policy Information</div>
+                                                                <div class="Sub-MainMenu" style="padding-left:15px">
+                                                                    <table border="0" align="left" cellpadding="0" cellspacing="0" style="width: 100%;
+                                                                        border: none;">
+                                                                        <tr>
+                                                                            <td align="left" valign="top">
+                                                                                <a href="../PolicyInformation/PolicyInformation.aspx" style="width: 100%; height: 100%;">
+                                                                                    <img src="../App_Themes/Theme/Images/New/Policy_Enquiry_new.png" width="190" height="28" style="border: none;
+                                                                                        display: block" /></a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top">
+                                                                                <a href="../PolicyInformation/COpyPolicySubOfficeAccess.aspx" style="width: 100%;
+                                                                                    height: 100%;" type="text/xml">
+                                                                                    <img src="../App_Themes/Theme/Images/New/Sub_Office_Access.png" width="190" height="28"
+                                                                                        style="border: none; display: block" /></a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top">
+                                                                                <a href="../ContactInformation/ContactInformation.aspx">
+                                                                                    <img src="../App_Themes/Theme/Images/New/Client_Contact_Information.png" width="190" height="27" style="border: none;
+                                                                                        display: block" /></a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top">
+                                                                                <a href="../PolicyInformation/PolicyDownload.aspx" style="width: 100%; height: 100%;">
+                                                                                    <img src="../App_Themes/Theme/Images/New/Downloads.png" width="190" height="28" style="border: none;
+                                                                                        display: block" /></a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top">
+                                                                                <div style="display: inline;">
+                                                                                    <a href="../PolicyInformation/ReceiptsandPayments.aspx" style="width: 100%; height: 100%;">
+                                                                                        <img alt="Receipts and Payments" src="../App_Themes/Theme/Images/New/Receipts_and_Payment.png"
+                                                                                            width="190" height="28" style="border: none;" />
+                                                                                        <img id="imgNewFlash" style="position: absolute; float: right" src="../App_Themes/Theme/Images/new_animated.gif"
+                                                                                                alt="New" />
+                                                                                    </a>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="MemberInformation" runat="server" class="newtab_link">
+                                                            <div class="MainMenu">
+                                                                <div class="MainMenu_Button">
+                                                                    Member Information</div>
+                                                                <div class="Sub-MainMenu">
+                                                                    <table border="0" align="left" cellpadding="0" cellspacing="0">
+                                                                        <tr>
+                                                                            <td align="left" valign="top">
+                                                                                <a href="../MemberInformation/MemberInformation.aspx">
+                                                                                    <img src="../App_Themes/Theme/Images/New/Member_Label_01.png" width="190" height="46"
+                                                                                        style="border: none; display: block" /></a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top">
+                                                                                <img src="../App_Themes/Theme/Images/New/Label_05.png" width="190" height="30" style="border: none;
+                                                                                    display: block" />
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="BillEnquiry" runat="server" class="newtab_link">
+                                                            <div class="MainMenu">
+                                                                <div class="MainMenu_Button">
+                                                                    Billing & Payment
+                                                                </div>
+                                                                <div class="Sub-MainMenu">
+                                                                    <table border="0" align="left" cellpadding="0" cellspacing="0" style="width: 100%;
+                                                                        border: none;">
+                                                                        <tr>
+                                                                            <td align="left" valign="top">
+                                                                                <a href="../BillEnquiry/BillEnquiry.aspx">
+                                                                                    <img src="../App_Themes/Theme/Images/New/Bill_Label_01.png" width="190" height="46"
+                                                                                        style="border: none; display: block" /></a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top">
+                                                                                <a href="../BillEnquiry/BillPayment.aspx">
+                                                                                    <img src="../App_Themes/Theme/Images/New/Bill_Label_02.png" width="190" height="28"
+                                                                                        style="border: none; display: block" /></a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top">
+                                                                                <img src="../App_Themes/Theme/Images/New/Label_05.png" width="190" height="30" style="border: none;
+                                                                                    display: block" />
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="Servicing" runat="server" class="newtab_link">
+                                                            <div class="MainMenu">
+                                                                <div class="MainMenu_Button">
+                                                                    Servicing</div>
+                                                                <div class="Sub-MainMenu">
+                                                                    <table border="0" align="left" cellpadding="0" cellspacing="0" style="width: 100%;
+                                                                        border: none;">
+                                                                        <tr>
+                                                                            <td align="left" valign="top">
+                                                                                <a href="../Services/ServiceRequest.aspx">
+                                                                                    <img src="../App_Themes/Theme/Images/New/Service_Label_01.png" width="190" height="46"
+                                                                                        style="border: none; display: block" /></a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top">
+                                                                                <a href="../Services/service.aspx">
+                                                                                    <img src="../App_Themes/Theme/Images/New/Service_Label_02.png" width="190" height="28"
+                                                                                        style="border: none; display: block" /></a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top">
+                                                                                <a href="../Services/ServiceList.aspx">
+                                                                                    <img src="../App_Themes/Theme/Images/New/Label_015.png" width="190" height="27" style="border: none;
+                                                                                        display: block" /></a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top">
+                                                                                <img src="../App_Themes/Theme/Images/New/Label_05.png" width="190" height="30" style="border: none;
+                                                                                    display: block" />
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="Claims" runat="server" class="newtab_link">
+                                                            <div class="MainMenu">
+                                                                <div class="MainMenu_Button">
+                                                                    Claims</div>
+                                                                <div class="Sub-MainMenu">
+                                                                    <table width="190" border="0" align="left" cellpadding="0" cellspacing="0" style="width: 100%;
+                                                                        border: none;">
+                                                                        <tr>
+                                                                            <td align="left" valign="top">
+                                                                                <a href="../Claims/ClaimIntimation.aspx">
+                                                                                    <img src="../App_Themes/Theme/Images/New/Claim_Label_01.png" width="190" height="46"
+                                                                                        style="border: none; display: block" /></a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top">
+                                                                                <a href="../Claims/OnlineClaimTracking.aspx">
+                                                                                    <img src="../App_Themes/Theme/Images/New/Claim_Label_02.png" width="190" height="28"
+                                                                                        style="border: none; display: block" /></a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top">
+                                                                                <a href="../Claims/ClaimDownload.aspx">
+                                                                                    <img src="../App_Themes/Theme/Images/New/Claim_Label_03.png" width="190" height="27"
+                                                                                        style="border: none; display: block" /></a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top">
+                                                                                <a href="../Claims/ClaimFAQ.aspx">
+                                                                                    <img src="../App_Themes/Theme/Images/New/Claim_Label_04.png" width="190" height="29"
+                                                                                        style="border: none; display: block" /></a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top">
+                                                                                <img src="../App_Themes/Theme/Images/New/Label_05.png" width="190" height="30" style="border: none;
+                                                                                    display: block" />
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="Miscellaneous" runat="server" class="newtab_link">
+                                                            <div class="MainMenu">
+                                                                <div class="MainMenu_Button">
+                                                                    Miscellaneous</div>
+                                                                <div class="Sub-MainMenu">
+                                                                    <table border="0" align="left" cellpadding="0" cellspacing="0" style="width: 100%;
+                                                                        border: none;">
+                                                                        <tr>
+                                                                            <td align="left" valign="top">
+                                                                                <a href="../CustomerSatisfactionSurvey/CustomerSatisfactionSurvey.aspx">
+                                                                                    <img src="../App_Themes/Theme/Images/New/Misce_Label_01.png" width="190" height="46"
+                                                                                        style="border: none; display: block" /></a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top">
+                                                                                <a href="../ChangePassword/ChangePassword.aspx">
+                                                                                    <img src="../App_Themes/Theme/Images/New/Misce_Label_02.png" width="190" height="28"
+                                                                                        style="border: none; display: block" /></a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top">
+                                                                                <a href="../ContactUs/ContactUs.aspx">
+                                                                                    <img src="../App_Themes/Theme/Images/New/Misce_Label_03.png" width="190" height="27"
+                                                                                        style="border: none; display: block" /></a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top">
+                                                                                <img src="../App_Themes/Theme/Images/New/Label_05.png" width="190" height="30" style="border: none;
+                                                                                    border: none; display: block" />
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="top_newtab_link" style="background-image: url('../App_Themes/Theme/Images/bottom_new_tab_bg.png');
+                                                                cursor: none;">
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td height="15px" valign="bottom" class="uniqueReference">
+                                                <blockquote>
+                                                    <asp:Label ID="uniqueReference" runat="server" Text="L&C/Misc/2016/Feb/082"></asp:Label></blockquote>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td style="width: 0.5%">
+                                    &nbsp;
+                                </td>
+                                <td valign="top" style="width: 78%;">
+                                    <div>
+                                        <asp:ContentPlaceHolder ID="BodyContent" runat="server">
+                                        </asp:ContentPlaceHolder>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </ContentTemplate>
+    </asp:UpdatePanel>
+    <asp:UpdateProgress ID="UpdateProgress1" runat="server" DynamicLayout="true" AssociatedUpdatePanelID="UP"
+        DisplayAfter="1">
+        <ProgressTemplate>
+            <div class="UpdateProgressmodal">
+                <div class="UpdateProgresscenter">
+                    <asp:Label ID="labelDisplay" runat="server" Text="Processing..."></asp:Label>
+                    <br />
+                    <img id="progessImage" src="../App_Themes/Theme/Images/loading.gif" alt="" width="70" />
+                </div>
+            </div>
+        </ProgressTemplate>
+    </asp:UpdateProgress>
+
+ <%--   <script type="text/javascript">
+        $(document).ready(function() {
+            $('.display').DataTable({ "lengthMenu": [[5, 10, 15, -1], [5, 10, 15, "All"]],
+            "scrollx":true });
+        });
+    </script>--%>
+
+    </form>
+</body>
+</html>

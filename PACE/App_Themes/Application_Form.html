@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar with Accordion and Search Filter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            box-sizing: border-box;
+            z-index: 1001;
+            cursor: pointer;
+        }
+
+        .navbar .brand {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        /* Sidebar styles */
+        .sidebar {
+            height: 100vh;
+            width: 250px;
+            background-color: #333;
+            color: white;
+            transition: all 0.3s ease;
+            padding: 20px;
+            box-sizing: border-box;
+            position: fixed;
+            top: 60px;
+            /* Below the navbar */
+            overflow-y: auto;
+        }
+
+        .sidebar.hide {
+            width: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .accordion {
+            cursor: pointer;
+            padding: 10px;
+            font-size: 16px;
+            border-bottom: 1px solid #575757;
+            text-transform: uppercase;
+        }
+
+        .accordion:hover {
+            background-color: #575757;
+        }
+
+        .panel {
+            display: none;
+            padding-left: 10px;
+            overflow: hidden;
+        }
+
+        .panel.show {
+            /* Class to show the panel */
+            display: block;
+        }
+
+        .panel a {
+            display: block;
+            padding: 8px;
+            color: white;
+            text-decoration: none;
+            border-bottom: none;
+        }
+
+        .panel a:hover {
+            background-color: #575757;
+        }
+
+        /* Main content styles */
+        .main-content {
+            margin-left: 250px;
+            padding: 80px 20px 20px;
+            /* Top padding for navbar space */
+            transition: margin-left 0.3s ease;
+            flex-grow: 1;
+        }
+
+        .main-content.full {
+            margin-left: 0;
+        }
+
+        /* Search bar styles */
+        #search {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 978px;
+        }
+
+        .form-title {
+            text-align: center;
+            margin-bottom: 24px;
+            font-size: 24px;
+            color: #3f51b5;
+        }
+
+        .form-group {
+            position: relative;
+            margin-bottom: 24px;
+        }
+
+        .form-group label {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: #757575;
+            transition: 0.3s ease-out;
+            pointer-events: none;
+            font-size: 16px;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px 10px 10px 10px;
+            border: none;
+            border-bottom: 2px solid #ccc;
+            outline: none;
+            font-size: 16px;
+            background: transparent;
+            transition: border-bottom 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            border-bottom: 2px solid #3f51b5;
+        }
+
+        .form-group input:focus+label,
+        .form-group input:valid+label,
+        .form-group select:valid+label {
+            top: -14px;
+            font-size: 12px;
+            color: #3f51b5;
+        }
+
+        .radio-group,
+        .button-group {
+            margin-bottom: 24px;
+        }
+
+        .radio-group label {
+            margin-right: 20px;
+            font-size: 16px;
+            color: #555;
+            cursor: pointer;
+        }
+
+        .radio-group input {
+            margin-right: 8px;
+        }
+
+        .button {
+            width: 100%;
+            background-color: #3f51b5;
+            color: white;
+            border: none;
+            padding: 14px;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #303f9f;
+        }
+
+        select {
+            appearance: none;
+            background: transparent;
+            padding: 10px 5px;
+            cursor: pointer;
+        }
+
+        .form-group::after {
+            content: "▼";
+            position: absolute;
+            right: 10px;
+            top: 12px;
+            color: #757575;
+            pointer-events: none;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            /* Adds space between columns */
+        }
+
+        .col-6 {
+            flex: 0 0 calc(50% - 20px);
+            /* Ensures two items per row, with space between */
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar" id="navbar">
+        <div class="brand" id="dashboardTitle">My Dashboard</div>
+        <div class="profile">
+            <a href="#"></a>
+            <a href="#"></a>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <input type="text" id="search" placeholder="Search menu..." onkeyup="filterMenu()">
+
+        <!-- <div class="accordion">Dashboard</div>
+    <div class="panel">
+      <a href="#">Overview</a>
+      <a href="#">Statistics</a>
+    </div>
+
+    <div class="accordion">Reports</div>
+    <div class="panel">
+      <a href="#">Sales</a>
+      <a href="#">Expenses</a>
+    </div>
+
+    <div class="accordion">Orders</div>
+    <div class="panel">
+      <a href="#">New Orders</a>
+      <a href="#">Order History</a>
+    </div>
+
+    <div class="accordion">Customers</div>
+    <div class="panel">
+      <a href="#">Active Customers</a>
+      <a href="#">Customer Support</a>
+    </div> -->
+
+        <div class="accordion">Settings</div>
+        <div class="panel">
+            <a href="#">Application Form</a>
+            <!-- <a href="#">Account</a> -->
+        </div>
+    </div>
+
+    <!-- Main content -->
+    <div class="main-content" id="mainContent">
+        <div class="form-container">
+
+
+            <form id="signUpForm">
+                <h2 class="form-title">Application Form</h2>
+                <p>Ex Details</p>
+                <hr>
+                <div class="row">
+                    <div class="form-group col-6">
+                        <select id="client" required>
+                            <option value="" disabled selected></option>
+                            <option value="us">Bank of Baroda</option>
+                            <option value="ca">Bank of Gujrat</option>
+                            <option value="uk">Bank of Rajasthan</option>
+                            <option value="in">CGGB</option>
+                        </select>
+                        <label for="Client">Client Name</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <select id="policy" required>
+                            <option value="" disabled selected></option>
+                            <option value="us">1101</option>
+                            <option value="ca">1102</option>
+                            <option value="uk">1103</option>
+                            <option value="in">1104</option>
+                        </select>
+                        <label for="policy">Policy Number</label>
+                    </div>
+                </div>
+                <p>CHANNEL DETAILS</p>
+                <hr>
+                <div class="row">
+                    <div class="form-group col-6">
+                        <input type="text" id="smsBranch" required>
+                        <label for="smsBranch">SMS Branch Code</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="smsLG" required>
+                        <label for="smsLG">SMS LG Code</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="dsaCode" required>
+                        <label for="dsaCode">DSA Code</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="branchCode" required>
+                        <label for="branchCode">Branch Code</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="BranchLGCode" required>
+                        <label for="BranchLGCode">Branch LG Code</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="loanrefId" required>
+                        <label for="loanrefId">Loan Ref Id</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="loanAccNumber" required>
+                        <label for="loanAccNumber">Loan Account Number</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="applicantType" required>
+                        <label for="applicantType">Applicant Type</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <select id="premiumpaid" required>
+                            <option value="" disabled selected></option>
+                            <option value="us">1101</option>
+                            <option value="ca">1102</option>
+                            <option value="uk">1103</option>
+                            <option value="in">1104</option>
+                        </select>
+                        <label for="premiumpaid">Premium Paid From Loan</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="annualncome" required>
+                        <label for="annualncome">Annual Income</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="ClientId" required>
+                        <label for="ClientId">Client Id</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="rflCode" required>
+                        <label for="rflCode">RFL Code</label>
+                    </div>
+                </div>
+
+                <p>PLAN DETAILS</p>
+                <hr>
+                <div class="row">
+                    <div class="form-group col-6">
+                        <input type="text" id="LoanAmount" required>
+                        <label for="Loan Amount ">Loan Amount </label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="SumAssured" required>
+                        <label for="Sum Assured">Sum Assured</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <select id="LoanType" required>
+                            <option value="" disabled selected></option>
+                            <option value="us">1101</option>
+                            <option value="ca">1102</option>
+                            <option value="uk">1103</option>
+                            <option value="in">1104</option>
+                        </select>
+                        <label for="premiumpaid">Loan Type</label>
+                    </div>
+
+                    <div class="form-group col-6">
+                        <input type="text" id="LoaninterestRate" required>
+                        <label for="LoaninterestRate">Loan interest Rate</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <select id="Staff" required>
+                            <option value="" disabled selected></option>
+                            <option value="us">1101</option>
+                            <option value="ca">1102</option>
+                            <option value="uk">1103</option>
+                            <option value="in">1104</option>
+                        </select>
+                        <label for="premiumpaid">Staff</label>
+                    </div>
+
+                    <div class="form-group col-6">
+                        <select id="PremiumType" required>
+                            <option value="" disabled selected></option>
+                            <option value="us">1101</option>
+                            <option value="ca">1102</option>
+                            <option value="uk">1103</option>
+                            <option value="in">1104</option>
+                        </select>
+                        <label for="Premium Type">Premium Type</label>
+                    </div>
+
+                    <div class="form-group col-6">
+                        <select id="SumAssuredType" required>
+                            <option value="" disabled selected></option>
+                            <option value="us">1101</option>
+                            <option value="ca">1102</option>
+                            <option value="uk">1103</option>
+                            <option value="in">1104</option>
+                        </select>
+                        <label for="SumAssuredType">Sum Assured  Type</label>
+                    </div>
+
+                    <div class="form-group col-6">
+                        <select id="InsuranceType" required>
+                            <option value="" disabled selected></option>
+                            <option value="us">1101</option>
+                            <option value="ca">1102</option>
+                            <option value="uk">1103</option>
+                            <option value="in">1104</option>
+                        </select>
+                        <label for="InsuranceType">Insurance Type</label>
+                    </div>
+
+                    <div class="form-group col-6">
+                        <select id="Paymentfrequency" required>
+                            <option value="" disabled selected></option>
+                            <option value="us">1101</option>
+                            <option value="ca">1102</option>
+                            <option value="uk">1103</option>
+                            <option value="in">1104</option>
+                        </select>
+                        <label for="Paymentfrequency">Payment frequency</label>
+                    </div>
+
+                    <div class="form-group col-6">
+                        <select id="DeathOption" required>
+                            <option value="" disabled selected></option>
+                            <option value="us">1101</option>
+                            <option value="ca">1102</option>
+                            <option value="uk">1103</option>
+                            <option value="in">1104</option>
+                        </select>
+                        <label for="Deathoption">Death Option</label>
+                    </div>
+
+                    <div class="form-group col-6">
+                        <select id="DeathOptionincomeyears" required>
+                            <option value="" disabled selected></option>
+                            <option value="us">1101</option>
+                            <option value="ca">1102</option>
+                            <option value="uk">1103</option>
+                            <option value="in">1104</option>
+                        </select>
+                        <label for="DeathOptionincomeyears">Death Option income years</label>
+                    </div>
+
+
+                    <div class="form-group col-6">
+                        <input type="text" id="PolicyTerm" required>
+                        <label for="Policy Term">Policy Term</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <select id="PremiumPayingTerm" required>
+                            <option value="" disabled selected></option>
+                            <option value="us">1101</option>
+                            <option value="ca">1102</option>
+                            <option value="uk">1103</option>
+                            <option value="in">1104</option>
+                        </select>
+                        <label for="PremiumPayingTerm">Premium Paying Term</label>
+                    </div>
+
+                    <div class="form-group col-6">
+                        <select id="MoratoriumPeriod" required>
+                            <option value="" disabled selected></option>
+                            <option value="us">1101</option>
+                            <option value="ca">1102</option>
+                            <option value="uk">1103</option>
+                            <option value="in">1104</option>
+                        </select>
+                        <label for="MoratoriumPeriod">Moratorium Period</label>
+                    </div>
+
+                    <div class="form-group col-6">
+                        <select id="InterestDuringMoratoriumPeriod" required>
+                            <option value="" disabled selected></option>
+                            <option value="us">1101</option>
+                            <option value="ca">1102</option>
+                            <option value="uk">1103</option>
+                            <option value="in">1104</option>
+                        </select>
+                        <label for="InterestDuringMoratoriumPeriod">Interest During Moratorium Period</label>
+                    </div>
+
+                    <div class="form-group col-6">
+                        <select id="Application Type" required>
+                            <option value="" disabled selected></option>
+                            <option value="us">1101</option>
+                            <option value="ca">1102</option>
+                            <option value="uk">1103</option>
+                            <option value="in">1104</option>
+                        </select>
+                        <label for="Application Type">Application Type</label>
+                    </div>
+
+                    <div class="form-group col-6">
+                        <select id="NumberOfApplicant" required>
+                            <option value="" disabled selected></option>
+                            <option value="us">1101</option>
+                            <option value="ca">1102</option>
+                            <option value="uk">1103</option>
+                            <option value="in">1104</option>
+                        </select>
+                        <label for="NumberOfApplicant">Number Of Applicant</label>
+                    </div>
+
+                    <div class="form-group col-6">
+                        <select id="BenefitOption" required>
+                            <option value="" disabled selected></option>
+                            <option value="us">1101</option>
+                            <option value="ca">1102</option>
+                            <option value="uk">1103</option>
+                            <option value="in">1104</option>
+                        </select>
+                        <label for="Benefit Option">Benefit Option</label>
+                    </div>
+                </div>
+
+                <p>INSURANCE AND LOAN DETAILS</p>
+                <hr>
+                <div class="row">
+                    <div class="form-group col-6">
+                        <input type="text" id="LoanReferId " required>
+                        <label for="Loan Refer Id ">Loan Refer Id </label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="LoanType" required>
+                        <label for="Loan Type">Loan Type</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <select id="NewLoan" required>
+                            <option value="" disabled selected></option>
+                            <option value="us">1101</option>
+                            <option value="ca">1102</option>
+                            <option value="uk">1103</option>
+                            <option value="in">1104</option>
+                        </select>
+                        <label for="NewLoan">New Loan</label>
+                    </div>
+
+                    <div class="form-group col-6">
+                        <input type="text" id="OldLoanAccountNumber" required>
+                        <label for="Old Loan Account Number">Old Loan Account Number</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="LoanAmountLoanTenure" required>
+                        <label for="Loan Amount Loan Tenure">Loan Amount Loan Tenure</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <select id="Staff" required>
+                            <option value="" disabled selected></option>
+                            <option value="us">1101</option>
+                            <option value="ca">1102</option>
+                            <option value="uk">1103</option>
+                            <option value="in">1104</option>
+                        </select>
+                        <label for="Staff">Staff</label>
+                    </div>
+
+                    <div class="form-group col-6">
+                        <select id="SumAssuredType" required>
+                            <option value="" disabled selected></option>
+                            <option value="us">1101</option>
+                            <option value="ca">1102</option>
+                            <option value="uk">1103</option>
+                            <option value="in">1104</option>
+                        </select>
+                        <label for="Sum Assured Type">Sum Assured Type</label>
+                    </div>
+
+                    <div class="form-group col-6">
+                        <select id="InsuranceType" required>
+                            <option value="" disabled selected></option>
+                            <option value="us">1101</option>
+                            <option value="ca">1102</option>
+                            <option value="uk">1103</option>
+                            <option value="in">1104</option>
+                        </select>
+                        <label for="Insurance Type">Insurance Type</label>
+                    </div>
+
+                    <div class="form-group col-6">
+                        <select id="PremiumPaymentFrequency" required>
+                            <option value="" disabled selected></option>
+                            <option value="us">1101</option>
+                            <option value="ca">1102</option>
+                            <option value="uk">1103</option>
+                            <option value="in">1104</option>
+                        </select>
+                        <label for="Premium Payment Frequency">Premium Payment Frequency</label>
+                    </div>
+
+                    <div class="form-group col-6">
+                        <input type="text" id="loanAccNumber" required>
+                        <label for="loanAccNumber">Loan Account Number</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="applicantType" required>
+                        <label for="applicantType">Applicant Type</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <select id="premiumpaid" required>
+                            <option value="" disabled selected></option>
+                            <option value="us">1101</option>
+                            <option value="ca">1102</option>
+                            <option value="uk">1103</option>
+                            <option value="in">1104</option>
+                        </select>
+                        <label for="premiumpaid">Premium Paid From Loan</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="annualncome" required>
+                        <label for="annualncome">Annual Income</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="ClientId" required>
+                        <label for="ClientId">Client Id</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="rflCode" required>
+                        <label for="rflCode">RFL Code</label>
+                    </div>
+                </div>
+
+                <p>OTHER DETAILS</p>
+                <hr>
+                <div class="row">
+                    <div class="form-group col-6">
+                        <input type="text" id="smsBranch" required>
+                        <label for="smsBranch">SMS Branch Code</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="smsLG" required>
+                        <label for="smsLG">SMS LG Code</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="dsaCode" required>
+                        <label for="dsaCode">DSA Code</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="branchCode" required>
+                        <label for="branchCode">Branch Code</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="BranchLGCode" required>
+                        <label for="BranchLGCode">Branch LG Code</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="loanrefId" required>
+                        <label for="loanrefId">Loan Ref Id</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="loanAccNumber" required>
+                        <label for="loanAccNumber">Loan Account Number</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="applicantType" required>
+                        <label for="applicantType">Applicant Type</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <select id="premiumpaid" required>
+                            <option value="" disabled selected></option>
+                            <option value="us">1101</option>
+                            <option value="ca">1102</option>
+                            <option value="uk">1103</option>
+                            <option value="in">1104</option>
+                        </select>
+                        <label for="premiumpaid">Premium Paid From Loan</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="annualncome" required>
+                        <label for="annualncome">Annual Income</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="ClientId" required>
+                        <label for="ClientId">Client Id</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="rflCode" required>
+                        <label for="rflCode">RFL Code</label>
+                    </div>
+                </div>
+
+                <p>QUOTE DETAILS</p>
+                <hr>
+                <div class="row">
+                    <div class="form-group col-6">
+                        <input type="text" id="smsBranch" required>
+                        <label for="smsBranch">SMS Branch Code</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="smsLG" required>
+                        <label for="smsLG">SMS LG Code</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="dsaCode" required>
+                        <label for="dsaCode">DSA Code</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="branchCode" required>
+                        <label for="branchCode">Branch Code</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="BranchLGCode" required>
+                        <label for="BranchLGCode">Branch LG Code</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="loanrefId" required>
+                        <label for="loanrefId">Loan Ref Id</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="loanAccNumber" required>
+                        <label for="loanAccNumber">Loan Account Number</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="applicantType" required>
+                        <label for="applicantType">Applicant Type</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <select id="premiumpaid" required>
+                            <option value="" disabled selected></option>
+                            <option value="us">1101</option>
+                            <option value="ca">1102</option>
+                            <option value="uk">1103</option>
+                            <option value="in">1104</option>
+                        </select>
+                        <label for="premiumpaid">Premium Paid From Loan</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="annualncome" required>
+                        <label for="annualncome">Annual Income</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="ClientId" required>
+                        <label for="ClientId">Client Id</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="rflCode" required>
+                        <label for="rflCode">RFL Code</label>
+                    </div>
+                </div>
+
+                <p>VERNACULAR UNEDUCATED DETAILS</p>
+                <hr>
+                <div class="row">
+                    <div class="form-group col-6">
+                        <input type="text" id="smsBranch" required>
+                        <label for="smsBranch">SMS Branch Code</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="smsLG" required>
+                        <label for="smsLG">SMS LG Code</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="dsaCode" required>
+                        <label for="dsaCode">DSA Code</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="branchCode" required>
+                        <label for="branchCode">Branch Code</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="BranchLGCode" required>
+                        <label for="BranchLGCode">Branch LG Code</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="loanrefId" required>
+                        <label for="loanrefId">Loan Ref Id</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="loanAccNumber" required>
+                        <label for="loanAccNumber">Loan Account Number</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="applicantType" required>
+                        <label for="applicantType">Applicant Type</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <select id="premiumpaid" required>
+                            <option value="" disabled selected></option>
+                            <option value="us">1101</option>
+                            <option value="ca">1102</option>
+                            <option value="uk">1103</option>
+                            <option value="in">1104</option>
+                        </select>
+                        <label for="premiumpaid">Premium Paid From Loan</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="annualncome" required>
+                        <label for="annualncome">Annual Income</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="ClientId" required>
+                        <label for="ClientId">Client Id</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="rflCode" required>
+                        <label for="rflCode">RFL Code</label>
+                    </div>
+                </div>
+
+
+                <p>ECS DETAILS</p>
+                <hr>
+                <div class="row">
+                    <div class="form-group col-6">
+                        <input type="text" id="smsBranch" required>
+                        <label for="smsBranch">SMS Branch Code</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="smsLG" required>
+                        <label for="smsLG">SMS LG Code</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="dsaCode" required>
+                        <label for="dsaCode">DSA Code</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="branchCode" required>
+                        <label for="branchCode">Branch Code</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="BranchLGCode" required>
+                        <label for="BranchLGCode">Branch LG Code</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="loanrefId" required>
+                        <label for="loanrefId">Loan Ref Id</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="loanAccNumber" required>
+                        <label for="loanAccNumber">Loan Account Number</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="applicantType" required>
+                        <label for="applicantType">Applicant Type</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <select id="premiumpaid" required>
+                            <option value="" disabled selected></option>
+                            <option value="us">1101</option>
+                            <option value="ca">1102</option>
+                            <option value="uk">1103</option>
+                            <option value="in">1104</option>
+                        </select>
+                        <label for="premiumpaid">Premium Paid From Loan</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="annualncome" required>
+                        <label for="annualncome">Annual Income</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="ClientId" required>
+                        <label for="ClientId">Client Id</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" id="rflCode" required>
+                        <label for="rflCode">RFL Code</label>
+                    </div>
+                </div>
+
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="gender" value="male" required> Male
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="female" required> Female
+                    </label>
+                </div>
+                <button type="submit" class="button" onclick="showSuccessAlert()">Submit</button>
+            </form>
+
+            <!-- JavaScript -->
+            <script>
+                const sidebar = document.getElementById('sidebar');
+                const mainContent = document.getElementById('mainContent');
+                const dashboardTitle = document.getElementById('dashboardTitle');
+                const accordions = document.getElementsByClassName('accordion');
+
+                // Toggle sidebar visibility when clicking on "My Dashboard"
+                dashboardTitle.addEventListener('click', () => {
+                    sidebar.classList.toggle('hide');
+                    mainContent.classList.toggle('full');
+                });
+
+                // Accordion functionality
+                for (let i = 0; i < accordions.length; i++) {
+                    accordions[i].addEventListener('click', function () {
+                        this.classList.toggle('active');
+                        const panel = this.nextElementSibling;
+                        panel.classList.toggle('show');
+                    });
+                }
+
+                // Search filter function
+                function filterMenu() {
+                    const filter = document.getElementById('search').value.toLowerCase();
+                    const links = sidebar.getElementsByTagName('a');
+
+                    for (let i = 0; i < links.length; i++) {
+                        const txtValue = links[i].textContent || links[i].innerText;
+                        if (txtValue.toLowerCase().includes(filter)) {
+                            links[i].style.display = '';
+                        } else {
+                            links[i].style.display = 'none';
+                        }
+                    }
+                }
+            </script>
+
+            <script>
+                function showSuccessAlert() {
+                    alert(" Successfully Submitted!");
+                    document.getElementById("signUpForm").reset();
+                }
+            </script>
+</body>
+
+</html>
